@@ -1,0 +1,351 @@
+
+///////////////////////////
+
+// .container_global {
+//     position: relative;
+// }
+
+.font_hearder {
+    background-color: #F2F6FA;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.089);
+}
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+
+.hearder {
+    width: 100%;
+    height: 50px;
+    background-color: #fff!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon_retour {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.TitreSuiviMedicament {
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+.TitreSuiviMedicament h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+
+
+////////////////////////// Debut de style de recherche
+
+
+.bareRecherche {
+    display: flex;
+}
+
+.recherche {
+    width: 100%;
+    margin: 15px 10px;
+    position: relative;
+}
+
+.container_form {
+    margin: 20px 10px 5px ;
+}
+
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #000;
+    --input-bg-color: #fff;
+    --focus-input-bg-color: transparent;
+    --text-color: #949faa;
+    --active-color: #008000;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 1.2em;
+    --gap: 0.9rem;
+  }
+  /* form style */
+  .form {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+  }
+
+  
+
+  /* a fancy bg for showing background and border when focus. */
+  .fancy-bg {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 30px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  /* label styling */
+  label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+  }
+  
+  .search,.close-btn {
+    position: absolute;
+  }
+  /* styling search-icon */
+  .search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+  }
+  /* svg -- size */
+  svg {
+    width: 20px;
+    display: block;
+  }
+  /* styling of close button */
+  .close-btn {
+    border: none;
+    right: var(--inline-padding-of-input);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* styling of input */
+  .input {
+    color: var(--input-text-color);
+    width: 100%;
+    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--text-color)
+  }
+  /* input background change in focus */
+  .input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+  }
+  /* search icon color change in focus */
+  .input:focus ~ .search {
+    fill: var(--active-color);
+  }
+  /* showing close button when typing */
+  .input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+  }
+
+
+
+////////////////////////////////////
+
+
+.icon_search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 28px;
+}
+
+.recherche .search {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+    border-radius: 20px;
+    padding-left: 50px;
+}
+
+.recherche .search:focus {
+    outline: 1px solid green;
+}
+
+
+////////////////////////// Fin de style de recherche
+
+.bare_ligne {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ligne {
+    width: 100%;
+    height: 1px;
+    background-color: #0000005b;
+    margin: 15px 10px 5px 10px;
+}
+
+///////////////////////////////////////////////
+/// 
+/// 
+
+
+///////////////////////////////
+///  les veteriniare 
+/// 
+
+.container_veterinaire {
+    margin: 15px 10px;
+}
+
+.info_vete {
+    display: flex;
+}
+
+.veterinaire {
+    margin-bottom: 8px;
+}
+
+///// image 
+///
+//
+
+.image_vete {
+    width: 40px;
+    height: 40px;
+}
+
+.image_vete img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nom_prenom p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.domaine p {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.30px;
+    padding-top: 2px;
+    width: 240px;
+}
+
+.vete_pays p {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.30px;
+    padding-top: 2px;
+}
+
+////////////////////
+/// 
+/// 
+
+.info_vete {
+    margin-top: 15px;
+}
+
+.info_name {
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+
+////// Bare et ligne 
+
+.bare {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.bare .ligne {
+    border-bottom: 1px solid #0000000e;
+    margin-top: 6px;
+}
+
+
+
+///////////////// container 
+/// 
+/// 
+
+
+.container_discussion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nombre {
+    text-align: right;
+}
+
+.nombre .heure {
+    font-size: 11px;
+}
+
+.container_nombre_sms {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.nombre .nombre_sms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #008000;
+    // text-align: center;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 5px;
+}

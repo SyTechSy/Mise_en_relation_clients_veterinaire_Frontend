@@ -1,0 +1,116 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <div class="icon_retour" routerLink="/detail-suivi-animal">
+        <i class="ri-arrow-left-s-line"></i>
+      </div>
+
+      <div class="titre_inscription">
+        <h3>Modifier Animal</h3>
+      </div>
+
+      <div class="vide">
+
+      </div>
+    </div>
+
+    <!-- Image  -->
+
+    <div class="image_logo">
+      <div class="logo">
+        <img src="../../../assets/LOGO2.png" alt="mon logo">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
+
+  <aside class="formulaire">
+
+    <form class="container_formulaire">
+
+      
+
+      <div class="formulaire">
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4>Information de animal</h4>
+        </div>
+
+        <!-- input de nom d'animal  -->
+        <div class="champ_input">
+          <input type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
+          <label for="nom" class="label">Nom d'animal</label>
+        </div>
+
+        <!-- input de vcategorie d'animal  -->
+        <div class="champ_input" style="margin-top: -10px;">
+          <input type="text" class="input_focus"  id="categorie" placeholder="Exemple : Chien ou ....." autocomplete="on" required>
+          <label for="categorie" class="label">C'est quel animal</label>
+        </div>
+
+        <!-- // sexe animal  -->
+        <div class="champ_input" style="margin-top: -10px;">
+
+          <select class="input_focus">
+            <option class="option_input" value="">Genre</option>
+            <option class="option_input" value="">Homme</option>
+            <option class="option_input" value="">Femme</option>
+          </select>
+        
+        </div>
+      
+        <!-- input de type file  -->
+
+        <div class="input_file">
+          <input type="file" accept="image/*" id="file" (change)="handleFileInput($event)">
+          <div class="label_input">
+            <label for="file" class="label_download">
+              <!-- <div class="image_user"> -->
+                <div class="roudel_img" >
+                  <img class="immmmmgggg" [src]="selectedFileDataUrl">
+                </div>
+                <p class="para_telecharger">Image animal</p>
+              <!-- </div> -->
+              <i class="ri-download-cloud-2-line icon_telecharger"></i>
+            </label>
+          </div>
+
+        </div>
+        
+        <!-- // description -->
+        <div class="champ_input">
+          <textarea type="text" class="input_focus input_focus_textarea" id="descript" placeholder="Une petite description" autocomplete="off" required></textarea>
+          <label for="descript" class="label">Description</label>
+        </div>
+
+
+
+        <!-- button envoie  -->
+
+        <!-- le button de submit  -->
+        <div class="btn_submit_global" routerLink="/detail-suivi-animal">
+          <button type="submit" class="btn_submit"> Modifier </button>
+        </div>
+
+
+
+      </div>
+
+    </form>
+
+  </aside>
+
+</div>

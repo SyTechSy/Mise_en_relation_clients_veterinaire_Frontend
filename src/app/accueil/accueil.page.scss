@@ -1,0 +1,407 @@
+
+///////////////////////////
+
+.container_global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+.hearder {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.logo .logo_img {
+    width: 100%;
+    height: 100%;
+}
+
+.profil_user_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.profil_user_img .profil_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+//////////////////////// STYLE DE CADRE 
+
+
+.content_cadre_accueil {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cadre_accueil {
+    width: 90%;
+    height: 100px;
+    background-color: #008000;
+    border-radius: 20px;
+}
+
+.bienvenu {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.title_bienvenu {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #F2F6FA;
+    margin-top: 5px;
+}
+
+////////////////////////////////// STYLE DE CONTENU DE LA PAGE ACCUEIL COMME GRID
+
+.container_grid {
+    margin: 20px 20px 0 20px;    
+}
+
+.content_grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0px 0px;
+}
+
+.grid_suivi_medicament_left,
+.grid_suivi_sante_left,
+.grid_forum_left
+{
+    width: 158px;
+    height: 130px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.253);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid_veterinaire_right {
+    width: 158px;
+    height: 160px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.253);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid_mes_animaux_right {
+    width: 158px;
+    height: 100px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.253);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid_mes_rdv_left,
+.grid_localiser_veterinaire_left 
+{
+    width: 158px;
+    height: 57.5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.253);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+///////////////////// Style de SUIVI MEDICAMENT
+
+.container_image_suivi_medicament {
+    display: flex;
+    justify-content: center;
+}
+
+.imageSuiviMedicament {
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+}
+
+.imageSuiviMedicament img{
+    width: 100%;
+    height: 100%;
+}
+
+.textSuiviMedicament {
+    margin-top: -5px;
+}
+
+
+////////////// text de suivi medicament
+
+.text_suivi_medicament {
+    margin-top: -5px;
+}
+
+.text_suivi_medicament .name_donner {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+/////////////////////////////// POUR SUIVI SANTE
+
+
+
+///////////////////// Style de SUIVI MEDICAMENT
+
+.container_image_suivi_sante {
+    display: flex;
+    justify-content: center;
+}
+
+.imageSuiviSante {
+    width: 85px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.imageSuiviSante img{
+    width: 100%;
+    height: 100%;
+}
+
+.textSuiviSante {
+    margin-top: -5px;
+}
+
+
+////////////// text de suivi medicament
+
+.text_suivi_sante {
+    margin-top: -5px;
+}
+
+.text_suivi_sante .name_donner {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+///////////////////// Style de FORUM
+
+.container_image_forum {
+    display: flex;
+    justify-content: center;
+}
+
+.imageForum {
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.imageForum img{
+    width: 100%;
+    height: 100%;
+}
+
+.textForum {
+    margin-top: -5px;
+}
+
+
+////////////// text de Forum
+
+.text_forum {
+    margin-top: -5px;
+}
+
+.text_forum .name_donner {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+///////////////////// Style de VETERINAIRE
+
+.container_image_veterinaire {
+    display: flex;
+    justify-content: center;
+}
+
+.imageveterinaire {
+    width: 95px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.imageveterinaire img{
+    width: 100%;
+    height: 100%;
+}
+
+.textveterinaire {
+    margin-top: -5px;
+}
+
+
+////////////// text de Forum
+
+.text_veterinaire {
+    margin-top: -6px;
+}
+
+.text_veterinaire .name_donner {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+
+////////////////////////////////////// POUR RENDEZ-VOUS
+
+
+
+.imagemes_rdv {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.imagemes_rdv img{
+    width: 100%;
+    height: 100%;
+}
+
+.container_mes_rdv {
+    display: flex;
+    align-items: center;
+}
+
+
+.text_mes_rdv .name_donner {
+    font-size: 12px;
+    padding-left: 5px;
+    line-height: 15px;
+}
+
+
+////////////////////////////////////// POUR Localisation
+
+
+
+.imagelocalGps {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.imagelocalGps img{
+    width: 100%;
+    height: 100%;
+}
+
+.container_localGps {
+    display: flex;
+    align-items: center;
+}
+
+
+.text_localGps .name_donner {
+    font-size: 12px;
+    padding-left: 5px;
+    line-height: 15px;
+}
+
+
+
+
+///////////////////// Style POUR LES ANIMAUX
+
+.container_image_suivreAnimal {
+    display: flex;
+    justify-content: center;
+}
+
+.imagesuivreAnimal {
+    width: 45px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.imagesuivreAnimal img{
+    width: 100%;
+    height: 100%;
+}
+
+.textsuivreAnimal {
+    margin-top: -5px;
+}
+
+
+////////////// text de suivi medicament
+
+.text_suivreAnimal {
+    margin-top: -5px;
+}
+
+.text_suivreAnimal .name_donner {
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+
+////////////////////// FOOTER
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.font_footer {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.accueil {
+    text-align: center;
+}
+
+.accueil i{
+    font-size: 35px;
+}
+
+// .accueil2 i{
+//     font-size: 40px;
+// }
+
+.accueil p {
+    font-size: 12px;
+}

@@ -1,0 +1,172 @@
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_retour {
+    display: flex;
+    align-items: center;
+}
+
+.icon_retour i {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.nom_retour p{
+    margin-left: 5px;
+}
+
+.cadre_nom {
+    margin-left: -70px;
+}
+
+.cadre_nom p{
+    font-size: 17px;
+}
+
+
+////////////////////////////////// Image de profil
+
+.cadre_decconecter {
+    padding-right: 10px;
+}
+
+.cadre_decconecter p {
+    color: #008000;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.titre_inscription {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.titre_inscription .icon_retour {
+    font-size: 25px;
+}
+
+.titre_inscription h3 {
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+.container_cadre_profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cadre_profil {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.image_profil {
+    width: 350px;
+    height: 340px;
+} 
+
+/////////////////
+
+.cadre_prenom {
+    margin-top: 20px;
+}
+
+.cadre_email {
+    text-align: center;
+}
+
+.cadre_h3 {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.image_profil img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.555);
+    // background-image: url('../../../assets/profil_vete.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.camera-icon {
+    font-size: 17px;
+    position: relative;
+    left: 45px;
+    top: -15px;
+    background-color: #008000;
+    color: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    font-weight: 200;
+    border: 2px solid #fff;
+}
+
+
+
+/////////////////////////////////////////
+
+.nom_apropos {
+    margin-left: 10px;
+}
+
+.nom_apropos .h4_mon_apropos {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.container_information {
+    margin-top: 20px;
+}
+
+.veterinaire_info {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.veterinaire_info2 {
+    display: flex;
+}
+
+.vete_info {
+    width: 100%;
+    border-bottom: 1px solid #00000088;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.para_vete_info {
+    padding: 10px 0px;
+}
+
+
+.eye i {
+    font-size: 25px;
+    margin-right: 5px;
+}

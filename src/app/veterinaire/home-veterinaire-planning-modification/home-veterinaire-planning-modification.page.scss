@@ -1,0 +1,195 @@
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+    background-color: #F2F6FA;
+}
+
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.titre_ajouter_rappel h3{
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.annuler_retour h3 {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: red;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.save h3 {
+    color: #008000;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+// image 
+
+.image_logo {
+    width: 120px;
+    height: 120px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #0000004b;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.div_bienvenu .para_bienvenu {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    // margin-top: 10px;
+}
+
+.image_logo i{
+    width: 100%;
+    height: 100%;
+}
+
+.h3_personne {
+    margin: 0px 0px;
+    font-size: 20px;
+}
+
+.image_profil {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.image_profil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+//////////////////////////////////// PLANNING
+///
+/// 
+/// 
+
+
+.container_planing {
+    margin: 0 10px 0 10px;
+}
+
+.name_content_planning {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+//
+
+.name_planing h2 {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.modifier_planning {
+    display: flex;
+    align-items: center;
+}
+
+.modifier_planning p {
+    margin-top: 6px;
+    letter-spacing: 0.50px;
+    font-weight: 500;
+    color: #008000;
+}
+
+.modifier_planning i {
+    font-size: 25px;
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+.planing_jour p{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.planing_jour2 p{
+    font-size: 18px;
+    // font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.name_content_planning_margin {
+    margin-top: 8px;
+}
+
+.planning_disponibilite {
+    display: flex;
+    align-items: center;
+}
+
+.planning_disponibilite p {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+    text-align: right;
+}
+
+/////////////////
+/// 
+/// 
+
+
+.name_content_planning_jour {
+    margin-top: 6px;
+    border-bottom: 1px solid #00000042;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.planning_disponibilite2 p {
+    font-size: 16px;
+    // font-weight: 600;
+    letter-spacing: 0.50px;
+    text-align: right;
+}
+
+
+//////////////////////////////// Icon le mod
+/// 
+/// 
+
+
+.planning_disponibilite2 {
+    display: flex;
+    align-items: center;
+}
+
+.planning_disponibilite2 .icon_mod { 
+    padding-top: 5px;
+}
+
+.planning_disponibilite2 i {
+    font-size: 20px;
+}

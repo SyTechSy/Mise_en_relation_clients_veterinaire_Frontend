@@ -1,0 +1,354 @@
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+    background-color: #F2F6FA;
+}
+
+
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_retour {
+    display: flex;
+    align-items: center;
+}
+
+.icon_retour i {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.nom_retour p{
+    margin-left: 5px;
+}
+
+
+// .hearder {
+//     height: 60px;
+//     width: 100%;
+//     background-color: #fff;
+// }
+
+.font_hearder {
+    background-color: #fff;
+}
+
+// image 
+
+.image_logo {
+    width: 120px;
+    height: 120px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #0000004b;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.div_bienvenu .para_bienvenu {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    // margin-top: 10px;
+}
+
+.image_logo i{
+    width: 100%;
+    height: 100%;
+}
+
+.h3_personne {
+    margin: 0px 0px;
+    font-size: 20px;
+}
+
+.image_profil {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.image_profil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/////////////////////////////////////////////////////////////
+
+
+.container_global {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.paragraphe_fiabilite {
+    font-size: 18px;
+    letter-spacing: 0.50px;
+
+}
+
+.profil_verifier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h3_profil_verif {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.voir_plus {
+    display: flex;
+    align-items: center;
+}
+
+.voir_plus i {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.voir_plus p {
+    font-size: 16px;
+}
+
+
+
+/////////////
+
+
+.critere {
+    margin-top: 8px;
+}
+
+.domaineSpe {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.domaineSpe i {
+    font-size: 18px;
+    color: #008000;
+}
+
+.domaineSpe p {
+    font-size: 16px ;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    padding-left: 10px;
+}
+
+//////////////////////////////////////////////////
+// Verification 
+
+.container_diplome {
+    margin-top: 10px;
+
+}
+
+.content_icon_name {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.name_verifi {
+    padding-left: 6px;
+}
+
+.name_verifi h3 {
+    font-size: 17px;
+    letter-spacing: 0.50px;
+}
+
+.description_verif {
+    margin-left: 34px;
+    margin-top: -5px;
+}
+
+.description_verif p{
+    width: 300px;
+    // line-height: 1px;
+    font-size: 15px;
+}
+
+.icon_verif_global i {
+    font-size: 18px;
+    color: #008000;
+}
+
+.description_verif p{
+    padding-top: -25px;
+    // line-height: 20px;
+    letter-spacing: 0.50px;
+}
+
+
+
+/////////////////////////////////////// name evaluation
+/// 
+///
+/// 
+
+
+.name_veterinaire {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name_veterinaire .h2_veterinaire {
+    font-size: 18px;
+    letter-spacing: 0.50px;
+    font-weight: 500;
+}
+
+.date_evaluation .para_date {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.date_evaluation {
+    padding-right: 5px;
+    padding-top: 8px;
+}
+
+
+////////////////////////
+
+.start_container {
+    margin-top: -5px;
+}
+
+.start_container .start {
+    display: flex;
+    align-items: center;
+}
+
+.icon_star {
+    padding-right: 5px;
+}
+
+.icon_star i {
+    color: orange;
+}
+
+//
+
+.para_commentaire_avis {
+    margin-top: 6px;
+}
+
+.para_commentaire_avis p{
+    font-size: 13px;
+    letter-spacing: 0.50px;
+    width: 90%;
+}
+
+//////////////////////////////////// PLANNING
+///
+/// 
+/// 
+
+
+// .container_planing {
+//     margin: 0 10px 0 10px;
+// }
+
+.name_content_planning2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+//
+
+.name_planing h2 {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.modifier_planning {
+    display: flex;
+    align-items: center;
+}
+
+.modifier_planning p {
+    margin-top: 6px;
+    letter-spacing: 0.50px;
+    font-weight: 500;
+    color: #008000;
+}
+
+.modifier_planning i {
+    font-size: 25px;
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+.planing_jour p{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.planing_jour2 p{
+    font-size: 18px;
+    // font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.name_content_planning_margin {
+    margin-top: 8px;
+}
+
+.planning_disponibilite {
+    display: flex;
+    align-items: center;
+}
+
+.planning_disponibilite p {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+    text-align: right;
+}
+
+/////////////////
+/// 
+/// 
+
+
+.name_content_planning_jour {
+    margin-top: 6px;
+    border-bottom: 1px solid #00000042;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.planning_disponibilite2 p {
+    font-size: 16px;
+    // font-weight: 600;
+    letter-spacing: 0.50px;
+    text-align: right;
+}

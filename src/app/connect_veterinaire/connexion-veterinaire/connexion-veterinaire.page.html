@@ -1,0 +1,124 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <div class="icon_retour">
+        <!-- <i class="ri-arrow-left-s-line"></i> -->
+      </div>
+
+      <div class="titre_inscription">
+        <h3>Connectez-vous V</h3>
+      </div>
+
+      <div class="vide">
+
+      </div>
+    </div>
+
+    <!-- Image  -->
+
+    <div class="image_logo">
+      <div class="logo">
+        <img src="../../../assets/LOGO2.png" alt="mon logo">
+      </div>
+    </div>
+
+    <div class="titre_logo">
+        <p>Comment vous appelez-vous ?</p>
+    </div>
+
+    <div class="description_logo">
+      <p>Entrez votre nom et votre prénom que vous <br> utilisez, et adresse email.</p>
+    </div>
+
+  </div>
+
+  <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
+
+  <aside class="formulaire" style="margin-top: 10px;">
+
+    <form class="container_formulaire">
+
+      <div class="formulaire" >
+
+        <!-- input de votre email  -->
+        <div class="champ_input">
+          <i class="ri-mail-line identfiant_icon"></i>
+          <input type="email"  class="input_focus" id="email" placeholder="example@gmail.com" autocomplete="on" required>
+          <label for="email" class="label">Votre email</label>
+          <i class="ri-information-line input_info_icon"></i>
+        </div>
+
+        <!-- input de votre password  -->
+        <div class="champ_input">
+          <i class="ri-git-repository-private-fill identfiant_icon"></i>
+          <input [type]="passwordType" class="input_focus" id="password" placeholder="**************" autocomplete="on" required>
+          <label for="password" class="label">Votre Mot de passe</label>
+          <!-- <i class="ri-eye-close-line input_info_icon" (click)="togglePassword()"></i> -->
+          <i class="input_info_icon" (click)="togglePassword()">
+            <ng-container *ngIf="!passwordShown">
+              <i class="ri-eye-close-line"></i> <!-- icône de l'œil barré -->
+            </ng-container>
+            <ng-container *ngIf="passwordShown">
+              <i class="ri-eye-line"></i> <!-- icône de l'œil -->
+            </ng-container>
+          </i>
+        </div>
+
+        <!-- Pour verifier si un administrateur a deja un compte  -->
+        
+        <!-- le button de submit  -->
+        <div class="btn_submit_global">
+          <button type="submit" class="btn_submit"> Se connecter </button>
+        </div>
+
+
+
+        <!-- //////////////// Ligne et ou et ligne -->
+
+        <div class="ligne_ou">
+
+          <!-- // ma ligne un -->
+
+          <div class="bare ligne1">
+
+          </div>
+
+          <!-- // mon or  -->
+
+          <div class="ou">
+            <p class="or">or</p>
+          </div>
+
+          <!-- // la ligne deux -->
+
+          <div class="bare ligne2">
+
+          </div>
+
+        </div>
+
+
+        <!-- ///////////////////////////////// TEXT de verification -->
+
+
+        <div class="compte_quiz">
+          <p>Vous n'avez pas de compte ? ?</p>
+          <p class="seConnecter" routerLink="/page1-inscription">Inscrivez-vous</p>
+        </div>
+
+      </div>
+
+  </form>
+
+  </aside>
+
+</div>

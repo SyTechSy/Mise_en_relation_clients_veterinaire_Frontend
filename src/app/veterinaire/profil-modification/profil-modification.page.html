@@ -1,0 +1,325 @@
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- <div class="icon_retour" routerLink="/section-choix">
+      <i class="ri-arrow-left-s-line"></i>
+    </div> -->
+
+    <div class="icon_retour" routerLink="/profil-detaille">
+      <i class="ri-arrow-left-s-line"></i>
+
+      <div class="nom_retour">
+        <p>Profil</p>
+      </div>
+    </div>
+
+    
+
+    <!-- // deconnexion  -->
+    <div class="cadre_nom">
+      <p>Modification</p>
+    </div>
+
+
+    <div class="vide">
+
+    </div>
+    
+  </div>
+
+
+  <!-- /////////////////////////// -->
+
+
+  
+  <div class="container_cadre_profil">
+
+    <div class="cadre_profil">
+
+      <div class="image_profil">
+        <img src="../../../assets/profil_vete.jpg" alt="" [src]="selectedFileDataUrl">
+
+        <label class="camera-icon" for="photoInput">
+          <i class="ri-camera-3-line"></i>
+        </label>
+      </div>
+
+      
+
+      <div class="ajoute_photo">
+        <div class="tof">
+          <input type="file" accept="image/*" capture="environment" id="photoInput" style="display: none;" name="photo" (change)="handleFileInput($event)">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- /////////////////////////////////////// -->
+
+  
+  <!-- //////////// Les information  -->
+
+  <div class="nom_apropos">
+    <h4 class="h4_mon_apropos"> A propos de moi </h4>
+  </div>
+
+</ion-header>
+
+<ion-content>
+<div class="container_global" style="background-color: #F2F6FA!important; padding: 10px 0 20px 0;">
+
+  <div class="content_text">
+
+    
+
+    <div class="container_information">
+
+      <div class="content_information">
+
+        <!-- // L'information de vétérinaire 1  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info" routerLink="/information-modifier">
+            <p class="para_vete_info">Nom</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Prénom</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Email</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Diplôme ou Certificat</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Domaine spécialisation</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Mon CV</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">78711623</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">23/10/2023</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Homme</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Année d'expérience</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Langue parlée</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Mali</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Boulkassoumbougou</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Rue</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- // L'information de vétérinaire 2  -->
+        <div class="veterinaire_info">
+          <!-- // vete info  -->
+          <div class="vete_info">
+            <p class="para_vete_info">Code postal</p>
+            
+            <div class="eye">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+</ion-content>
+
+<ion-footer class="font_footer">
+  <div class="footer_content">
+    
+    <div class="accueil">
+      <i class="ri-home-line"></i>
+      <div class="nom_icon">
+        <p> Accueil </p>
+      </div>
+    </div>
+    
+    <div class="accueil">
+      <i class="ri-notification-2-line"></i>
+      <div class="nom_icon">
+        <p> Notification </p>
+      </div>
+    </div>
+    
+    <div class="accueil accueil2">
+      <i class="ri-wechat-line"></i>
+      <div class="nom_icon">
+        <p> Message </p>
+      </div>
+    </div>
+    
+    <div class="accueil">
+      <i class="ri-user-line"></i>
+      <div class="nom_icon">
+        <p> Profil </p>
+      </div>
+    </div>
+
+  </div>
+</ion-footer>

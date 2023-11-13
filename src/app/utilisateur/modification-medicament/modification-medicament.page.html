@@ -1,0 +1,162 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <div class="icon_retour">
+        <i class="ri-arrow-left-s-line"></i>
+        
+        <div class="img_logo">
+          <img src="../../../assets/LOGO2.png" alt="">
+        </div>
+        
+      </div>
+
+      <div class="vide">
+
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////// -->
+
+    <!-- Mon formulaire en question -->
+    <form class="container_formulaire">
+
+      <aside class="formulaire">       
+              
+        <!-- //////  Titre ajouter un medicament  -->
+
+        <div class="title_ajoute_medi">
+          <div class="title_ajoute">
+            <h4 class="title"> Modifier un Médicament </h4>
+          </div>
+        </div>
+
+        <!-- Le container qui va contenir notre input et image -->
+        <div class="container_global_input">
+
+          <!-- Image qui sera a droit de notre formulaire -->
+          <div class="image_input">
+            <!-- Afficher l'image sélectionnée -->
+            <div class="image_user">
+              <div class="roudel_img" >
+                <img src="../../../assets/profil_vete.jpg" class="immmmmgggg" [src]="selectedFileDataUrl">
+
+                <label class="camera-icon" for="photoInput">
+                  <i class="ri-camera-3-line"></i>
+                </label>
+              </div>
+
+
+            </div>
+            <!-- // Clien pour ajouter une photo  -->
+
+            <div class="ajoute_photo">
+              <div class="tof">
+                <input type="file" accept="image/*" capture="environment" id="photoInput" style="display: none;" name="photo" (change)="handleFileInput($event)">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <button type="submit" style="color: white; background: #000; padding: 10px;">Ajouter la photo</button> -->
+
+
+        
+              <div class="formulaire">
+        
+                <!-- ///// TITRE  --> 
+        
+                <div class="champ_input2">
+        
+                  <!-- input de votre pays  -->
+                  <div class="champ_input">
+                    <input type="date" class="input_focus2"  id="date_debut" placeholder="Saisir votre nom" autocomplete="on" required>
+                    <label for="date_debut" class="label">Date de début</label>
+                  </div>
+        
+                  <!-- input de votre quartier  -->
+                  <div class="champ_input">
+                    <input type="date" class="input_focus2"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
+                    <label for="date_fin" class="label">Date de fin</label>
+                  </div>
+        
+                </div>
+        
+                
+                <!-- input de votre nom de médicament  -->
+        
+                <div class="champ_input">
+                  <input type="text" class="input_focus" id="name_medicament" placeholder="example@gmail.com" autocomplete="off" required>
+                  <label for="name_medicament" class="label">Nom de médicament</label>
+                </div>
+
+                <!-- // Dasoge et frequence  -->
+        
+                  
+                <div class="champ_input">
+
+                  <div class="jour_div">
+                    <select class="input_focus2" name="frequence" id="frequence">
+                      <option value="">(1) Comprimées</option>
+                      <option value="">(2) Comprimées</option>
+                      <option value="">(3) Comprimées</option>
+                    </select>
+                  </div>
+
+                  <div class="mois_div">
+                    <select class="input_focus2" name="dosage" id="dosage">
+                      <option value=""> 1 / jours </option>
+                      <option value=""> 2 / jours </option>
+                      <option value=""> 3 / jours </option>
+                    </select>
+                  </div>
+
+                </div>
+
+
+                <!-- /// Input pour la modification de rappel  -->
+
+                <div class="champ_input">
+                  <input type="time" class="input_focus input_focus_textarea2" id="time" autocomplete="off" required>
+                  <label for="time" class="label label_heure">Heure de reveil</label>
+                  <!-- <i class="ri-information-line input_info_icon"></i> -->
+                </div>  
+
+
+                
+                <!-- input de votre description -->
+        
+                <div class="champ_input" >
+                  <textarea type="text" class="input_focus input_focus_textarea" id="email_user" placeholder="Une petite description" autocomplete="off" required></textarea>
+                  <label for="email_user" class="label">Description</label>
+                </div>
+
+
+                
+                <!-- button envoie  -->
+
+                <!-- le button de submit  -->
+                <div class="btn_submit_global">
+                  <button type="submit" class="btn_submit"> Modifier </button>
+                </div>
+
+
+              </div>
+
+        </div>
+
+      </aside>
+
+    </form>
+
+
+  </div>
+</div>

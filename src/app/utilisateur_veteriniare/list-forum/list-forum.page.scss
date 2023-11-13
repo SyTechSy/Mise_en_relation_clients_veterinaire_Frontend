@@ -1,0 +1,511 @@
+
+///////////////////////////
+
+// .container_global {
+//     position: relative;
+// }
+
+.font_hearder {
+    background-color: #F2F6FA;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.089);
+}
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+
+.hearder {
+    width: 100%;
+    height: 50px;
+    background-color: #fff!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon_retour {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.TitreSuiviMedicament {
+    margin-bottom: 5px;
+    margin-right: 50px;
+}
+
+.TitreSuiviMedicament h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    // font-style: italic;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.modifier {
+    padding-right: 10px;
+}
+
+.modifier p {
+    color: #008000;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+}
+
+//////////////////////
+/// 
+/// Icon de header
+
+.container_title_forum {
+    margin: 15px 10px;
+}
+
+.content_forum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/////////// Debut 
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+  }
+  
+  .input {
+    border-style: none;
+    height: 35px;
+    width: 35px;
+    padding: 10px ;
+    outline: none;
+    border-radius: 50px;
+    transition: .5s ease-in-out;
+    background-color: #008000;
+    // box-shadow: 0px 0px 3px #f3f3f3;
+    // padding-right: 40px;
+    color: #008000;
+  }
+  
+  .input::placeholder,
+  .input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+  }
+  
+  .input::placeholder {
+    color: #008000;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: .2s linear;
+  }
+
+  .icon:focus ~ .input,
+  .input:focus {
+    box-shadow: none;
+    width: 300px;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    border-radius: 0px;
+    background-color: #F2F6FA;
+    border-bottom: 3px solid #008000;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }  
+
+  ///////////////
+  /// 
+  /// Container 
+  
+  .les_forum {
+    padding: 7px 10px;
+    background-color: #008000;
+    letter-spacing: 0.50px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+  }
+
+  .les_forum p {
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .mes_forum {
+    padding: 5px 10px;
+    background-color: #FFF;
+    letter-spacing: 0.50px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+  }
+
+  .mes_forum p {
+    font-size: 15px;
+    color: #008000;
+  }
+
+
+  .container_icon_search {
+    display: flex;
+    align-items: center;
+  }
+
+  .add {
+    padding-right: 5px;
+    background-color: #F2F6FA;
+    z-index: 10000;
+  }
+
+  .add i {
+    font-size: 40px;
+    z-index: 1000000000000000;
+    color: #008000;
+  }
+
+  //////////// Boutton
+  
+
+  
+
+/////////// FIN
+
+
+//////////////////////// FIN DE HEADER ///////////////////////////////////////////////////////////
+/// 
+///
+/// CONTENT 
+/// 
+
+
+.container_cadre_forum {
+    margin: 10px 10px 20px 10px;
+}
+
+.cadre_forum {
+    background-color: #00800013;
+    border-radius: 10px;
+    // padding: 15px 15px 10px;
+    // margin-bottom: 15px;
+    padding: 15px 15px 10px 15px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+}
+
+// .container_sliding {
+//     margin-bottom: 15px;
+//     margin-top: 15px;
+// }
+
+.image_perso {
+    width: 40px;
+    height: 40px;
+}
+
+.image_perso img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.13);
+}
+
+//////////
+/// 
+
+.container_perso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 15px;
+    // margin-top: 10px;
+}
+
+.photo_info {
+    display: flex;
+    align-items: center;
+}
+
+
+.titre_debat h3{
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 0.50px;
+    font-weight: 600;
+    padding-bottom: 2px;
+    font-family: "Poppins";
+}
+
+.content_info_perso {
+    margin-left: 10px;
+}
+
+.createur p {
+    font-size: 10px;
+    padding-bottom: 2px;
+    font-family: "Poppins";
+}
+
+.date_publier p {
+    font-size: 8px;
+    letter-spacing: 0.50px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+///////////////////////
+
+.bare_point {
+    margin-top: -20px;
+}
+
+// .question {
+//     margin-left: 12px;
+//     margin-top: -12px;
+// }
+
+.question p {
+    font-size: 12px;
+    letter-spacing: 0.50px;
+    font-family: "Poppins";
+    width: 95%;
+}
+
+
+.image_question_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_question {
+    width: 315px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.image_question img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/////// style de option pour discuter 
+/// 
+
+.like_comment_container {
+    display: flex;
+    align-items: center;
+}
+
+.obtion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.like,
+.comment,
+.discuter 
+{
+    display: flex;
+    align-items: center;
+}
+
+.like i,
+.comment i,
+.discuter i
+{
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+.discuter {
+    color: #008000;
+}
+
+.like {
+    padding-right: 15px;
+}
+
+.like p,
+.comment p,
+.discuter p
+{
+    font-size: 12px;
+    font-family: 'Poppins';
+    letter-spacing: 0.50px;
+}
+
+/////////////////////////////////
+/// 
+
+.button_close .icon_close {
+    font-size: 30px;
+    color: #000;
+} 
+
+///////////////////////////////////////
+/// 
+///  Les differents commentaire 
+/// 
+
+.container_commentaire {
+    margin: 15px;
+}
+
+.content_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.personne {
+    width: 50px;
+    height: 50px;
+}
+
+.personne img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+// container_information
+
+.container_information {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.nom_prenom p {
+    font-size: 18px;
+    letter-spacing: 0.60px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.commentaire_personne {
+    width: 98%;
+}
+
+.commentaire_personne p {
+    font-size: 12px;
+    letter-spacing: 0.60px;
+    font-family: 'Poppins';
+}
+
+.content_heure_repose {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.reponse {
+    padding-left: 10px;
+}
+
+.heure p
+{
+    font-size: 12px;
+    font-family: 'Poppins';
+}
+
+.reponse p
+{
+    font-size: 13px;
+    font-family: 'Poppins';
+}
+
+
+
+///////////////////////////////////////
+/// 
+///  Les differents sous commentaire 
+/// 
+
+.container_commentaire2 {
+    margin: 15px;
+}
+
+.content_container2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-left: 65px
+}
+
+.personne2 {
+    width: 30px;
+    height: 30px;
+}
+
+.personne2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+// container_information
+
+.container_information2 {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.nom_prenom2 p {
+    font-size: 13px;
+    letter-spacing: 0.60px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.commentaire_personne2 {
+    width: 90%;
+}
+
+.commentaire_personne2 p {
+    font-size: 10px;
+    letter-spacing: 0.60px;
+    font-family: 'Poppins';
+}
+
+.content_heure_repose2 {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.reponse2 {
+    padding-left: 10px;
+}
+
+.heure2 p
+{
+    font-size: 10px;
+    font-family: 'Poppins';
+}
+
+.reponse2 p
+{
+    font-size: 11px;
+    font-family: 'Poppins';
+}

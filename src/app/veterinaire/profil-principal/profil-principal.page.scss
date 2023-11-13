@@ -1,0 +1,194 @@
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+.container_global {
+    background-color: #F2F6FA;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+
+.font_hearder {
+    margin-bottom: 10px;
+}
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cadre_decconecter {
+    margin-right: 20px;
+}
+
+.cadre_decconecter p {
+    color: red;
+}
+
+// .icon_retour i {
+//     font-size: 30px;
+//     color: white;
+//     margin-left: 10px;
+// }
+
+.titre_inscription {
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+.titre_inscription h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    margin-left: 20px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+
+//////////////////////////////////////////// CARDRE PROFIL
+
+
+.container_cadre_profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+.image_profil {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -25px;
+    left: 25px;
+}
+
+.cadre_profil {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    margin: 0 15px 0 15px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px rgba(0, 128, 0, 0.11);
+}
+
+.image_profil img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.555);
+}
+
+.cadre_info {
+    position: relative;
+    left: 150px;
+    top: -10px;
+}
+
+.cadre_prenom {
+    margin-top: -12px;
+    font-size: 17px;
+}
+
+.cadre_prenom .cadre_h3,
+.cadre_nom .cadre_h3
+{
+    font-size: 20px;
+}
+
+.cadre_email {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+//////// Cadre action
+
+.cadre_action {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.cadre_edit,
+.cadre_detaille {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.cadre_edit p {
+    color: #008000;
+}
+
+.icon_edit {
+    font-size: 18px;
+    color: #008000;
+    padding-right: 5px;
+}
+
+.cadre_detaille p {
+    color: #ffa500;
+}
+
+.icon_delete {
+    font-size: 18px;
+    color: #ffa500;
+    padding-right: 5px;
+}
+
+
+/////////////////////////////////////////
+
+.veterinaire_info {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.veterinaire_info2 {
+    display: flex;
+}
+
+.vete_info {
+    width: 100%;
+    border-bottom: 1px solid #00000088;
+}
+
+.vete_info_ok {
+    width: 100%;
+    border-bottom: 1px solid #00000088;
+}
+
+.vete_info_ok2 {
+    width: 100%;
+    border-bottom: 1px solid #00000088;
+    margin-left: 10px;
+}
+
+.vete_info2 { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.para_vete_info {
+    padding: 10px 0px;
+}
+
+.eye i {
+    font-size: 20px;
+    margin-right: 10px;
+}

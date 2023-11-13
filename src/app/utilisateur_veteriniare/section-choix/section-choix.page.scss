@@ -1,0 +1,72 @@
+.image-centree {
+    width: 50%;
+}
+
+.image {
+    text-align: center;
+    margin-top: -25px;
+}
+
+.paragraphe {
+    margin-top: -20px;
+}
+  
+.paragraphe p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.background_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    // width: 340px;
+    // border-radius: 20px;
+    // height: 200px;
+    // background-image: url("../../assets/utilisateur01.jpg");
+    // background-size: cover;
+    width: 350px;
+    height: 180px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    filter: brightness(0.3);
+}
+
+
+
+
+.h3 h3 {
+    position: absolute;
+    top: 35%;
+    left: 19%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.h3Vete h3 {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.textDes p {
+    font-size: 11px;
+}

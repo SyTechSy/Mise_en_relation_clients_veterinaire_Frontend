@@ -1,0 +1,454 @@
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #008000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_retour {
+    display: flex;
+    align-items: center;
+}
+
+.icon_retour i {
+    font-size: 25px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.nom_retour p{
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.50px;
+}
+
+.cadre_nom {
+    margin-right: 10px;
+}
+
+.detaille_rdv {
+    padding-right: 10px;
+}
+
+.detaille_rdv p {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.60px;
+}
+
+.cadre_nom p{
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/////////////////////////  VETERINAIRE
+///
+//
+
+.veterinaire {
+    margin: 20px 0 0 10px;
+}
+
+.name_veterinaire p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.info_vete {
+    display: flex;
+}
+
+///// image 
+///
+//
+
+.image_vete {
+    width: 40px;
+    height: 40px;
+}
+
+.image_vete img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nom_prenom p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.domaine p {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.30px;
+}
+
+.vete_pays p {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.30px;
+}
+
+////////////////////
+/// 
+/// 
+
+.info_vete {
+    margin-top: 15px;
+}
+
+.info_name {
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+////// Bare et ligne 
+
+.bare {
+    margin: 10px 10px 10px 50px;
+}
+
+.bare .ligne {
+    border-bottom: 1px solid #0000002f;
+}
+
+///////////////////////////////////////////////////
+/// 
+///  Fomulaire
+
+
+
+/////////////////////////////////// FORMULAIRE 
+
+
+// ====================== INPUT DE INSCRIPION D'ADMINISTRATEUR 
+
+
+.title_mot {
+    margin-bottom: -10px;
+}
+
+.title_mot h4{
+    font-size: 17px;
+}
+
+
+.container_formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.champ_input {
+    position: relative;
+}
+
+.input_focus {
+    width: 100%;
+    min-width: 337px;
+    height: 49px;
+    // padding: 10px 10px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.input_focus:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.champ_input .label {
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    pointer-events: none;
+    color: #000;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus:not(:placeholder-shown) + .label,
+.input_focus:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+// ========= email icon ===========
+
+.input_info_icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+.btn_submit {
+    background-color: var(--color-principal);
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 49px;
+    // color: #25A069;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: var(--color-principal);
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
+
+////////// btn connect 
+
+
+.btn_submit_global {
+    margin-top: 20px;
+}
+
+.btn_submit {
+    background-color: #008000;
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    height: 49px;
+    color: #fff;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: #0c630c;
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
+
+.ligne_ou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.bare {
+    width: 100px;
+    background-color: #000000b4;
+    height: 1px;
+}
+
+.ou {
+    padding: 0 5px;
+}
+
+.compte_quiz p {
+    text-align: center;
+    font-size: 13px;
+}
+
+.seConnecter {
+    color: red;
+}
+
+
+//////////////// OPtion
+
+
+// .option_input {
+//     width: 10px;
+//     background-color: red;
+// }
+
+
+
+
+// .acte_content .jour_div .jours {
+//     border-top: none;
+//     border-bottom: 1px solid #000;
+//     border-left: none;
+//     border-right: none;
+// }
+
+
+.input_focus2
+ {
+    width: 150px;
+    height: 49px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.input_focus3
+ {
+    width: 170px;
+    height: 49px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+
+
+.input_focus5
+ {
+    width: 170px;
+    height: 49px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+
+
+.champ_input2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.input_focus2:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus2:not(:placeholder-shown) + .label,
+.input_focus2:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus2::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus2:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+//////////////////////////////////////
+/// 
+
+.champ_input textarea {
+    width: 100%;
+  resize: none;  
+}
+
+
+
+
+
+.input_focus5:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus5:not(:placeholder-shown) + .label,
+.input_focus5:focus + .label {
+    color: var(--color-principal);
+    top: 65px;
+    left: 250px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 16px;
+    padding: 0 0px;
+}
+
+.input_focus5::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus5:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}

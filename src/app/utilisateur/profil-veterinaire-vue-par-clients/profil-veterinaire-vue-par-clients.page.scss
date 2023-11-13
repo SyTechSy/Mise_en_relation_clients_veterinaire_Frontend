@@ -1,0 +1,399 @@
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+.hearder {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_retour {
+    display: flex;
+    align-items: center;
+}
+
+.icon_retour i {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.nom_retour p{
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cadre_nom {
+    margin-right: 10px;
+}
+
+.cadre_nom p{
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+///////////////////////////// Profill veterinaire 
+/// 
+
+.profil_container {
+    margin: 20px 10px 0 10px;
+}
+
+.profil_content {
+    display: flex;
+}
+
+.profil_content .image {
+    width: 120px;
+    height: 130px;
+}
+
+.profil_content .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+////////////////
+/// 
+
+.nom p{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.prenom p{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.domaine p{
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+}
+
+//////////////////
+
+.info_profil_vete {
+    margin: 0px 0 0 15px;
+}
+
+
+/////////////
+/// 
+/// 
+
+.profil_contact {
+    margin: 30px 0 0 0px;
+}
+
+.contact_profil {
+    display: flex;
+    align-items: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.email i {
+    background-color: #008000;
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.164);
+}
+
+.phone i {
+    background-color: #fff;
+    padding: 5px;
+    font-size: 20px;
+    color: #000;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.164);
+    border: 1px solid #0080002a;
+}
+
+
+.message {
+    background-color: #008000;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.185);
+}
+
+.message p {
+    color: #fff;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.message i {
+    // background-color: #008000;
+    padding: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.email,
+.phone,
+.conatiner_message 
+{
+    padding-right: 5px;
+}
+
+.bare {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bare .ligne {
+    border-bottom: 1px solid #00000042;
+}
+
+////////////////////////////////////////////
+/// BIO
+/// 
+
+
+.bio_name p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.description_bio p {
+    font-size: 13px;
+}
+
+//////////////////////
+/// 
+/// Adress
+
+.content_adresse {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;  ///////////
+}
+
+.icon_adress i{
+    font-size: 20px;
+}
+
+.info_name_adress {
+    margin-left: 10px;
+}
+
+////////
+
+.adresse_contact {
+    margin: 30px 0;
+    display: flex;
+}
+
+.info_name p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.adress_detaille p {
+    font-size: 12px;
+    letter-spacing: 0.50px;
+}
+
+
+
+///////////////////////////////////////////
+/// 
+/// 
+///  Cadre localisation 
+
+.cadre_localisation {
+    margin-left: 20px;
+}
+
+.cadre {
+    width: 158px;
+    height: 170px;
+    background-color: #00800015;
+    border-radius: 10px;
+}
+
+////////////////////////////////
+/// 
+/// 
+/// Note
+
+.name p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon_star {
+    padding-right: 5px;
+}
+
+.icon_star i {
+    color: orange;
+    font-size: 18px;
+}
+
+/////////////// text
+/// 
+/// input 
+
+.formulaire_comment {
+    margin-top: 20px;
+}
+
+.input_commente {
+    margin: 15px 0px;
+    position: relative;
+}
+
+.max {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    font-size: 10px;
+}
+
+.input_commente textarea{
+    resize: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.089);
+    font-size: 15px;
+    letter-spacing: 0.50px;
+    height: 60px;
+    border: 1px solid #00800036;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+//////////////////////////////// Button
+/// 
+///
+
+
+.btn_submit {
+    padding: 10px 20px;
+    background-color: #008000;
+    border-radius: 10px;
+    color: #FFF;
+    letter-spacing: 0.50px;
+    margin-top: -20px;
+}
+
+
+
+
+
+/////////////////////////////////////////
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #008000;
+    --fill: #ffc73a;
+  }
+  
+  .rating input {
+    appearance: unset;
+  }
+  
+  .rating label {
+    cursor: pointer;
+  }
+  
+  .rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .rating label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+    0% {
+      transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30% {
+      transform: scale(0);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30.1% {
+      stroke: var(--fill);
+      stroke-dasharray: 0;
+      stroke-linejoin: miter;
+      stroke-width: 8px;
+    }
+  
+    60% {
+      transform: scale(1.2);
+      fill: var(--fill);
+    }
+  }
+  

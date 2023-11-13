@@ -1,0 +1,156 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <div class="icon_retour" routerLink="/page2-inscription">
+        <i class="ri-arrow-left-s-line"></i>
+      </div>
+
+      <div class="titre_inscription">
+        <h3>Réjoignez VetCare</h3>
+      </div>
+
+      <div class="vide">
+
+      </div>
+    </div>
+
+    <!-- Image  -->
+
+    <div class="image_logo">
+      <div class="logo">
+        <img src="../../../assets/LOGO2.png" alt="mon logo">
+      </div>
+    </div>
+
+    <div class="titre_logo">
+        <p>Les informations de localisations</p>
+    </div>
+
+    <div class="description_logo">
+      <p>Entrez votre pays, et votre Quartier, votre <br> rue et code postal</p>
+    </div>
+
+  </div>
+
+
+  <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
+
+  <aside class="formulaire">
+
+    <form class="container_formulaire">
+
+      
+
+      <div class="formulaire">
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4>Pays/Quartier</h4>
+        </div>
+
+        <!-- input de votre pays  -->
+        <div class="champ_input">
+          <input type="text" class="input_focus"  id="pays" placeholder="Saisir le nom de votre pays" autocomplete="on" required>
+          <label for="pays" class="label">Votre pays</label>
+        </div>
+
+        <!-- input de votre quartier  -->
+        <div class="champ_input" style="margin-top: -10px;">
+          <input type="text" class="input_focus"  id="quartier" placeholder="Saisir le nom de votre quartier" autocomplete="on" required>
+          <label for="quartier" class="label">Votre quartier</label>
+        </div>
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4>Rue/Code postal</h4>
+        </div>
+
+        <!-- input de votre acte de naissance  -->
+
+
+        <div class="acte_container">
+
+          <div class="champ_input2">
+
+            <!-- input de votre numero  -->
+            <div class="champ_input">
+              <input type="number" class="input_focus2"  id="rue" placeholder="Saisir votre rue" autocomplete="on" required>
+              <label for="rue" class="label">Rue</label>
+            </div>
+
+             <!-- input de votre numero  -->
+             <div class="champ_input">
+              <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="Saisir code postal" autocomplete="on" required>
+              <label for="postal" class="label">Code postal</label>
+            </div>
+
+            
+
+          </div>
+
+        </div>
+        
+
+
+        <!-- button envoie  -->
+
+        <!-- le button de submit  -->
+        <div class="btn_submit_global" routerLink="/page4-inscription">
+          <button type="submit" class="btn_submit"> Suivant </button>
+        </div>
+
+
+
+        <!-- //////////////// Ligne et ou et ligne -->
+
+        <div class="ligne_ou">
+
+          <!-- // ma ligne un -->
+
+          <div class="bare ligne1">
+
+          </div>
+
+          <!-- // mon or  -->
+
+          <div class="ou">
+            <p class="or">or</p>
+          </div>
+
+          <!-- // la ligne deux -->
+
+          <div class="bare ligne2">
+
+          </div>
+
+        </div>
+
+
+        <!-- ///////////////////////////////// TEXT de verification -->
+
+
+        <div class="compte_quiz">
+          <p>Vous avez déja un compte ?</p>
+          <p class="seConnecter" routerLink="/page-final-connexion-veterinaire">Connectez-vous</p>
+        </div>
+
+
+
+      </div>
+
+    </form>
+
+  </aside>
+
+</div>

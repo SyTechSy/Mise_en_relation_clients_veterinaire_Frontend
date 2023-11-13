@@ -1,0 +1,261 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <!-- Mon logo  -->
+      <div class="logo">
+        <img src="../../../assets/LOGO2.png" alt="mon logo" class="logo_img">
+      </div>
+
+      <!-- Mon profil image  -->
+      <div class="profil_user_img">
+        <img src="../../../assets/profil.jpg" alt="le profil de utilisateur" class="profil_img">
+      </div>
+
+    </div>
+
+    <!-- //////////////////////// LE CONTAINER GLOBAL D'ACCUEIL -->
+
+    <div class="container">
+
+      <div class="content_cadre_accueil">
+
+        <div class="cadre_accueil">
+
+          <p class="bienvenu">Bonjour, et Bienvenu,</p>
+          <h2 class="title_bienvenu">
+            Diakaridia SY
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div class="container_grid">
+
+        <div class="content_grid">
+
+          <!-- // pour left  -->
+          <div class="grid_left">
+
+            <!-- // suivi medicament  -->
+            <div class="grid_suivi_medicament_left" routerLink="/suivi-medicament">
+
+              <div class="container_suivi_medicament">
+
+                <div class="container_image_suivi_medicament">
+                  <div class="imageSuiviMedicament">
+                    <img src="../../../assets/Medicine.png" alt="image de suivi medicament">
+                  </div>
+                </div>
+
+                <div class="text_suivi_medicament">
+                  <h4 class="name_donner"> Suivi <br> Médicament </h4>
+                </div>
+  
+              </div>
+
+            </div>
+  
+            <!-- // suivi santé -->
+            <div class="grid_suivi_sante_left">
+
+              <div class="container_suivi_sante">
+
+                <div class="container_image_suivi_sante">
+                  <div class="imageSuiviSante">
+                    <img src="../../../assets/sante.png" alt="image de suivi medicament">
+                  </div>
+                </div>
+
+                <div class="text_suivi_sante">
+                  <h4 class="name_donner"> Suivi Santé </h4>
+                </div>
+  
+              </div>
+              
+            </div>
+
+            <!-- // mes rendez-vous  -->
+            <div class="grid_mes_rdv_left">
+
+              <div class="container_mes_rdv" routerLink="/mes-rdv">
+
+                <div class="container_image_mes_rdv">
+                  <div class="imagemes_rdv">
+                    <img src="../../../assets/Rendez-vous.png" alt="image de rendez-vous">
+                  </div>
+                </div>
+
+                <div class="text_mes_rdv">
+                  <h4 class="name_donner"> Mes <br> Rendez-vous </h4>
+                </div>
+  
+              </div>
+
+            </div>
+
+            <!-- // recherche un vétérinaire par localisaion  -->
+            <div class="grid_localiser_veterinaire_left">
+
+              <div class="container_localGps">
+
+                <div class="container_image_localGps">
+                  <div class="imagelocalGps">
+                    <img src="../../../assets/icon_localisation.png" alt="image de rendez-vous">
+                  </div>
+                </div>
+
+                <div class="text_localGps">
+                  <h4 class="name_donner"> Localiser <br> un Vétérinaire </h4>
+                </div>
+  
+              </div>
+            </div>
+            
+          </div>
+          <!-- // Fin pour left -->
+
+          <!-- // pour right  -->
+
+          <div class="grid_right">
+
+            <!-- // Tout les vétérinaire  -->
+            <div class="grid_veterinaire_right">
+
+              <div class="container_veterinaire">
+
+                <div class="container_image_veterinaire">
+                  <div class="imageveterinaire">
+                    <img src="../../../assets/veterinaire_icon.jpg" alt="image de suivi medicament">
+                  </div>
+                </div>
+
+                <div class="text_veterinaire">
+                  <h4 class="name_donner"> Les <br> Vétérinaire </h4>
+                </div>
+  
+              </div>
+            </div>
+
+            <!-- // Mes animaux  -->
+            <div class="grid_mes_animaux_right">
+
+              <div class="container_suivreAnimal">
+
+                <div class="container_image_suivreAnimal">
+                  <div class="imagesuivreAnimal">
+                    <img src="../../../assets/Medicine.png" alt="image de suivi medicament">
+                  </div>
+                </div>
+
+                <div class="text_suivreAnimal" routerLink="/suivi-animal">
+                  <h4 class="name_donner"> Animal </h4>
+                </div>
+  
+              </div>
+            </div>
+
+            <!-- // forum  -->
+            <div class="grid_forum_left">
+
+              <div class="container_forum"  routerLink="/list-forum">
+
+                <div class="container_image_forum">
+                  <div class="imageForum">
+                    <img src="../../../assets/forum.png" alt="image de suivi medicament">
+                  </div>
+                </div>
+
+                <div class="text_forum">
+                  <h4 class="name_donner"> Groupe Forum </h4>
+                </div>
+  
+              </div>
+            </div>
+
+          </div>
+
+          <!-- // Fin pour right  -->
+  
+        </div>
+
+      </div>
+
+      <!-- // Fin de container  -->
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- <ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="accueil">
+      <ion-icon name="play-circle"></ion-icon>
+      Accueil
+    </ion-tab-button>
+
+    <ion-tab-button tab="profil-user">
+      <ion-icon name="play-circle"></ion-icon>
+      Profil
+    </ion-tab-button>
+
+    <ion-tab-button tab="library">
+      <ion-icon name="library"></ion-icon>
+      Library
+    </ion-tab-button>
+
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs> -->
+
+<!-- <ion-footer class="font_footer">
+  <div class="footer_content">
+    
+    <div class="accueil" style="color: green;">
+      <i class="ri-home-line"></i>
+      <div class="nom_icon">
+        <p> Accueil </p>
+      </div>
+    </div>
+    
+    <div class="accueil">
+      <i class="ri-notification-2-line"></i>
+      <div class="nom_icon">
+        <p> Notification </p>
+      </div>
+    </div>
+    
+    <div class="accueil accueil2">
+      <i class="ri-wechat-line"></i>
+      <div class="nom_icon">
+        <p> Message </p>
+      </div>
+    </div>
+    
+    <div class="accueil" routerLink="/profil-user">
+      <i class="ri-user-line"></i>
+      <div class="nom_icon">
+        <p> Profil </p>
+      </div>
+    </div>
+
+  </div>
+</ion-footer> -->

@@ -1,0 +1,290 @@
+
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- <div class="icon_retour" routerLink="/section-choix">
+      <i class="ri-arrow-left-s-line"></i>
+    </div> -->
+
+    <div class="icon_retour">
+      <i class="ri-arrow-left-s-line"></i>
+
+      <div class="nom_retour">
+        <p> Profil Vétérinaire </p>
+      </div>
+    </div>
+
+    
+
+    <!-- // deconnexion  -->
+    <div class="cadre_nom" routerLink="/home-veterinaire-vue-par-clients">
+      <p>Information</p>
+    </div>
+
+    
+  </div>
+
+
+  <!-- /////////////////////////// -->
+
+
+
+  <div class="profil_container">
+
+    <div class="profil_content">
+
+      <!-- // c'est pour l'image  -->
+      <div class="image">
+        <img src="../../../assets/profil.jpg" alt="">
+      </div>
+
+      <!-- // information de cette image qui est n otre profil  -->
+      <div class="info_profil_vete">
+
+        <!-- // le nom de Vétérinaire -->
+        <div class="nom">
+          <p>
+            Koureissi
+          </p>
+        </div>
+
+        <!-- // le nom de Vétérinaire -->
+        <div class="prenom">
+          <p>
+            Diakaridia
+          </p>
+        </div>
+
+        <!-- // le nom de Vétérinaire -->
+        <div class="domaine">
+          <p>
+            Diplôme/Certificat
+          </p>
+        </div>
+
+        <!-- /////////////////////////////// Contact direct  -->
+        <div class="profil_contact">
+
+          <div class="contact_profil">
+
+            <!-- // email  -->
+            <div class="email">
+              <i class="ri-mail-line"></i>
+            </div>
+
+            <!-- // telephone  -->
+            <div class="phone">
+              <i class="ri-phone-line"></i>
+            </div>
+
+            <!-- // message  -->
+            <div class="conatiner_message">
+              <div class="message">
+                <i class="ri-chat-3-line"></i>
+                <p>Message</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ///// Debut de mon bare  -->
+    <div class="bare">
+      <div class="ligne">
+        <!-- ////////////////////// -->
+      </div>
+    </div>
+    <!-- ///// Fin de mon bare  -->
+  </div>
+    
+</ion-header>
+
+
+<ion-content>
+  <div class="profil_container">
+
+
+    <!-- //////////////////// BIO -->
+
+    <div class="bio_container">
+
+      <div class="bio_name">
+        <p>
+          Bio
+        </p>
+      </div>
+
+      <div class="description_bio">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas iste veniam nemo vel quis porro?
+        </p>
+      </div>
+
+    </div>
+
+    <!-- //////////////////// Fin BIO -->
+
+
+
+    <!-- /////////////////// Debut de Adresse et horraire et cardre localisation  -->
+
+
+    <div class="adresse_contact">
+
+      <!-- ///// Content global  -->
+      <div class="content_global">
+      
+        <!-- // content  -->
+        <div class="content_adresse">
+
+          <div class="icon_adress">
+            <i class="ri-map-pin-line"></i>
+          </div>
+
+          <div class="info_name_adress">
+            <!-- // name  -->
+            <div class="info_name">
+              <p>Adresse</p>
+            </div>
+
+            <!-- // detaille -->
+
+            <div class="adress_detaille">
+              <p>Pays : MALI, Quartier : </p>
+              <p>Boulkassoumbougou,</p>
+              <p>Rue : 216.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- // content  -->
+        <div class="content_adresse">
+
+          <div class="icon_adress">
+            <i class="ri-time-line"></i>
+          </div>
+
+          <div class="info_name_adress">
+            <!-- // name  -->
+            <div class="info_name">
+              <p>Horraire</p>
+            </div>
+
+            <!-- // detaille -->
+
+            <div class="adress_detaille">
+              <p>Du Lundi au Vendredi,</p>
+              <p>Ouverture est de 08h,</p>
+              <p>Jusqu’a 18h.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ////////////////////////////////// localisation -->
+
+      <!-- /// le cadre de localition  -->
+      <div class="cadre_localisation">
+
+        <div class="cadre">
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /////////////////// FIN de Adresse et horraire et cardre localisation  -->
+
+
+
+    <!-- .noter un veterinaire et donne un commentainer  -->
+    <div class="noter_vete">
+
+      <!-- // name  -->
+      <div class="name">
+        <p>
+          Noter cette vétérinaire 
+        </p>
+      </div>
+
+      <div class="note">
+
+        <div class="rating">
+          <input type="radio" id="star-1" name="star-radio" value="star-1">
+          <label for="star-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+          </label>
+          <input type="radio" id="star-2" name="star-radio" value="star-1">
+          <label for="star-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+          </label>
+          <input type="radio" id="star-3" name="star-radio" value="star-1">
+          <label for="star-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+          </label>
+          <input type="radio" id="star-4" name="star-radio" value="star-1">
+          <label for="star-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+          </label>
+          <input type="radio" id="star-5" name="star-radio" value="star-1">
+          <label for="star-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+          </label>
+        </div>
+
+      </div>
+
+
+      <!-- //////////////// commentaire  -->
+
+
+      <form class="formulaire_comment">
+
+         <!-- // name  -->
+        <label for="comment" class="name">
+          <p>
+            Commenter
+          </p>
+        </label>
+
+        <!-- ................. Champs de commentaire  -->
+
+        <div class="input_commente">
+          <textarea [(ngModel)]="text" maxlength="100" (ionChange)="textareaMaxLengthValidation()" name="comment" placeholder="Émettre un avis sur le service rendu par le vétérinaire"></textarea>
+          <p class="max" *ngIf="wordsCount !== undefined">
+            {{ wordsCount }} mots saisis (limite : 100)
+          </p>
+          
+        </div>
+
+        <button class="btn_submit">
+          Envoyer
+        </button>
+        
+        
+
+      </form>
+
+
+
+    </div>
+
+  </div>
+</ion-content>
+
+
+

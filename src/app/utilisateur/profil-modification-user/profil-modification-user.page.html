@@ -1,0 +1,188 @@
+
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- <div class="icon_retour" routerLink="/section-choix">
+      <i class="ri-arrow-left-s-line"></i>
+    </div> -->
+
+    <div class="icon_retour" routerLink="/profil-user">
+      <i class="ri-arrow-left-s-line"></i>
+
+      <div class="nom_retour">
+        <p> Modification </p>
+      </div>
+    </div>
+
+    
+
+    <!-- // deconnexion  -->
+    <div class="cadre_nom">
+      <p>Save</p>
+    </div>
+
+    
+  </div>
+
+
+  <!-- /////////////////////////// -->
+
+
+  
+  <div class="container_cadre_profil">
+
+    <div class="cadre_profil">
+
+      <div class="image_profil">
+        <img src="../../../assets/profil_vete.jpg" alt="" [src]="selectedFileDataUrl">
+
+        <label class="camera-icon" for="photoInput">
+          <i class="ri-pencil-line"></i>
+        </label>
+      </div>
+
+      
+
+      <div class="ajoute_photo">
+        <div class="tof">
+          <input type="file" accept="image/*" capture="environment" id="photoInput" style="display: none;" name="photo" (change)="handleFileInput($event)">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</ion-header>
+
+
+<ion-content class="container_global_content">
+<div class="container_global">
+
+  <div class="content_text">
+
+    <!-- /////////////////////////////////////// -->
+
+    <div class="container_blanc">
+      <form class="cadre_blanc_container">
+        <div class="div">
+        <!-- // nom  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> Nom </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" value="SY">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // prenom  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> Prénom </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" value="Diakaridia">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // bio  -->
+        <div class="bio_conatiner">
+
+          <div class="title_bio">
+            <h3 class="h3_bio"> Bio </h3>
+          </div>
+
+          <div class="description_bio">
+            <p class="para_bio">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, incidunt.
+            </p>
+          </div>
+
+        </div>
+        
+        <!-- // email  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title h3_email"> Email </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" class="email" value="sydiakaridia38@gmail.com">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // numero  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> Numéro </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" value="78711623">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // sexe  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> Genre </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" value="Homme">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // numero  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> 23/10/2023 </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" value="78711623">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+        
+        <!-- // numero  -->
+        <div class="information_perso">
+          <!-- .. div de h3  -->
+          <div class="title_info">
+            <h3 class="h3_title"> Adresse </h3>         
+          </div>
+          <!-- .div de input  -->
+          <div class="input_info">
+            <input type="text" class="adress" value="Boulkassoumbougou">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+        </div>
+
+      </div>
+      </form>
+    </div>
+    
+    
+  </div>
+</div>
+</ion-content>

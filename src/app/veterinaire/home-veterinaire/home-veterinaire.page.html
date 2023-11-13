@@ -1,0 +1,1089 @@
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <div class="image_logo">
+      <img src="../../../assets/LOGO2.png" alt="">
+    </div>
+    
+  </div>
+
+  <div class="container_welcome">
+    <div class="welcome">
+
+      <div class="div_bienvenu">
+        <p class="para_bienvenu"> Bienvenu </p>
+        <div class="nom_personne">
+          <h3 class="h3_personne"> Diakaridia Koureissi SY </h3>
+        </div>
+      </div>
+      <!-- ////////////////  -->
+
+      <div class="image_profil">
+        <img src="../../../assets/profil_vete.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+</ion-header>
+
+<ion-content class="global">
+
+  <div class="container_global">
+
+    <div class="content_accueil">
+
+      <div class="fiabilite">
+        <p class="paragraphe_fiabilite">Fiabilités</p>
+      </div>
+
+      <!-- ////////////////// -->
+
+      <div class="profil_verifier_container">
+
+        <div class="profil_verifier">
+
+          <!-- // titre du profil  -->
+          <div class="titre_verif">
+            <h3 class="h3_profil_verif">Profil vérifiées</h3>
+          </div>
+          
+          <!-- // voir plus de profil verif  -->
+          <div class="voir_plus">
+            <p class="para_voir_plus" id="open-modal" expand="block" >voir plus</p>
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+
+          <ion-modal #modal trigger="open-modal" [presentingElement]="presentingElement">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-title>Profil vérifiées</ion-title>
+                  <ion-buttons slot="end">
+                    <ion-button (click)="modal.dismiss()">Close</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content>
+                
+                <!-- // les informations -->
+
+                <div class="container_diplome">
+
+                  <!-- ///////////////////////// 1  -->
+                  <div class="frame_voir">
+
+                    <div class="content_icon_name">
+                      <!-- // icon de diplome  -->
+                      <div class="icon_verif_global">
+                        <i class="ri-verified-badge-fill"></i>
+                      </div>
+  
+                      <!-- <div class="name_description"> -->
+                      <!-- // Nom de diplome  -->
+                      <div class="name_verifi">
+                        <h3> Diplôme </h3>
+                      </div>
+                    </div>
+                    
+                    <!-- // description  -->
+                    <div class="description_verif">
+                      <p>
+                        Le vétérinaire doit être titulaire d'un diplôme d'Etat de docteur vétérinaire.
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- ///////////////////////// 1  -->
+                  <div class="frame_voir">
+
+                    <div class="content_icon_name">
+                      <!-- // icon de diplome  -->
+                      <div class="icon_verif_global">
+                        <i class="ri-verified-badge-fill"></i>
+                      </div>
+  
+                      <!-- <div class="name_description"> -->
+                      <!-- // Nom de diplome  -->
+                      <div class="name_verifi">
+                        <h3> Expérience </h3>
+                      </div>
+                    </div>
+                    
+                    <!-- // description  -->
+                    <div class="description_verif">
+                      <p>
+                        L'administrateur peut vérifier l'expérience du vétérinaire en consultant son curriculum vitae ou en contactant ses anciens employeurs.                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- ///////////////////////// 1  -->
+                  <div class="frame_voir">
+
+                    <div class="content_icon_name">
+                      <!-- // icon de diplome  -->
+                      <div class="icon_verif_global">
+                        <i class="ri-verified-badge-fill"></i>
+                      </div>
+  
+                      <!-- <div class="name_description"> -->
+                      <!-- // Nom de diplome  -->
+                      <div class="name_verifi">
+                        <h3> Compétences </h3>
+                      </div>
+                    </div>
+                    
+                    <!-- // description  -->
+                    <div class="description_verif">
+                      <p>
+                        L'administrateur peut demander au vétérinaire de décrire ses compétences dans des domaines spécifiques, tels que la chirurgie, la médecine interne et la médecine d'urgence.                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- ///////////////////////// 1  -->
+                  <div class="frame_voir">
+
+                    <div class="content_icon_name">
+                      <!-- // icon de diplome  -->
+                      <div class="icon_verif_global">
+                        <i class="ri-verified-badge-fill"></i>
+                      </div>
+  
+                      <!-- <div class="name_description"> -->
+                      <!-- // Nom de diplome  -->
+                      <div class="name_verifi">
+                        <h3> Certifications </h3>
+                      </div>
+                    </div>
+                    
+                    <!-- // description  -->
+                    <div class="description_verif">
+                      <p>
+                        Le vétérinaire peut être titulaire de certifications supplémentaires, telles que la certification en médecine féline ou en médecine canine.                      </p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+
+
+        </div>
+
+        <!-- ///////////////// Les verification  -->
+
+        <div class="critere">
+          <!-- // pour diplome  -->
+          <div class="domaineSpe diplome">
+            <i class="ri-verified-badge-fill"></i>
+            <p>Diplôme...</p>
+          </div>
+
+          <!-- // pour experience  -->
+          <div class="domaineSpe experience">
+            <i class="ri-verified-badge-fill"></i>
+            <p>Expérience</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- ////////////////////////////////////// Critrique  -->
+      <div class="fiabilite" style="margin-top: 15px;">
+        <p class="paragraphe_fiabilite">Critiques</p>
+      </div>
+
+      <!-- ////////////////// -->
+
+      <div class="profil_verifier_container">
+
+        <div class="profil_verifier">
+
+          <!-- // titre du profil  -->
+          <div class="titre_verif">
+            <h3 class="h3_profil_verif">Avis sur Vétérinaire</h3>
+          </div>
+          
+          <!-- // voir plus de profil verif  -->
+          <div class="voir_plus">
+            <p class="para_voir_plus"  id="open-modal2" expand="block" >voir plus</p>
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+
+          <ion-modal #modal trigger="open-modal2" [presentingElement]="presentingElement">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-title>Tout les avis</ion-title>
+                  <ion-buttons slot="end">
+                    <ion-button (click)="modal.dismiss()">Close</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content>
+                
+                <!-- // les informations 000 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 00 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 0-->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 1 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les information 2 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 3 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 4 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 5 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+                
+                <!-- // les informations 6 -->
+
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+
+                  <div class="content_avis">
+        
+                    <div class="information_avis">
+        
+                      <!-- // name des vétérinaire  -->
+                      <div class="name_veterinaire">
+                        <h2 class="h2_veterinaire">
+                          Diakaridia SY
+                        </h2>
+        
+                        <div class="date_evaluation">
+                          <p class="para_date">
+                            25/10/2023
+                          </p>
+                        </div>
+                      </div>
+        
+                      <!-- // avis par etoil  -->
+                      <div class="start_container">
+        
+                        <div class="start">
+        
+                          <!-- //// etoile 1  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 2  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 3  -->
+                          <div class="icon_star">
+                            <i class="ri-star-fill"></i>
+                          </div>
+                          <!-- //// etoile 4  -->
+                          <div class="icon_star">
+                            <i class="ri-star-half-fill"></i>
+                          </div>
+                          <!-- //// etoile 5  -->
+                          <div class="icon_star">
+                            <i class="ri-star-line"></i>
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                      <div class="para_commentaire_avis">
+                        <!-- // commentaire  -->
+                        <p>
+                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                        </p>
+                      </div>
+        
+                    </div>
+        
+                  </div>
+        
+                </div>
+
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+
+
+        </div>
+
+        <!-- ///////////////// Les avis sur veterinaire  -->
+
+        <div class="avis_container">
+
+          <div class="content_avis">
+
+            <div class="information_avis">
+
+              <!-- // name des vétérinaire  -->
+              <div class="name_veterinaire">
+                <h2 class="h2_veterinaire">
+                  Diakaridia SY
+                </h2>
+
+                <div class="date_evaluation">
+                  <p class="para_date">
+                    25/10/2023
+                  </p>
+                </div>
+              </div>
+
+              <!-- // avis par etoil  -->
+              <div class="start_container">
+
+                <div class="start">
+
+                  <!-- //// etoile 1  -->
+                  <div class="icon_star">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <!-- //// etoile 2  -->
+                  <div class="icon_star">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <!-- //// etoile 3  -->
+                  <div class="icon_star">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <!-- //// etoile 4  -->
+                  <div class="icon_star">
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                  <!-- //// etoile 5  -->
+                  <div class="icon_star">
+                    <i class="ri-star-line"></i>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="para_commentaire_avis">
+                <!-- // commentaire  -->
+                <p>
+                  Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ///////////////////// LEs Forums espace dDebut  -->
+
+
+
+        <!-- ///////////////////// LEs Forums espace Fin  -->
+
+
+
+
+
+
+        <!-- ///////////////////// LEs planing espace Debut  -->
+
+
+        <!-- // container de planing  -->
+        <div class="container_planing">
+          
+          <!-- // content de planing pour planning et modification -->
+          <div class="name_content_planning">
+
+            <!-- // name et Modification  -->
+            <div class="name_planing">
+              <h2>
+                Mon planning
+              </h2>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="modifier_planning" routerLink="/home-veterinaire-planning-modification">
+              <p>
+                Modifier
+              </p>
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_margin" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour">
+              <p>
+                Jours
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite">
+              <p>
+                disponibilité
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Lundi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 16h à 18h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Mardi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 08h à 11h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Mercredi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 10h à 15h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Jeudi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 15h à 16h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Vendredi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 16h à 18h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Samedi
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 12h à 15h
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <p>
+                Dimanche
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                de 17h à 21h
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ///////////////////// LEs planing espace Fin  -->
+
+      </div>
+      
+      <!-- ////////////////////////////////// FIn de content_accueil  -->
+
+    </div>
+
+  </div>
+
+
+</ion-content>

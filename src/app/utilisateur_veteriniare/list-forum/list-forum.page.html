@@ -1,0 +1,1055 @@
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- // icon de retour  -->
+    <div class="icon_retour" routerLink="/accueil">
+      <i class="ri-arrow-left-s-line"></i>
+    </div>
+
+    <!-- titre de suivi medicament  -->
+    <div class="TitreSuiviMedicament" >
+      <h3>Forum Publié</h3>
+    </div>
+
+    <div class="modifier">
+      <p>
+        
+      </p>
+    </div>
+  
+  </div>
+
+
+  <!-- ////////////////////////////////////////// autre hearder  -->
+
+  <div class="container_title_forum">
+
+    <div class="content_forum">
+
+      <!-- .pour les forum  -->
+      <div class="les_forum">
+        <p>
+          Les forums
+        </p>
+      </div>
+
+      <!-- // pour mes forum  -->
+
+      <div class="mes_forum">
+        <p>
+          Mes forums
+        </p>
+      </div>
+
+      <!-- // Pour les icon de l'ajout et de recherche  -->
+      <div class="container_icon_search">
+        <!-- // ajout  -->
+        <div class="add" routerLink="/ajouter-forum">
+          <i class="ri-add-box-line"></i>
+        </div>
+
+        <!-- // recherche  -->
+        <!-- <div class="search">
+          
+        </div> -->
+
+        <div class="input-wrapper">
+          <button class="icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#F2F6FA" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#F2F6FA" d="M22 22L20 20"></path>
+            </svg>
+          </button>
+          <input placeholder="search.." class="input" name="text" type="text" >
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</ion-header>
+
+
+<ion-content>
+
+<div class="container_list">
+  <!-- <ion-list> -->
+
+    <!-- ////////// cadre ion-item-sliding 1 -->
+    <ion-item-sliding style="margin-top: 15px; border: none!important;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+      
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment" id="open-modal2" expand="block" >
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+
+              <ion-modal #modal trigger="open-modal2" [presentingElement]="presentingElement">
+                <ng-template>
+                  <ion-header>
+                    <ion-toolbar>
+                      <ion-title>Commentaire</ion-title>
+                      <ion-buttons slot="end">
+                        <ion-button class="button_close" (click)="modal.dismiss()"><i class="ri-close-fill icon_close"></i></ion-button>
+                      </ion-buttons>
+                    </ion-toolbar>
+                  </ion-header>
+
+                  <ion-content>
+
+                    <!-- // container de commentaire  -->
+                    <div class="container_commentaire">
+
+                      <!-- // content 1 -->
+                      <div class="content_container">
+
+                        <!-- // image de la personne qui envoyer un message  -->
+                        <div class="container_img_perso">
+                          <div class="personne">
+                            <img src="../../../assets/profil.jpg" alt="">
+                          </div>
+                        </div>
+
+                        <!-- // les informations de personne comme  -->
+                        <!-- // Nom et prenom et commentaire et heur et reponse  -->
+                        <div class="container_information">
+
+                          <!-- // nom et prenom  -->
+                          <div class="nom_prenom">
+                            <p>
+                              Mady Doucouré
+                            </p>
+                          </div>
+                          <!-- // les commentaires  -->
+                          <div class="commentaire_personne">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipi elit. Autem, sint.
+                            </p>
+                          </div>
+                          <!-- // container et heure et reponse  -->
+                          <div class="content_heure_repose">
+                            <!-- // heure  -->
+                            <div class="heure">
+                              <p>
+                                18:00
+                              </p>
+                            </div>
+                            <!-- // reponse  -->
+                            <div class="reponse">
+                              <p>
+                                Réponse
+                              </p>
+                            </div>
+                          </div>
+
+                        </div>
+                        
+                      </div>
+
+                      <!-- // content 2 -->
+                      <div class="content_container">
+
+                        <!-- // image de la personne qui envoyer un message  -->
+                        <div class="container_img_perso">
+                          <div class="personne">
+                            <img src="../../../assets/profil.jpg" alt="">
+                          </div>
+                        </div>
+
+                        <!-- // les informations de personne comme  -->
+                        <!-- // Nom et prenom et commentaire et heur et reponse  -->
+                        <div class="container_information">
+
+                          <!-- // nom et prenom  -->
+                          <div class="nom_prenom">
+                            <p>
+                              Mady Doucouré
+                            </p>
+                          </div>
+                          <!-- // les commentaires  -->
+                          <div class="commentaire_personne">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipi elit. Autem, sint.
+                            </p>
+                          </div>
+                          <!-- // container et heure et reponse  -->
+                          <div class="content_heure_repose">
+                            <!-- // heure  -->
+                            <div class="heure">
+                              <p>
+                                18:00
+                              </p>
+                            </div>
+                            <!-- // reponse  -->
+                            <div class="reponse">
+                              <p>
+                                Réponse
+                              </p>
+                            </div>
+                          </div>
+
+                        </div>
+                        
+                      </div>
+
+                                <!-- // sou commentaire -->
+                                <div class="content_container2">
+
+                                  <!-- // image de la personne qui envoyer un message  -->
+                                  <div class="container_img_perso2">
+                                    <div class="personne2">
+                                      <img src="../../../assets/profil.jpg" alt="">
+                                    </div>
+                                  </div>
+
+                                  <!-- // les informations de personne comme  -->
+                                  <!-- // Nom et prenom et commentaire et heur et reponse  -->
+                                  <div class="container_information2">
+
+                                    <!-- // nom et prenom  -->
+                                    <div class="nom_prenom2">
+                                      <p>
+                                        Mady Doucouré
+                                      </p>
+                                    </div>
+                                    <!-- // les commentaires  -->
+                                    <div class="commentaire_personne2">
+                                      <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipi elit. Autem, sint.
+                                      </p>
+                                    </div>
+                                    <!-- // container et heure et reponse  -->
+                                    <div class="content_heure_repose2">
+                                      <!-- // heure  -->
+                                      <div class="heure2">
+                                        <p>
+                                          18:00
+                                        </p>
+                                      </div>
+                                      <!-- // reponse  -->
+                                      <div class="reponse2">
+                                        <p>
+                                          Réponse
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+
+                                <!-- // sou commentaire -->
+                                <div class="content_container2">
+
+                                  <!-- // image de la personne qui envoyer un message  -->
+                                  <div class="container_img_perso2">
+                                    <div class="personne2">
+                                      <img src="../../../assets/profil.jpg" alt="">
+                                    </div>
+                                  </div>
+
+                                  <!-- // les informations de personne comme  -->
+                                  <!-- // Nom et prenom et commentaire et heur et reponse  -->
+                                  <div class="container_information2">
+
+                                    <!-- // nom et prenom  -->
+                                    <div class="nom_prenom2">
+                                      <p>
+                                        Mady Doucouré
+                                      </p>
+                                    </div>
+                                    <!-- // les commentaires  -->
+                                    <div class="commentaire_personne2">
+                                      <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipi elit. Autem, sint.
+                                      </p>
+                                    </div>
+                                    <!-- // container et heure et reponse  -->
+                                    <div class="content_heure_repose2">
+                                      <!-- // heure  -->
+                                      <div class="heure2">
+                                        <p>
+                                          18:00
+                                        </p>
+                                      </div>
+                                      <!-- // reponse  -->
+                                      <div class="reponse2">
+                                        <p>
+                                          Réponse
+                                        </p>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+
+                      <!-- // content 2 -->
+                      <div class="content_container">
+
+                        <!-- // image de la personne qui envoyer un message  -->
+                        <div class="container_img_perso">
+                          <div class="personne">
+                            <img src="../../../assets/profil.jpg" alt="">
+                          </div>
+                        </div>
+
+                        <!-- // les informations de personne comme  -->
+                        <!-- // Nom et prenom et commentaire et heur et reponse  -->
+                        <div class="container_information">
+
+                          <!-- // nom et prenom  -->
+                          <div class="nom_prenom">
+                            <p>
+                              Mady Doucouré
+                            </p>
+                          </div>
+                          <!-- // les commentaires  -->
+                          <div class="commentaire_personne">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur, adipi elit. Autem, sint.
+                            </p>
+                          </div>
+                          <!-- // container et heure et reponse  -->
+                          <div class="content_heure_repose">
+                            <!-- // heure  -->
+                            <div class="heure">
+                              <p>
+                                18:00
+                              </p>
+                            </div>
+                            <!-- // reponse  -->
+                            <div class="reponse">
+                              <p>
+                                Réponse
+                              </p>
+                            </div>
+                          </div>
+
+                        </div>
+                        
+                      </div>
+
+                    </div>
+
+                  </ion-content>
+
+                </ng-template>
+              </ion-modal>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;" routerLink="/modifier-forum">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- ////////// cadre ion-item-sliding 2 -->
+    <ion-item-sliding style="margin-top: 15px;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <!-- <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+       -->
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment">
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- ////////// cadre ion-item-sliding 3 -->
+    <ion-item-sliding style="margin-top: 15px;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+      
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment">
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- ////////// cadre ion-item-sliding 4 -->
+    <ion-item-sliding style="margin-top: 15px;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+      
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment">
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- ////////// cadre ion-item-sliding 5 -->
+    <ion-item-sliding style="margin-top: 15px;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <!-- <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+       -->
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment">
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- ////////// cadre ion-item-sliding 6 -->
+    <ion-item-sliding style="margin-top: 15px;">
+  
+      <ion-item>
+        
+        <div class="cadre_forum">
+
+          <!-- // image et titre  -->
+          <div class="container_perso">
+            <!-- // image  -->
+            <div class="photo_info">
+      
+              <!-- //////////////// -->
+              <div class="image_perso">
+                <img src="../../../assets/profil.jpg" alt="">
+              </div>
+        
+              <!-- // titre du debat pour discuter -->
+              <div class="content_info_perso">
+                <!-- // titre  -->
+                <div class="titre_debat">
+                  <h3>
+                    Titre du debat pour discuter 
+                  </h3>
+                </div>
+        
+                <!-- // cree par cette personne  -->
+                <div class="createur">
+                  <p>
+                    Créer par Diakaridia SY
+                  </p>
+                </div>
+        
+                <!-- // heur de dispo  -->
+                <div class="date_publier">
+                  <p>
+                    12:00
+                  </p>
+                </div>
+              </div>
+      
+            </div>
+      
+            <!-- ////////////// Trois Point -->
+      
+            <div class="bare_point">
+              <!-- <i class="ri-more-fill"></i> -->
+            </div>
+      
+          </div>
+      
+          <!-- ////////////// QUestion a poser  -->
+          <div class="question">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipi elit. Quibusdam, asperiores.
+            </p>
+          </div>
+      
+          <!-- ////////////////// Image de question mais pas oubligatoir  -->
+      
+          <div class="image_question_container">
+            <div class="image_question">
+              <img src="../../../assets/veterinaire.jpg" alt="">
+            </div>
+          </div>
+      
+          <!-- ////////////////////////////////////// Like comment et discuter  -->
+      
+          <div class="obtion">
+      
+            <div class="like_comment_container">
+      
+              <!-- // liker -->
+              <div class="like">
+                <i class="ri-thumb-up-line"></i>
+                <p>
+                  250
+                </p>
+              </div>
+      
+              <!-- // commentaire  -->
+              <div class="comment">
+                <i class="ri-chat-2-line"></i>
+                <p>
+                  4,590
+                </p>
+              </div>
+      
+            </div>
+      
+            <!-- // discuter  -->
+            <div class="discuter">
+              <i class="ri-chat-3-line"></i>
+              <p>
+                Discuter
+              </p>
+            </div>
+      
+          </div>
+      
+          
+      
+        </div>
+
+      </ion-item>
+  
+      <ion-item-options>
+        <ion-item-option style="background-color: #008000;">
+          modifier
+          <i style="padding-left: 5px;" class="ri-edit-box-line"></i>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          Delete
+          <i style="padding-left: 5px;" class="ri-delete-bin-3-line"></i>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  
+  <!-- </ion-list> -->
+</div>
+
+<!-- <div class="container_cadre_forum">
+</div> -->
+
+</ion-content>

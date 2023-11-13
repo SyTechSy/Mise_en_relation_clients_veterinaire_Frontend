@@ -1,0 +1,99 @@
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- // icon de retour  -->
+    <div class="icon_retour" routerLink="/list-forum">
+      <i class="ri-arrow-left-s-line"></i>
+    </div>
+
+    <!-- titre de suivi medicament  -->
+    <div class="TitreSuiviMedicament">
+      <h3>Modifier une discussion</h3>
+    </div>
+
+    <div class="vide">
+
+    </div>
+  
+  </div>
+
+</ion-header>
+
+
+<ion-content>
+
+  <aside class="formulaire">
+
+    <form class="container_formulaire">
+
+      <div class="formulaire">
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4>Titre / Question </h4>
+        </div>
+
+        <!-- input de votre nom  -->
+        <div class="champ_input">
+          <input disabled type="text" class="input_focus"  id="nom" placeholder="Saisir votre nom" autocomplete="on" required>
+          <label for="nom" class="label">Titre de discussion</label>
+        </div>
+
+        <!-- // input de type textaera  -->
+        <div class="champ_input">
+          <textarea disabled class="input_focus input_focus_textarea" name="description" id="nom" placeholder="Saisir votre question" autocomplete="on" required></textarea>
+          <label for="description" class="label">Votre question</label>
+        </div>        
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4> Modifier l'image</h4>
+        </div>
+
+        
+      
+        <!-- input de type file  -->
+
+        <div class="input_file">
+          <input type="file" accept="image/*" id="file" (change)="handleFileInput($event)">
+          <div class="label_input">
+            <label for="file" class="label_download">
+              <!-- <div class="image_user"> -->
+                <div class="roudel_img" >
+                  <img class="immmmmgggg" [src]="selectedFileDataUrl">
+                </div>
+                <!-- <p class="para_telecharger">Télécharger CV</p> -->
+              <!-- </div> -->
+              <i class="ri-download-cloud-2-line icon_telecharger"></i>
+            </label>
+          </div>
+        </div>
+
+        
+
+
+        <!-- button envoie  -->
+
+        <!-- le button de submit  -->
+        <div class="btn_submit_global">
+          <button type="submit" class="btn_submit"> Modifier </button>
+        </div>
+
+
+      </div>
+
+    </form>
+
+  </aside>
+
+
+</ion-content>

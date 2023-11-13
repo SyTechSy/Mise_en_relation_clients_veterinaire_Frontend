@@ -1,0 +1,428 @@
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+.hearder {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon_retour {
+    font-size: 30px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.TitreSuiviMedicament h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.img_logo {
+    margin-left: 10px;
+}
+
+.img_logo img {
+    width: 70px;
+    height: auto;
+}
+
+///////// titre ajouter un medicament
+
+.title_ajoute h4 {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+//////////////////// Style de médicament
+/// 
+
+
+
+.camera-icon {
+    font-size: 20px;
+    position: relative;
+    left: 110px;
+    top: -30px;
+    background-color: #008000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: 200;
+}
+
+
+.roudel_img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-image: url("../../../assets/profil.jpg");
+    background-size: cover;
+    background-position: center;
+    // background-color: #3d3737;
+    border: none;
+}
+
+.roudel_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.image_user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ajoute_photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ajoute_photo input[type="file"] {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    background-color: #86868663;
+    border-radius: 10px;
+  }
+
+.ajoute_photo input[type="file"]::-webkit-file-upload-button {
+    color: #000; 
+    background: none;
+    border: none;
+}
+
+
+///////////////////// Champs 
+
+
+.input_focus2
+ {
+    width: 160px;
+    height: 49px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+
+// .champ_input2 {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+
+.input_focus2:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.containerDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+////////////////////////////////
+
+
+
+.title_mot {
+    margin-bottom: -10px;
+}
+
+.title_mot h4{
+    font-size: 17px;
+}
+
+
+.container_formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_focus {
+    width: 100%;
+    min-width: 337px;
+    height: 49px;
+    // padding: 10px 10px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.input_focus:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.champ_input .label {
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    pointer-events: none;
+    color: #000;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus:not(:placeholder-shown) + .label,
+.input_focus:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+// ========= email icon ===========
+
+.input_info_icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+.btn_submit {
+    background-color: var(--color-principal);
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 49px;
+    // color: #25A069;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: var(--color-principal);
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
+
+////////// btn connect 
+
+
+.btn_submit_global {
+    margin-top: 30px;
+}
+
+.btn_submit {
+    background-color: #008000;
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    height: 49px;
+    color: #fff;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: #0c630c;
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
+
+.ligne_ou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.bare {
+    width: 100px;
+    background-color: #000000b4;
+    height: 1px;
+}
+
+.ou {
+    padding: 0 5px;
+}
+
+.compte_quiz p {
+    text-align: center;
+    font-size: 13px;
+}
+
+.seConnecter {
+    color: red;
+}
+
+
+.input_focus2
+ {
+    width: 160px;
+    height: 49px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.champ_input2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+
+.input_focus2:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus2:not(:placeholder-shown) + .label,
+.input_focus2:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus2::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus2:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.input_focus2 {
+    font-size: 16px;
+}
+
+
+.champ_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.champs_input textarea {
+    resize: none;
+}
+
+////////////////////////////////////
+
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus_textarea:not(:placeholder-shown) + .label,
+.input_focus_textarea:focus + .label {
+    color: var(--color-principal);
+    top: 65px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 15px;
+    padding: 0 0px;
+}
+
+.input_focus_textarea2:not(:placeholder-shown) + .label,
+.input_focus_textarea2:focus + .label {
+    color: var(--color-principal);
+    top: 0px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 15px;
+    padding: 0 0px;
+}
+
+.input_focus_textarea::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus_textarea:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.input_focus_textarea {
+    font-size: 16px;
+}

@@ -1,0 +1,260 @@
+
+///////////////////////////
+
+// .container_global {
+//     position: relative;
+// }
+
+.font_hearder {
+    background-color: #F2F6FA;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.089);
+}
+
+.ecran .ecran_vue {
+    width: 100%;
+    height: 40px;
+}
+
+
+.hearder {
+    width: 100%;
+    height: 50px;
+    background-color: #fff!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon_retour {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.TitreSuiviMedicament {
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+.TitreSuiviMedicament h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    // font-style: italic;
+    font-weight: 500;
+}
+
+
+
+/////////////////////////////////// FORMULAIRE 
+
+
+// ====================== INPUT DE INSCRIPION D'ADMINISTRATEUR 
+
+
+.title_mot {
+    margin-bottom: -10px;
+}
+
+.title_mot h4{
+    font-size: 17px;
+}
+
+
+.container_formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.champ_input {
+    position: relative;
+}
+
+.input_focus {
+    width: 100%;
+    min-width: 337px;
+    height: 49px;
+    // padding: 10px 10px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.input_focus:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.champ_input .label {
+    position: absolute;
+    top: 26px;
+    left: 0px;
+    pointer-events: none;
+    color: #000;
+}
+
+.input_focus_textarea {
+    resize: none;
+}
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus:not(:placeholder-shown) + .label,
+.input_focus:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+//////////////////////////////////////////
+/// 
+
+
+.champs_input textarea {
+    resize: none;
+}
+
+////////////////////////////////////
+
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus_textarea:not(:placeholder-shown) + .label,
+.input_focus_textarea:focus + .label {
+    color: var(--color-principal);
+    top: 65px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 15px;
+    padding: 0 0px;
+}
+
+.input_focus_textarea::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus_textarea:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.input_focus_textarea {
+    font-size: 16px;
+}
+
+
+/////////////////////////////////////////
+
+.label_download {
+    position: relative;
+}
+
+.input_file {
+    margin-top: 20px;
+}
+
+.roudel_img {
+    width: 300px;
+    height: 200px;
+    background-color: #d1d1d1;
+    border-radius: 10px;
+    // position: relative;
+}
+
+.roudel_img img{
+    width: 100%;
+    height: 100%;
+    background-color: #d1d1d1;
+    border-radius: 10px;
+}
+
+.input_file input {
+    display: none;
+}
+
+.label_download i {
+    font-size: 30px;
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+}
+
+
+.btn_submit {
+    background-color: var(--color-principal);
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 49px;
+    // color: #25A069;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: var(--color-principal);
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
+
+////////// btn connect 
+
+
+.btn_submit_global {
+    margin-top: 30px;
+}
+
+.btn_submit {
+    background-color: #008000;
+    // width: 360px;
+    width: 100%;
+    min-width: 337px;
+    border-radius: 9px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    height: 49px;
+    color: #fff;
+}
+
+.btn_submit:hover {
+    // --ion-color-primary: #25A069;
+    background-color: #0c630c;
+    transition: all 0.3s;
+    --ion-color-primary-shade: #227e55;
+    --ion-color-secondary: #25A069;
+}
