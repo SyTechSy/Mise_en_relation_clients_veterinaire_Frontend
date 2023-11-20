@@ -1,0 +1,296 @@
+
+    <!-- ||||||||||||| Cadre 2 -->
+    
+    <div class="cadre_container">
+
+      <div class="cadre_content cadre_content2">
+
+        <div class="image_suivi_medicament">
+          <img src="../../../assets/medi.jpg" alt="image de medicament">
+        </div>
+
+        <div class="info_suivi_medi">
+          
+          <!-- // Date de debut et date de fin  -->
+          <div class="dateDebutFin">
+            <p class="Ddebut">23/10/2023</p>
+            <p class="Ddif">à</p>
+            <p class="Dfin">23/10/2023</p>
+          </div>
+          
+          <!-- // nom de medicament  -->
+
+          <div class="name_medicament">
+            <h3 class="name_med"> Nom de Médicament </h3>
+          </div>
+          
+          <!-- // nom de animal concerner  -->
+
+          <div class="name_animal">
+            <h3 class="name_ani"> Nom d'animal</h3>
+          </div>
+          
+          <!-- // nombre de frequence  -->
+
+          <div class="nombre_frequence">
+            <h3 class="nombre_fre"> (2) Comprimeées</h3>
+          </div>
+          
+          <!-- // nombre dosage  -->
+
+          <div class="nombre_dosage">
+            <h3 class="nombre_dos"> 1 / jours</h3>
+          </div>
+          
+          <!-- // heure de prise   -->
+
+          <div class="heure_prise">
+            <h3 class="heure_pri"> 17 : 00 </h3>
+          </div>
+          
+          <!-- // description de medicament   -->
+
+          <div class="description_medicament">
+            <p class="description_med"> Une petite description pour <br> le médicament</p>
+          </div>
+
+        </div>
+
+      </div>      
+
+      <!-- ................. Modification de suppression .................. -->
+
+      <div class="edit_delete">
+        <!-- // modification  -->
+        <div class="edit">
+          <i class="ri-edit-box-line icon_edit"></i>
+        </div>
+        <!-- // suppression  -->
+        <div class="delete">
+          <i class="ri-delete-bin-3-line icon_delete"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ||||||||||||| Cadre 3 -->
+    
+    <div class="cadre_container">
+
+      <div class="cadre_content cadre_content2">
+
+        <div class="image_suivi_medicament">
+          <img src="../../../assets/medi.jpg" alt="image de medicament">
+        </div>
+
+        <div class="info_suivi_medi">
+          
+          <!-- // Date de debut et date de fin  -->
+          <div class="dateDebutFin">
+            <p class="Ddebut">23/10/2023</p>
+            <p class="Ddif">à</p>
+            <p class="Dfin">23/10/2023</p>
+          </div>
+          
+          <!-- // nom de medicament  -->
+
+          <div class="name_medicament">
+            <h3 class="name_med"> Nom de Médicament </h3>
+          </div>
+          
+          <!-- // nom de animal concerner  -->
+
+          <div class="name_animal">
+            <h3 class="name_ani"> Nom d'animal</h3>
+          </div>
+          
+          <!-- // nombre de frequence  -->
+
+          <div class="nombre_frequence">
+            <h3 class="nombre_fre"> (2) Comprimeées</h3>
+          </div>
+          
+          <!-- // nombre dosage  -->
+
+          <div class="nombre_dosage">
+            <h3 class="nombre_dos"> 1 / jours</h3>
+          </div>
+          
+          <!-- // heure de prise   -->
+
+          <div class="heure_prise">
+            <h3 class="heure_pri"> 17 : 00 </h3>
+          </div>
+          
+          <!-- // description de medicament   -->
+
+          <div class="description_medicament">
+            <p class="description_med"> Une petite description pour <br> le médicament</p>
+          </div>
+
+        </div>
+
+      </div>      
+
+      <!-- ................. Modification de suppression .................. -->
+
+      <div class="edit_delete">
+        <!-- // modification  -->
+        <div class="edit">
+          <i class="ri-edit-box-line icon_edit"></i>
+        </div>
+        <!-- // suppression  -->
+        <div class="delete">
+          <i class="ri-delete-bin-3-line icon_delete"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ||||||||||||| Cadre 3 -->
+    
+    <div class="cadre_container">
+
+      <div class="cadre_content cadre_content2">
+
+        <div class="image_suivi_medicament">
+          <img src="../../../assets/medi.jpg" alt="image de medicament">
+        </div>
+
+        <div class="info_suivi_medi">
+          
+          <!-- // Date de debut et date de fin  -->
+          <div class="dateDebutFin">
+            <p class="Ddebut">23/10/2023</p>
+            <p class="Ddif">à</p>
+            <p class="Dfin">23/10/2023</p>
+          </div>
+          
+          <!-- // nom de medicament  -->
+
+          <div class="name_medicament">
+            <h3 class="name_med"> Nom de Médicament </h3>
+          </div>
+          
+          <!-- // nom de animal concerner  -->
+
+          <div class="name_animal">
+            <h3 class="name_ani"> Nom d'animal</h3>
+          </div>
+          
+          <!-- // nombre de frequence  -->
+
+          <div class="nombre_frequence">
+            <h3 class="nombre_fre"> (2) Comprimeées</h3>
+          </div>
+          
+          <!-- // nombre dosage  -->
+
+          <div class="nombre_dosage">
+            <h3 class="nombre_dos"> 1 / jours</h3>
+          </div>
+          
+          <!-- // heure de prise   -->
+
+          <div class="heure_prise">
+            <h3 class="heure_pri"> 17 : 00 </h3>
+          </div>
+          
+          <!-- // description de medicament   -->
+
+          <div class="description_medicament">
+            <p class="description_med"> Une petite description pour <br> le médicament</p>
+          </div>
+
+        </div>
+
+      </div>      
+
+      <!-- ................. Modification de suppression .................. -->
+
+      <div class="edit_delete">
+        <!-- // modification  -->
+        <div class="edit">
+          <i class="ri-edit-box-line icon_edit"></i>
+        </div>
+        <!-- // suppression  -->
+        <div class="delete">
+          <i class="ri-delete-bin-3-line icon_delete"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ||||||||||||| Cadre 3 -->
+    
+    <div class="cadre_container">
+
+      <div class="cadre_content cadre_content2">
+
+        <div class="image_suivi_medicament">
+          <img src="../../../assets/medi.jpg" alt="image de medicament">
+        </div>
+
+        <div class="info_suivi_medi">
+          
+          <!-- // Date de debut et date de fin  -->
+          <div class="dateDebutFin">
+            <p class="Ddebut">23/10/2023</p>
+            <p class="Ddif">à</p>
+            <p class="Dfin">23/10/2023</p>
+          </div>
+          
+          <!-- // nom de medicament  -->
+
+          <div class="name_medicament">
+            <h3 class="name_med"> Nom de Médicament </h3>
+          </div>
+          
+          <!-- // nom de animal concerner  -->
+
+          <div class="name_animal">
+            <h3 class="name_ani"> Nom d'animal</h3>
+          </div>
+          
+          <!-- // nombre de frequence  -->
+
+          <div class="nombre_frequence">
+            <h3 class="nombre_fre"> (2) Comprimeées</h3>
+          </div>
+          
+          <!-- // nombre dosage  -->
+
+          <div class="nombre_dosage">
+            <h3 class="nombre_dos"> 1 / jours</h3>
+          </div>
+          
+          <!-- // heure de prise   -->
+
+          <div class="heure_prise">
+            <h3 class="heure_pri"> 17 : 00 </h3>
+          </div>
+          
+          <!-- // description de medicament   -->
+
+          <div class="description_medicament">
+            <p class="description_med"> Une petite description pour <br> le médicament</p>
+          </div>
+
+        </div>
+
+      </div>      
+
+      <!-- ................. Modification de suppression .................. -->
+
+      <div class="edit_delete">
+        <!-- // modification  -->
+        <div class="edit">
+          <i class="ri-edit-box-line icon_edit"></i>
+        </div>
+        <!-- // suppression  -->
+        <div class="delete">
+          <i class="ri-delete-bin-3-line icon_delete"></i>
+        </div>
+      </div>
+
+    </div>

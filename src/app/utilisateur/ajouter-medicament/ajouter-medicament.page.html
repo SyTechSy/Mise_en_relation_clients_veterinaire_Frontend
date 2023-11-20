@@ -78,13 +78,13 @@
         
                   <!-- input de votre pays  -->
                   <div class="champ_input">
-                    <input type="date" class="input_focus2"  id="date_debut" placeholder="Saisir votre nom" autocomplete="on" required>
+                    <input type="date" class="input_focus2" [(ngModel)]="dateDebut" name="dateDebut"  id="date_debut" placeholder="Saisir votre nom" autocomplete="on" required>
                     <label for="date_debut" class="label">Date de début</label>
                   </div>
         
                   <!-- input de votre quartier  -->
                   <div class="champ_input">
-                    <input type="date" class="input_focus2"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
+                    <input type="date" class="input_focus2"  [(ngModel)]="dateFin" name="dateFin"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
                     <label for="date_fin" class="label">Date de fin</label>
                   </div>
         
@@ -94,14 +94,38 @@
                 <!-- input de votre nom de médicament  -->
         
                 <div class="champ_input">
-                  <input type="text" class="input_focus" id="name_medicament" placeholder="example@gmail.com" autocomplete="off" required>
+                  <input type="text" class="input_focus" [(ngModel)]="nomMedicament" name="nomMedicament" id="name_medicament" placeholder="example@gmail.com" autocomplete="off" required>
                   <label for="name_medicament" class="label">Nom de médicament</label>
+                </div>
+
+        
+                
+                <!-- input de votre nom de animal  -->
+        
+                <div class="champ_input">
+                  <input type="text" class="input_focus" [(ngModel)]="nomAnimal" name="nomAnimal" id="name_animal" placeholder="Saisir le nom d'animal" autocomplete="off" required>
+                  <label for="name_animal" class="label">Nom d'animal</label>
                 </div>
 
                 <!-- // Dasoge et frequence  -->
         
+                <div class="champ_input2">
+        
+                  <!-- input de votre pays  -->
+                  <div class="champ_input">
+                    <input type="text" class="input_focus2" [(ngModel)]="frequense" name="frequense"  id="frequense" placeholder="Saisir votre nom" autocomplete="on" required>
+                    <label for="frequense" class="label">frequense</label>
+                  </div>
+        
+                  <!-- input de votre quartier  -->
+                  <div class="champ_input">
+                    <input type="text" class="input_focus2"  [(ngModel)]="dosage" name="dosage"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
+                    <label for="date_fin" class="label">dasoge</label>
+                  </div>
+        
+                </div>
                   
-                <div class="champ_input">
+                <!-- <div class="champ_input">
 
                   <div class="jour_div">
                     <select class="input_focus2" name="frequence" id="frequence">
@@ -119,12 +143,12 @@
                     </select>
                   </div>
 
-                </div>
+                </div> -->
                 
                 <!-- input de votre description -->
         
                 <div class="champ_input">
-                  <textarea type="text" class="input_focus input_focus_textarea" id="descript" placeholder="Une petite description" autocomplete="off" required></textarea>
+                  <textarea type="text" maxlength="50" [(ngModel)]="description" name="description" class="input_focus input_focus_textarea" id="descript" placeholder="Une petite description" autocomplete="off" required></textarea>
                   <label for="descript" class="label">Description</label>
                 </div>
 
@@ -133,7 +157,7 @@
 
                 <!-- le button de submit  -->
                 <div class="btn_submit_global" routerLink="/ajouter-rappel">
-                  <button type="submit" class="btn_submit"> Suivant </button>
+                  <button type="submit"  (click)="onSubmit()" class="btn_submit"> Suivant </button>
                 </div>
 
 

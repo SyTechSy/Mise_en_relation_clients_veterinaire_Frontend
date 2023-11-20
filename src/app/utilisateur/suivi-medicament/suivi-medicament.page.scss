@@ -181,6 +181,7 @@
 
 .description_medicament .description_med {
     font-size: 11px;
+    width: 190px;
 }
 
 .name_medicament {
@@ -244,31 +245,31 @@
 
 ////////////////////// FOOTER
 
-.footer_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.font_footer {
-    background-color: #fff;
-    padding: 10px 0;
-}
-
-.accueil {
-    text-align: center;
-}
-
-.accueil i{
-    font-size: 35px;
-}
-
-// .accueil2 i{
-//     font-size: 40px;
+// .footer_content {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-left: 20px;
+//     margin-right: 20px;
 // }
 
-.accueil p {
-    font-size: 12px;
-}
+// .font_footer {
+//     background-color: #fff;
+//     padding: 10px 0;
+// }
+
+// .accueil {
+//     text-align: center;
+// }
+
+// .accueil i{
+//     font-size: 35px;
+// }
+
+// // .accueil2 i{
+// //     font-size: 40px;
+// // }
+
+// .accueil p {
+//     font-size: 12px;
+// }

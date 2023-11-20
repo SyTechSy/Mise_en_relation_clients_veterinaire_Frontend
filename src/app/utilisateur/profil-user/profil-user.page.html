@@ -1,4 +1,4 @@
-<div class="container_global">
+<div class="container_global" *ngIf="userconnect">
 
   <div class="content_text">
 
@@ -51,13 +51,13 @@
     <!-- ////////////////////////////////////////  -->
 
     <div class="name_user">
-      <h2 class="h2_name"> Diakaridia SY </h2>
+      <h2 class="h2_name"> {{userconnect.prenom}} {{userconnect.nom}} </h2>
     </div>
 
 
     <div class="bio_user">
       <p class="p_description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        {{userconnect.description}}
       </p>
     </div>
 
@@ -75,7 +75,7 @@
       </div>
 
       <div class="btn_right">
-        <button class="btn_profil btn_profil_red">
+        <button class="btn_profil btn_profil_red" (click)="deconnecterUtilisateur()">
           Déconnecter
         </button>
       </div>
@@ -99,7 +99,7 @@
             <div class="icon_info">
               <i class="ri-mail-line"></i>
             </div>
-            <p class="para_vete_info">sydiakaridia38@gmail.com</p>
+            <p class="para_vete_info">{{userconnect.email}}</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@
             <div class="icon_info">
               <i class="ri-smartphone-line"></i>
             </div>
-            <p class="para_vete_info">78711623</p>
+            <p class="para_vete_info">{{userconnect.numero}}</p>
           </div>
         </div>
 
@@ -121,7 +121,7 @@
             <div class="icon_info">
               <i class="ri-smartphone-line"></i>
             </div>
-            <p class="para_vete_info">Homme</p>
+            <p class="para_vete_info">{{userconnect.genre}}</p>
           </div>
         </div>
 
@@ -132,7 +132,7 @@
             <div class="icon_info">
               <i class="ri-article-line"></i>
             </div>
-            <p class="para_vete_info">23/10/2023</p>
+            <p class="para_vete_info">{{userconnect.dateNaissance}}</p>
           </div>
         </div>
 
@@ -143,7 +143,7 @@
             <div class="icon_info">
               <i class="ri-map-pin-2-line"></i>
             </div>
-            <p class="para_vete_info">Boulkassoumbougou</p>
+            <p class="para_vete_info">{{userconnect.quartier}}</p>
           </div>
         </div>
 

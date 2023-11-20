@@ -161,6 +161,10 @@ const routes: Routes = [
   {
     path: 'profil-principal',
     loadChildren: () => import('./veterinaire/profil-principal/profil-principal.module').then( m => m.ProfilPrincipalPageModule)
+  },
+  {
+    path: 'inscription-utilisateur2',
+    loadChildren: () => import('./connect_utilisateur/inscription-utilisateur2/inscription-utilisateur2.module').then( m => m.InscriptionUtilisateur2PageModule)
   }
 ];
 @NgModule({

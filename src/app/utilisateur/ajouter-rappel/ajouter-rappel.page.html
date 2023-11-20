@@ -25,7 +25,7 @@
       </div>
 
       <!-- // enregistrement  -->
-      <div class="save" routerLink="/suivi-medicament">
+      <div class="save" (click)="onSubmit()" >
         <h3> Enregistrer </h3>
       </div>
 
@@ -53,7 +53,7 @@
         <div class="formulaire">
   
           <div class="champ_input">
-            <input type="time" class="input_focus input_focus_textarea" id="time" autocomplete="off" required>
+            <input type="time" [(ngModel)]="reveil" name="reveil" class="input_focus input_focus_textarea" id="time" autocomplete="off" required>
             <label for="time" class="label label_heure">Heure de reveil</label>
             <!-- <i class="ri-information-line input_info_icon"></i> -->
           </div>  

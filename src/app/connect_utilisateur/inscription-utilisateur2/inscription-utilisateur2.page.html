@@ -61,42 +61,41 @@
 
           <!-- input de votre pays  -->
           <div class="champ_input">
-            <input type="text" class="input_focus2" [(ngModel)]="nom"  id="nom_user" name="nom" placeholder="Saisir votre nom" autocomplete="on" required>
-            <label for="nom_user" class="label">Votre nom</label>
+            <input type="text" class="input_focus2"  [(ngModel)]="numero"  name="numero" id="num_user" name="numero" placeholder="Saisir votre numero" autocomplete="on" required>
+            <label for="num_user" class="label">Numéro</label>
           </div>
 
           <!-- input de votre quartier  -->
           <div class="champ_input">
-            <input type="text" class="input_focus2" [(ngModel)]="prenom"  name="prenom" id="prenom_user" placeholder="Saisir votre prénom" autocomplete="on" required>
-            <label for="prenom_user" class="label">Votre prénom</label>
+            <input type="text" class="input_focus2"  [(ngModel)]="genre"  name="genre" name="genre" id="genre_user" placeholder="Saisir votre genre" autocomplete="on" required>
+            <label for="genre_user" class="label">Votre genre</label>
           </div>
 
         </div>
 
         
-        <!-- input de votre email  -->
+        <!-- input de votre acte de naissance  -->
 
         <div class="champ_input">
-          <input type="email" class="input_focus" [(ngModel)]="email"  name="email" id="email_user" placeholder="example@gmail.com" autocomplete="off" required>
-          <label for="email_user" class="label">Votre email</label>
-          <i class="ri-information-line input_info_icon"></i>
+          <input type="text" class="input_focus"  [(ngModel)]="dateNaissance"  name="dateNaissance" name="dateNaissance" id="dateNaissance" placeholder="12/12/2000" autocomplete="off" required>
+          <label for="dateNaissance" class="label">Votre Date de naissance</label>
         </div>
 
-       
-        
-
-        <!-- input de votre pays  -->
+        <!-- input de votre acte de naissance  -->
+ 
         <div class="champ_input">
-          <input type="password" class="input_focus" [(ngModel)]="motDePasse"  name="motDePasse"  id="password_user" placeholder="Saisir votre mot de passe" autocomplete="on" required>
-          <label for="password_user" class="label">Mot de passe</label>
-        </div>
+         <input type="text" class="input_focus" [(ngModel)]="quartier"  name="quartier" name="quartier" id="quartier" placeholder="Boulkassoumbougou" autocomplete="off" required>
+         <label for="quartier" class="label">Votre quartier</label>
+       </div>
 
-        <!-- input de votre quartier  -->
-        <div class="champ_input" style="margin-top: -10px;">
-          <input type="password" class="input_focus"  id="repassword_user" placeholder="Confirmer votre mot de " autocomplete="on" required>
-          <label for="repassword_user" class="label">Confirm mot de passe</label>
-        </div>
 
+       <!-- input de votre acte de naissance  -->
+
+       <div class="champ_input">
+        <input type="text" class="input_focus" [(ngModel)]="description"  name="description"  name="description" id="description" placeholder="une petite description" autocomplete="off" required>
+        <label for="description" class="label">Votre description</label>
+      </div>
+ 
       
         <!-- input de votre acte de naissance  -->
       
@@ -106,7 +105,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global">
-          <button type="button" (click)="onSubmit()"  class="btn_submit"> Suivant </button>
+          <button type="button" (click)="onSubmit()"  class="btn_submit"> S'inscrire </button>
         </div>
 
 

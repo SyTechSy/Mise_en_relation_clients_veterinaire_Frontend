@@ -24,7 +24,7 @@
     
 
     <!-- // deconnexion  -->
-    <div class="cadre_nom">
+    <div  (click)="onSubmit()" class="cadre_nom">
       <p>Save</p>
     </div>
 
@@ -80,10 +80,12 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" value="SY">
+            <input [(ngModel)]="userconnect.nom" [value]="userconnect.nom" name="nom" type="text" value="SY">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
+
+         <!-- <pre> {{userconnect | json}} </pre> -->
         
         <!-- // prenom  -->
         <div class="information_perso">
@@ -93,7 +95,7 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" value="Diakaridia">
+            <input [(ngModel)]="userconnect.prenom"[value]="userconnect.prenom"name="prenom" type="text" value="Diakaridia">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
@@ -105,11 +107,27 @@
             <h3 class="h3_bio"> Bio </h3>
           </div>
 
-          <div class="description_bio">
+          <!-- <div class="description_bio">
             <p class="para_bio">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, incidunt.
             </p>
+          </div> -->
+
+          <div class="input_description">
+            <textarea class="txt" [(ngModel)]="userconnect.description"
+            [value]="userconnect.description"
+            name="description" type="text" value=""></textarea>
           </div>
+
+          <style>
+            .txt {
+              width: 100%; 
+              resize: none;
+              border: none; 
+              outline: none;
+            }
+          </style>
+
 
         </div>
         
@@ -121,7 +139,9 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" class="email" value="sydiakaridia38@gmail.com">
+            <input [(ngModel)]="userconnect.email"
+            [value]="userconnect.email"
+            name="email" type="text" class="email" >
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
@@ -134,7 +154,9 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" value="78711623">
+            <input [(ngModel)]="userconnect.numero"
+            [value]="userconnect.numero"
+            name="numero" type="text" value="78711623">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
@@ -147,7 +169,9 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" value="Homme">
+            <input [(ngModel)]="userconnect.genre"
+            [value]="userconnect.genre"
+            name="genre" type="text" value="Homme">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
@@ -156,11 +180,13 @@
         <div class="information_perso">
           <!-- .. div de h3  -->
           <div class="title_info">
-            <h3 class="h3_title"> 23/10/2023 </h3>         
+            <h3 class="h3_title"> Date de naissance </h3>         
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" value="78711623">
+            <input [(ngModel)]="userconnect.dateNaissance"
+            [value]="userconnect.dateNaissance"
+            name="dateNaissance" type="text" value="78711623">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
@@ -173,7 +199,9 @@
           </div>
           <!-- .div de input  -->
           <div class="input_info">
-            <input type="text" class="adress" value="Boulkassoumbougou">
+            <input [(ngModel)]="userconnect.quartier"
+            [value]="userconnect.quartier"
+            name="quartier" type="text" class="adress">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>
