@@ -272,7 +272,7 @@
     border-right: none;
     margin: 10px 0;
     transition: all 0.3s;
-    font-size: 18px;
+    font-size: 20px;
     background: none;
 }
 
@@ -294,4 +294,69 @@
 .champ_input {
     display: flex;
     justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+// .input_focus {
+//     width: 100%;
+//     min-width: 337px;
+//     height: 49px;
+//     // padding: 10px 10px;
+//     outline: none;
+//     border-bottom: 1px solid #000;
+//     border-top: none;
+//     border-left: none;
+//     border-right: none;
+//     margin: 10px 0;
+//     transition: all 0.3s;
+//     font-size: 18px;
+//     background: none;
+// }
+
+.input_focus2:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+// .champ_input .label {
+//     position: absolute;
+//     top: 26px;
+//     left: 0px;
+//     pointer-events: none;
+//     color: #000;
+// }
+
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus2:not(:placeholder-shown) + .label,
+.input_focus2:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus2::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus2:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
 }

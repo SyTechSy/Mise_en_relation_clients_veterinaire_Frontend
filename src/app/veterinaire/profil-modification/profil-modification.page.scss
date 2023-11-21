@@ -94,70 +94,154 @@
     font-weight: 600;
 }
 
-.container_information {
-    margin-top: 20px;
+
+
+.container_global {
+    background-color: #F2F6FA;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
-.veterinaire_info {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 0px;
-}
-
-.veterinaire_info2 {
+.container_cadre_profil {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    background-color: #F2F6FA;
 }
 
-.vete_info {
+
+.image_profil {
+    width: 115px;
+    height: 115px;
+} 
+
+.image_profil img {
     width: 100%;
-    border-bottom: 1px solid #00000088;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.555);
+    background-image: url('../../../assets/profil_vete.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+// .camera-icon {
+//     font-size: 25px;
+//     position: relative;
+//     left: 110px;
+//     top: -40px;
+//     color: #000;
+//     padding: 6px;
+//     border-radius: 50%;
+//     font-weight: 200;
+// }
+
+////////////////////////////////// SUPPRESSION DE PROFIL 
+
+.container_blanc {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    margin-top: -20px;
 }
 
-
-.para_vete_info {
-    padding: 10px 0px;
-}
-
-
-.eye i {
-    font-size: 25px;
-    margin-right: 5px;
-}
-
-
-
-
-
-
-////////////////////// FOOTER
-
-.footer_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.font_footer {
+.cadre_blanc_container {
+    width: 100%;
     background-color: #fff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 128, 0, 0.089);
+    height: auto;
+    margin: 40px 10px 0px 10px;
 }
 
-.accueil {
-    text-align: center;
+
+// ......................................................................
+
+.information_perso {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000081;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
-.accueil i{
-    font-size: 35px;
+.bio_conatiner {
+    border-bottom: 1px solid #00000081;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
-.accueil2 i{
-    font-size: 40px;
+.title_info {
+    opacity: 0.7;
 }
 
-.accueil p {
-    font-size: 15px;
+
+
+.input_info {
+    display: flex;
+    align-items: center;
+}
+
+.input_info i {
+    font-size: 20px;
+}
+
+
+.input_info input {
+    text-align: right;
+    border: none;
+    padding-right: 5px;
+    font-size: 18px;
+    width: 220px;
+    font-weight: 600;
+    outline: none;
+}
+
+.h3_title {
+    font-size: 19px;
+}
+
+
+////// BIO 
+
+.description_bio {
+    margin-bottom: 10px;
+}
+
+.title_bio {
+    font-size: 19px;
+}
+
+.para_bio {
+    font-size: 14px;
+    letter-spacing: 0.50px;
+}
+
+.div {
+    margin-bottom: 100px;
+}
+
+.input_info .email, 
+.input_info .adress 
+{
+    font-size: 17px;
+}
+
+
+
+.filee {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #008000;
+
 }

@@ -18,8 +18,8 @@
       <h3>Suivi Médicament</h3>
     </div>
 
-    <div class="vide">
-
+    <div class="iconAjouter" routerLink="/ajouter-medicament">
+      <i class="ri-add-line"></i>
     </div>
   
   </div>
@@ -116,11 +116,11 @@
 
       <div class="edit_delete1">
         <!-- // modification  -->
-        <div class="edit">
+        <div class="edit" routerLink="/modification-medicament/{{affichemedi.suiviMedicamentId}}">
           <i class="ri-edit-box-line icon_edit"></i>
         </div>
         <!-- // suppression  -->
-        <div class="delete">
+        <div class="delete" (click)="deleteMedicament(affichemedi.suiviMedicamentId!)">
           <i class="ri-delete-bin-3-line icon_delete"></i>
         </div>
       </div>
@@ -131,3 +131,4 @@
   </div>
 </div>
 </ion-content>
+

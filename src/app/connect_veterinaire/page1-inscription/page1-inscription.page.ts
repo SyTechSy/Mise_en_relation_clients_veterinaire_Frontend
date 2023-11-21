@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { VeterinaireService } from 'src/app/monService/veterinaire.service';
 
 @Component({
   selector: 'app-page1-inscription',
@@ -7,9 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1InscriptionPage implements OnInit {
 
-  constructor() { }
+  nom:string="";
+  prenom:string="";
+  email:string="";
+  numero:string="";
+  genre:string="";
+  langueParler:string="";
+  pays:string="";
+  quartier:string="";
+  rue: number | undefined;
+  codePostal:number | undefined;
+  diplomeOuCertificat:string="";
+  domaineSpecialisation:string="";
+  jours:string="";
+  mois:string="";
+  annee:string="";
+  anneeExperience:string="";
+  imageCV:string="";
+  motDePasse:string="";
+
+  constructor(
+    private veteService : VeterinaireService,
+    private router : Router
+  ) { }
 
   ngOnInit() {
   }
+
+  onSubmit() {
+    this.veteService.veterinaire.nom = this.nom;
+    this.veteService.veterinaire.prenom = this.prenom;
+    this.veteService.veterinaire.email = this.email;
+    this.router.navigate( [`/page2-inscription`] ).then()
+  }
+
 
 }

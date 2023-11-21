@@ -64,8 +64,8 @@
 
         <!-- input de votre pays  -->
         <div class="champ_input">
-          <input type="password" class="input_focus"  id="password" placeholder="Saisir votre mot de passe" autocomplete="on" required>
-          <label for="password" class="label">Mot de passe</label>
+          <input [(ngModel)]="motDePasse"  id="motDePasse" name="motDePasse" type="password" class="input_focus" placeholder="Saisir votre mot de passe" autocomplete="on" required>
+          <label for="motDePasse" class="label">Mot de passe</label>
         </div>
 
         <!-- input de votre quartier  -->
@@ -82,7 +82,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global">
-          <button type="submit" class="btn_submit" routerLink="/accueil"> S'inscrire </button>
+          <button (click)="onSubmit()" type="submit" class="btn_submit"> S'inscrire </button>
         </div>
 
 

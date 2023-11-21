@@ -52,7 +52,7 @@
         <!-- input de votre email  -->
         <div class="champ_input">
           <i class="ri-mail-line identfiant_icon"></i>
-          <input type="email"  class="input_focus" id="email" placeholder="example@gmail.com" autocomplete="on" required>
+          <input type="email" [(ngModel)]="email" name="email" class="input_focus" id="email" placeholder="example@gmail.com" autocomplete="on" required>
           <label for="email" class="label">Votre email</label>
           <i class="ri-information-line input_info_icon"></i>
         </div>
@@ -60,7 +60,7 @@
         <!-- input de votre password  -->
         <div class="champ_input">
           <i class="ri-git-repository-private-fill identfiant_icon"></i>
-          <input [type]="passwordType" class="input_focus" id="password" placeholder="**************" autocomplete="on" required>
+          <input [(ngModel)]="motDePasse" name="motDePasse" [type]="passwordType" class="input_focus" id="password" placeholder="**************" autocomplete="on" required>
           <label for="password" class="label">Votre Mot de passe</label>
           <!-- <i class="ri-eye-close-line input_info_icon" (click)="togglePassword()"></i> -->
           <i class="input_info_icon" (click)="togglePassword()">
@@ -77,7 +77,7 @@
         
         <!-- le button de submit  -->
         <div class="btn_submit_global">
-          <button type="submit" class="btn_submit"> Se connecter </button>
+          <button type="submit" class="btn_submit"  (click)="onSubmit()"> Se connecter </button>
         </div>
 
 

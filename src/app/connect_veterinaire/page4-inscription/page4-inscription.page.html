@@ -59,14 +59,14 @@
 
         <!-- input de votre pays  -->
         <div class="champ_input">
-          <input type="text" class="input_focus"  id="diplome" placeholder="Saisir le diplôme ou certificat" autocomplete="on" required>
-          <label for="diplome" class="label">Votre Diplôme ou Certificat</label>
+          <input [(ngModel)]="diplomeOuCertificat"  id="diplomeOuCertificat" name="diplomeOuCertificat" type="text" class="input_focus" placeholder="Saisir le diplôme ou certificat" autocomplete="on" required>
+          <label for="diplomeOuCertificat" class="label">Votre Diplôme ou Certificat</label>
         </div>
 
         <!-- input de votre quartier  -->
         <div class="champ_input" style="margin-top: -10px;">
-          <input type="text" class="input_focus"  id="domaine" placeholder="Saisir votre domaine spécialisation" autocomplete="on" required>
-          <label for="domaine" class="label">Votre domaine spécialisation</label>
+          <input [(ngModel)]="domaineSpecialisation"  id="domaineSpecialisation" name="domaineSpecialisation" type="text" class="input_focus" placeholder="Saisir votre domaine spécialisation" autocomplete="on" required>
+          <label for="domaineSpecialisation" class="label">Votre domaine spécialisation</label>
         </div>
 
         <!-- input de votre quartier  -->
@@ -77,8 +77,8 @@
 
         <!-- input de votre quartier  -->
         <div class="champ_input" style="margin-top: -10px;">
-          <input type="number" maxlength="4" class="input_focus" id="experience" placeholder="Saisir votre année d'expérience" autocomplete="on" required>
-          <label for="experience" class="label">Année d'experience</label>
+          <input [(ngModel)]="anneeExperience"  id="anneeExperience" name="anneeExperience" type="text" class="input_focus" placeholder="Saisir votre année d'expérience" autocomplete="on" required>
+          <label for="anneeExperience" class="label">Année d'experience</label>
         </div>
 
       
@@ -112,7 +112,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global" routerLink="/page5-inscription">
-          <button type="submit" class="btn_submit"> Suivant </button>
+          <button (click)="onSubmit()" type="submit" class="btn_submit"> Suivant </button>
         </div>
 
 

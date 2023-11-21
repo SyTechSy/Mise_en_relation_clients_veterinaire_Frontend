@@ -32,7 +32,7 @@ export class VetcareLiaisonService {
 
   
 
-    /////////////// Pour modifier de utilisateur
+  /////////////// Pour modifier de utilisateur
   modifierUtilisateur(user : Utilisateur) {
     console.log("test",user)
     return this.http.put(this.apiUrl+"/modifier", {

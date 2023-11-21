@@ -28,8 +28,10 @@
     </div>
 
 
-    <div class="vide">
-
+    <div class="save" style="padding-right: 10px;" (click)="onSubmit()">
+      <p style="color: #008000; letter-spacing: 0.50px; font-size: 18px;" >
+        Enregistrer
+      </p>
     </div>
     
   </div>
@@ -74,222 +76,250 @@
 
 </ion-header>
 
-<ion-content>
-<div class="container_global" style="background-color: #F2F6FA!important; padding: 10px 0 20px 0;">
-
-  <div class="content_text">
-
-    
-
-    <div class="container_information">
-
-      <div class="content_information">
-
-        <!-- // L'information de vétérinaire 1  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info" routerLink="/information-modifier">
-            <p class="para_vete_info">Nom</p>
-            
-            <div class="eye">
+<ion-content class="container_global_content">
+  <div class="container_global">
+  
+    <div class="content_text">
+  
+      <!-- /////////////////////////////////////// -->
+  
+      <div class="container_blanc">
+        <form class="cadre_blanc_container">
+          <div class="div">
+          <!-- // nom  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Nom </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.nom" [value]="veteconnect.nom" name="nom" type="text" placeholder="SY">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Prénom</p>
-            
-            <div class="eye">
+  
+           <!-- <pre> {{veteconnect | json}} </pre> -->
+          
+          <!-- // prenom  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Prénom </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.prenom" [value]="veteconnect.prenom" name="prenom" type="text" placeholder="diakaridia">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Email</p>
-            
-            <div class="eye">
+          
+          <!-- // email  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title h3_email"> Email </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.email" [value]="veteconnect.email" name="email" type="text" class="email" placeholder="votre email">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Diplôme ou Certificat</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Diplôme ou Certificat </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.diplomeOuCertificat" [value]="veteconnect.diplomeOuCertificat" name="diplomeOuCertificat" type="text" placeholder="Certificat ou diplôme">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Domaine spécialisation</p>
-            
-            <div class="eye">
+          
+          <!-- // sexe  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Domaine spécialisation </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.domaineSpecialisation" [value]="veteconnect.domaineSpecialisation" name="domaineSpecialisation" type="text" placeholder="domaine">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Mon CV</p>
-            
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Mon CV </h3>         
+            </div>
+            <!-- .div de input  -->
             <div class="eye">
+              <input type="file" id="fille" name="fille" style="display: none;">
+              <label for="fille" class="filee">
+                modifier
+              </label>
+            </div>
+          </div>
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Numéro </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.numero" [value]="veteconnect.numero" name="numero" type="number" class="numero" placeholder="78888888">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">78711623</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Jours</h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.jours" [value]="veteconnect.jours" name="jours" type="text" class="numero" placeholder="Jours">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">23/10/2023</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Mois </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.mois" [value]="veteconnect.mois" name="mois" type="text" class="numero" placeholder="Mois">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Homme</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Année </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.annee" [value]="veteconnect.annee" name="annee" type="text" class="numero" placeholder="Année">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Année d'expérience</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Genre </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.genre" [value]="veteconnect.genre" name="genre" type="text" class="numero" placeholder="Homme">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Langue parlée</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Année d'expérience </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.anneeExperience" [value]="veteconnect.anneeExperience" name="anneeExperience" type="text" class="numero" placeholder="2 ans">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Mali</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Langue parler </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.langueParler" [value]="veteconnect.langueParler" name="langueParler" type="text" class="numero" placeholder="Français">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Boulkassoumbougou</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Pays </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.pays" [value]="veteconnect.pays" name="pays" type="text" class="numero" placeholder="Mali">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Rue</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Quartier </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.quartier" [value]="veteconnect.quartier" name="quartier" type="text" class="numero" placeholder="Boulkassoumbougou">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
-        </div>
-
-        <!-- // L'information de vétérinaire 2  -->
-        <div class="veterinaire_info">
-          <!-- // vete info  -->
-          <div class="vete_info">
-            <p class="para_vete_info">Code postal</p>
-            
-            <div class="eye">
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Rue </h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.rue" [value]="veteconnect.rue" name="rue" type="number" class="numero" placeholder="123">
               <i class="ri-arrow-right-s-line"></i>
             </div>
-
           </div>
+          
+          <!-- // numero  -->
+          <div class="information_perso">
+            <!-- .. div de h3  -->
+            <div class="title_info">
+              <h3 class="h3_title"> Code postal</h3>         
+            </div>
+            <!-- .div de input  -->
+            <div class="input_info">
+              <input [(ngModel)]="veteconnect.codePostal" [value]="veteconnect.codePostal" name="codePostal" type="number" class="numero" placeholder="65768">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+  
         </div>
-
+        </form>
       </div>
+      
+      
     </div>
-
-
   </div>
-</div>
-
-
-</ion-content>
-
+  </ion-content>
+<!-- 
 <ion-footer class="font_footer">
   <div class="footer_content">
     
@@ -322,4 +352,4 @@
     </div>
 
   </div>
-</ion-footer>
+</ion-footer> -->

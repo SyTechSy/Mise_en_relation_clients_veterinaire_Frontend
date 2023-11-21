@@ -20,7 +20,7 @@
     
 
     <!-- // deconnexion  -->
-    <div class="cadre_decconecter">
+    <div class="cadre_decconecter" (click)="deconnecterVeterinaire()">
       <p>Se déconnecter</p>
     </div>
 
@@ -33,7 +33,7 @@
 
   <!-- // Cadre de profil  -->
 
-  <div class="container_cadre_profil">
+  <div class="container_cadre_profil" *ngIf="veteconnect">
 
     <div class="cadre_profil">
 
@@ -45,19 +45,19 @@
 
         <!-- // le nom de mon cadre  -->
         <div class="cadre_nom">
-          <h3 class="cadre_h3">SY</h3>
+          <h3 class="cadre_h3">{{veteconnect.nom}}</h3>
         </div>
 
         <!-- // Le prénom de mon cadre  -->
         <div class="cadre_prenom">
-          <h3 class="cadre_h3">Diakaridia</h3>
+          <h3 class="cadre_h3">{{veteconnect.prenom}}</h3>
         </div>
 
       </div>
 
         <!-- // email de mon cadre  -->
         <div class="cadre_email">
-          <p class="cadre_p">sydiakaridia38@gmail.com</p>
+          <p class="cadre_p">{{veteconnect.email}}</p>
         </div>
 
 
@@ -84,7 +84,7 @@
 </ion-header>
 
 
-<ion-content class="container_global_con">
+<ion-content class="container_global_con" *ngIf="veteconnect">
 
   <div class="container_global">
 
@@ -100,7 +100,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Diplôme spécialisation</p>
+              <p class="para_vete_info"> {{veteconnect.diplomeOuCertificat}} </p>
             </div>
           </div>
 
@@ -108,26 +108,25 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Domaine spécialisation</p>
+              <p class="para_vete_info"> {{veteconnect.domaineSpecialisation}} </p>
             </div>
           </div>
 
           <!-- // L'information de vétérinaire 3  -->
-          <div class="veterinaire_info">
-            <!-- // vete info  -->
+          <!-- <div class="veterinaire_info">
             <div class="vete_info vete_info2">
-              <p class="para_vete_info">Mon CV</p>
+              <p class="para_vete_info">Mon CV en cours...</p>
               <div class="eye">
                 <i class="ri-eye-line"></i>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- // L'information de vétérinaire 2  -->
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">78711623</p>
+              <p class="para_vete_info"> {{veteconnect.numero}} </p>
             </div>
           </div>
 
@@ -135,7 +134,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Boulkassoumbougou</p>
+              <p class="para_vete_info"> {{veteconnect.quartier}} </p>
             </div>
           </div>
 
@@ -143,13 +142,18 @@
           <div class="veterinaire_info veterinaire_info2">
             <!-- // vete info  -->
             <div class="vete_info_ok">
-              <p class="para_vete_info">23/10/2023</p>
+              <p class="para_vete_info">
+                Le
+                {{veteconnect.jours}} /
+                {{veteconnect.mois}} /
+                {{veteconnect.annee}}
+              </p>
             </div>
 
             
             <!-- // vete info  -->
             <div class="vete_info_ok vete_info_ok2">
-              <p class="para_vete_info">Homme</p>
+              <p class="para_vete_info"> {{veteconnect.genre}} </p>
             </div>
           </div>
 
@@ -157,7 +161,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Année d'expérience</p>
+              <p class="para_vete_info"> {{veteconnect.anneeExperience}} </p>
             </div>
           </div>
 
@@ -165,7 +169,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Langue Parlée</p>
+              <p class="para_vete_info"> {{veteconnect.langueParler}} </p>
             </div>
           </div>
         

@@ -13,7 +13,7 @@
       <i class="ri-arrow-left-s-line"></i>
     </div> -->
 
-    <div class="titre_inscription" routerLink="/profil-principal">
+    <div class="titre_inscription" routerLink="/tabs-v/profil-principal">
       <i class="ri-arrow-left-s-line icon_retour"></i>
       <h3>Profil</h3>
     </div>
@@ -27,7 +27,7 @@
   </div>
 </ion-header>
 
-<ion-content>
+<ion-content  *ngIf="veteconnect">
   <div class="container_global" style="background-color: #F2F6FA;">
 
     <div class="content_text">
@@ -56,12 +56,15 @@
 
       <!-- // Le prénom de mon cadre  -->
       <div class="cadre_prenom">
-        <h3 class="cadre_h3">Diakaridia SY</h3>
+        <h3 class="cadre_h3">
+          {{veteconnect.prenom}}
+          {{veteconnect.nom}}
+        </h3>
       </div>
       
       <!-- // email de mon cadre  -->
       <div class="cadre_email">
-        <p class="cadre_p">sydiakaridia38@gmail.com</p>
+        <p class="cadre_p">{{veteconnect.email}}</p>
       </div>
 
       <!-- //////////// Les information  -->
@@ -74,7 +77,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Diplôme spécialisation</p>
+              <p class="para_vete_info">{{veteconnect.diplomeOuCertificat}}</p>
             </div>
           </div>
 
@@ -82,7 +85,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Domaine spécialisation</p>
+              <p class="para_vete_info">{{veteconnect.domaineSpecialisation}}</p>
             </div>
           </div>
 
@@ -90,7 +93,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info vete_info2">
-              <p class="para_vete_info">Mon CV</p>
+              <p class="para_vete_info">Mon CV toutjour en cours..</p>
               <div class="eye">
                 <i class="ri-eye-line"></i>
               </div>
@@ -101,7 +104,26 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">78711623</p>
+              <p class="para_vete_info">{{veteconnect.numero}}</p>
+            </div>
+          </div>
+
+          <!-- // L'information de vétérinaire 2  -->
+          <!-- <div class="veterinaire_info">
+            <div class="vete_info">
+              <p class="para_vete_info">{{veteconnect.quartier}}</p>
+            </div>
+          </div> -->
+
+          <!-- // L'information de vétérinaire 2  -->
+          <div class="veterinaire_info">
+            <!-- // vete info  -->
+            <div class="vete_info">
+              <p class="para_vete_info">
+                {{veteconnect.jours}} - 
+                {{veteconnect.mois}} -
+                {{veteconnect.annee}}
+              </p>
             </div>
           </div>
 
@@ -109,29 +131,29 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Boulkassoumbougou</p>
+              <p class="para_vete_info">{{veteconnect.genre}}</p>
             </div>
           </div>
 
           <!-- // L'information de vétérinaire 2  -->
-          <div class="veterinaire_info veterinaire_info2">
+          <!-- <div class="veterinaire_info veterinaire_info2" style="display: flex; justify-content: space-between;"> -->
             <!-- // vete info  -->
-            <div class="vete_info_ok">
+            <!-- <div class="vete_info_ok">
               <p class="para_vete_info">23/10/2023</p>
-            </div>
+            </div> -->
 
             
             <!-- // vete info  -->
-            <div class="vete_info_ok vete_info_ok2">
+            <!-- <div class="vete_info_ok vete_info_ok2">
               <p class="para_vete_info">Homme</p>
             </div>
-          </div>
+          </div> -->
 
           <!-- // L'information de vétérinaire 2  -->
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Année d'expérience</p>
+              <p class="para_vete_info">{{veteconnect.anneeExperience}}</p>
             </div>
           </div>
 
@@ -139,7 +161,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Langue Parlée</p>
+              <p class="para_vete_info">{{veteconnect.langueParler}}</p>
             </div>
           </div>
 
@@ -149,7 +171,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Mali</p>
+              <p class="para_vete_info">{{veteconnect.pays}}</p>
             </div>
           </div>
 
@@ -157,7 +179,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Boulkassoumbougou</p>
+              <p class="para_vete_info">{{veteconnect.quartier}}</p>
             </div>
           </div>
 
@@ -165,7 +187,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Rue</p>
+              <p class="para_vete_info">{{veteconnect.rue}}</p>
             </div>
           </div>
 
@@ -173,7 +195,7 @@
           <div class="veterinaire_info">
             <!-- // vete info  -->
             <div class="vete_info">
-              <p class="para_vete_info">Code postal</p>
+              <p class="para_vete_info">{{veteconnect.codePostal}}</p>
             </div>
           </div>
 

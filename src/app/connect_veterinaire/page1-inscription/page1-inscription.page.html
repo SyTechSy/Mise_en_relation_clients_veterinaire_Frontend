@@ -60,13 +60,13 @@
 
         <!-- input de votre nom  -->
         <div class="champ_input">
-          <input type="text" class="input_focus"  id="nom" placeholder="Saisir votre nom" autocomplete="on" required>
+          <input [(ngModel)]="nom"  id="nom" name="nom" type="text" class="input_focus" placeholder="Saisir votre nom" autocomplete="on" required>
           <label for="nom" class="label">Votre nom</label>
         </div>
 
         <!-- input de votre prénom  -->
         <div class="champ_input" style="margin-top: -10px;">
-          <input type="text" class="input_focus"  id="prenom" placeholder="Saisir votre nom" autocomplete="on" required>
+          <input [(ngModel)]="prenom" name="prenom" id="prenom" type="text" class="input_focus" placeholder="Saisir votre prenom" autocomplete="on" required>
           <label for="prenom" class="label">Votre prénom</label>
         </div>
 
@@ -79,7 +79,7 @@
         <!-- input de votre email  -->
 
         <div class="champ_input">
-          <input type="email" class="input_focus" id="email" placeholder="example@gmail.com" autocomplete="off" required>
+          <input [(ngModel)]="email" name="email" id="email" type="email" class="input_focus" placeholder="example@gmail.com" autocomplete="off" required>
           <label for="email" class="label">Votre email</label>
           <i class="ri-information-line input_info_icon"></i>
         </div>
@@ -89,7 +89,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global" routerLink="/page2-inscription"> 
-          <button type="submit" class="btn_submit"> Suivant </button>
+          <button type="submit" (click)="onSubmit()"  class="btn_submit"> Suivant </button>
         </div>
 
 

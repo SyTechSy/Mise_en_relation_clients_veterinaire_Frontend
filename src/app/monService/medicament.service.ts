@@ -28,45 +28,55 @@ export class MedicamentService {
     });
     }
 
-    listMedicament(): Observable<Medicament[]> {
-      return this.http.get<any[]>(this.apiUrl+ '/list').pipe(
-        map((response: any[]) => {
-          return response.map((item: any) => {
-            return {
-              suiviMedicamentId: item.suiviMedicamentId,
-              dateDebut: item.dateDebut,
-              dateFin: item.dateFin,
-              nomMedicament: item.nomMedicament,
-              nomAnimal: item.nomAnimal,
-              frequense: item.frequense,
-              dosage: item.dosage,
-              reveil: item.reveil,
-              description: item.description,
-            } as Medicament;
-          })
-        })
-      )
-    }
+    ////////////////// Liste les medicament 
 
-    /*
-    listMedicament(): Observable<Medicament[]> {
-    return this.http.get<any[]>(this.apiUrl + '/list').pipe(
+  listMedicament(): Observable<Medicament[]> {
+    return this.http.get<any[]>(this.apiUrl+ '/list').pipe(
       map((response: any[]) => {
-        // Assure-toi que la réponse est correctement transformée en un tableau de Medicament
         return response.map((item: any) => {
-          // Ici, tu dois mapper les propriétés reçues de l'API à ton modèle Medicament
           return {
             suiviMedicamentId: item.suiviMedicamentId,
             dateDebut: item.dateDebut,
             dateFin: item.dateFin,
-            // ... et ainsi de suite pour chaque propriété
+            nomMedicament: item.nomMedicament,
+            nomAnimal: item.nomAnimal,
+            frequense: item.frequense,
+            dosage: item.dosage,
+            reveil: item.reveil,
+            description: item.description,
           } as Medicament;
-        });
+        })
       })
-    );
+    )
   }
 
-    */
+  //////////////////////// liste moi modifier medicament par Id
+  listMedicamentId(id : number) {
+    return this.http.get<any[]>(this.apiUrl+ '/suivi/'+id)
+  }
+
+    
+  /////////////// Pour modifier de utilisateur
+  modifierMedicament(medi : Medicament) {
+    console.log("test",medi)
+    return this.http.put(this.apiUrl+"/modifier", {
+      "suiviMedicamentId" : medi.suiviMedicamentId, 
+      "dateDebut" : medi.dateDebut, 
+      "dateFin" : medi.dateFin,
+      "nomMedicament" : medi.nomMedicament,
+      "nomAnimal" : medi.nomAnimal,
+      "frequense" : medi.frequense,
+      "dosage" : medi.dosage,
+      "reveil" : medi.reveil,
+      "description" : medi.description,
+    });
+  }
+
+  ////////////// SUPPRESSION 
+
+  supprimerMedicament(id: number) {
+    return this.http.delete(this.apiUrl+"/supprimer/"+id);
+  }
 
 
     setMedi(medi: Medicament) {
@@ -82,8 +92,35 @@ export class MedicamentService {
 
 
 
+}
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /////////////// Pour l'ajouter medicament
   
@@ -104,4 +141,3 @@ export class MedicamentService {
         // });
   // }
         
-}

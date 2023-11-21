@@ -7,7 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'accueil',
+    path: '',
+    loadChildren: () => import('./tabs-v/tabs-v.module').then(m => m.TabsVPageModule)
+  },
+  {
+    path: 'tabs/accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   },
   {
@@ -15,7 +19,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur_veteriniare/discussion-user-vete/discussion-user-vete.module').then( m => m.DiscussionUserVetePageModule)
   },
   {
-    path: 'profil-user',
+    path: 'tabs/profil-user',
     loadChildren: () => import('./utilisateur/profil-user/profil-user.module').then( m => m.ProfilUserPageModule)
   },
   {
@@ -83,7 +87,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/mes-rdv/mes-rdv.module').then( m => m.MesRdvPageModule)
   },
   {
-    path: 'modification-medicament',
+    path: 'modification-medicament/:id',
     loadChildren: () => import('./utilisateur/modification-medicament/modification-medicament.module').then( m => m.ModificationMedicamentPageModule)
   },
   {
@@ -123,7 +127,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur_veteriniare/modifier-forum/modifier-forum.module').then( m => m.ModifierForumPageModule)
   },
   {
-    path: 'home-veterinaire',
+    path: 'tabs-v/home-veterinaire',
     loadChildren: () => import('./veterinaire/home-veterinaire/home-veterinaire.module').then( m => m.HomeVeterinairePageModule)
   },
   {
@@ -165,6 +169,10 @@ const routes: Routes = [
   {
     path: 'inscription-utilisateur2',
     loadChildren: () => import('./connect_utilisateur/inscription-utilisateur2/inscription-utilisateur2.module').then( m => m.InscriptionUtilisateur2PageModule)
+  },
+  {
+    path: 'tabs-v',
+    loadChildren: () => import('./tabs-v/tabs-v.module').then( m => m.TabsVPageModule)
   }
 ];
 @NgModule({

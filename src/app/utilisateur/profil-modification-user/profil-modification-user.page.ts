@@ -10,6 +10,7 @@ import { VetcareLiaisonService } from 'src/app/monService/vetcare-liaison.servic
 })
 export class ProfilModificationUserPage implements OnInit {
   
+  
   nom:string="";
   prenom:string="";
   email:string="";
@@ -48,7 +49,7 @@ export class ProfilModificationUserPage implements OnInit {
     }
   } 
 
-  //////////////////////////////////
+  ////////////////////////////////// MODIFICATION 
 
   onSubmit() {
     let user : Utilisateur = JSON.parse(localStorage.getItem("utilisateur")!);

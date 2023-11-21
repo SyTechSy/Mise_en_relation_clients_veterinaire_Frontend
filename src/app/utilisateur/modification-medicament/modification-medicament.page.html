@@ -10,7 +10,7 @@
 
     <div class="hearder">
 
-      <div class="icon_retour">
+      <div class="icon_retour" routerLink="/suivi-medicament">
         <i class="ri-arrow-left-s-line"></i>
         
         <div class="img_logo">
@@ -78,13 +78,13 @@
         
                   <!-- input de votre pays  -->
                   <div class="champ_input">
-                    <input type="date" class="input_focus2"  id="date_debut" placeholder="Saisir votre nom" autocomplete="on" required>
+                    <input [(ngModel)]="modifieMedi.dateDebut" [value]="modifieMedi.dateDebut" name="dateDebut" type="date" class="input_focus2"  id="date_debut" placeholder="Saisir votre nom" autocomplete="on" required>
                     <label for="date_debut" class="label">Date de début</label>
                   </div>
         
                   <!-- input de votre quartier  -->
                   <div class="champ_input">
-                    <input type="date" class="input_focus2"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
+                    <input [(ngModel)]="modifieMedi.dateFin" [value]="modifieMedi.dateFin" name="dateFin"  type="date" class="input_focus2"  id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
                     <label for="date_fin" class="label">Date de fin</label>
                   </div>
         
@@ -94,14 +94,40 @@
                 <!-- input de votre nom de médicament  -->
         
                 <div class="champ_input">
-                  <input type="text" class="input_focus" id="name_medicament" placeholder="example@gmail.com" autocomplete="off" required>
+                  <input [(ngModel)]="modifieMedi.nomMedicament" [value]="modifieMedi.nomMedicament" name="nomMedicament" type="text" class="input_focus" id="name_medicament" placeholder="name medicament" autocomplete="off" required>
                   <label for="name_medicament" class="label">Nom de médicament</label>
+                </div>
+        
+                
+                <!-- input de votre nom de médicament  -->
+        
+                <div class="champ_input">
+                  <input [(ngModel)]="modifieMedi.nomAnimal" [value]="modifieMedi.nomAnimal" name="nomAnimal" type="text" class="input_focus" id="name_medicament" placeholder="name animal" autocomplete="off" required>
+                  <label for="nomAnimal" class="label">Nom de animal</label>
                 </div>
 
                 <!-- // Dasoge et frequence  -->
         
+                
+                <!-- // Dasoge et frequence  -->
+        
+                <div class="champ_input2">
+        
+                  <!-- input de votre pays  -->
+                  <div class="champ_input">
+                    <input [(ngModel)]="modifieMedi.frequense" [value]="modifieMedi.frequense" name="frequense" type="text" class="input_focus2" id="frequense" placeholder="Saisir votre nom" autocomplete="on" required>
+                    <label for="frequense" class="label">frequense</label>
+                  </div>
+        
+                  <!-- input de votre quartier  -->
+                  <div class="champ_input">
+                    <input [(ngModel)]="modifieMedi.dosage" [value]="modifieMedi.dosage" name="dosage" type="text" class="input_focus2" id="date_fin" placeholder="Saisir votre prénom" autocomplete="on" required>
+                    <label for="date_fin" class="label">dasoge</label>
+                  </div>
+        
+                </div>
                   
-                <div class="champ_input">
+                <!-- <div class="champ_input">
 
                   <div class="jour_div">
                     <select class="input_focus2" name="frequence" id="frequence">
@@ -119,13 +145,13 @@
                     </select>
                   </div>
 
-                </div>
+                </div> -->
 
 
                 <!-- /// Input pour la modification de rappel  -->
 
                 <div class="champ_input">
-                  <input type="time" class="input_focus input_focus_textarea2" id="time" autocomplete="off" required>
+                  <input [(ngModel)]="modifieMedi.reveil" [value]="modifieMedi.reveil" name="reveil" type="time" class="input_focus input_focus_textarea2" id="time" autocomplete="off" required>
                   <label for="time" class="label label_heure">Heure de reveil</label>
                   <!-- <i class="ri-information-line input_info_icon"></i> -->
                 </div>  
@@ -134,8 +160,8 @@
                 
                 <!-- input de votre description -->
         
-                <div class="champ_input" >
-                  <textarea type="text" class="input_focus input_focus_textarea" id="email_user" placeholder="Une petite description" autocomplete="off" required></textarea>
+                <div class="champ_input">
+                  <textarea [(ngModel)]="modifieMedi.description" [value]="modifieMedi.description" name="description" type="text" class="input_focus input_focus_textarea" id="email_user" placeholder="Une petite description" autocomplete="off" required></textarea>
                   <label for="email_user" class="label">Description</label>
                 </div>
 
@@ -145,7 +171,7 @@
 
                 <!-- le button de submit  -->
                 <div class="btn_submit_global">
-                  <button type="submit" class="btn_submit"> Modifier </button>
+                  <button type="submit" class="btn_submit" (click)="onSubmit()"> Modifier </button>
                 </div>
 
 

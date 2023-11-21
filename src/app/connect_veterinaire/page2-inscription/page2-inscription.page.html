@@ -60,8 +60,8 @@
 
         <!-- input de votre numero  -->
         <div class="champ_input">
-          <input type="number" class="input_focus"  id="number" placeholder="Saisir votre numero" autocomplete="on" required>
-          <label for="number" class="label">Votre numéro</label>
+          <input [(ngModel)]="numero"  id="numero" name="numero" type="number" class="input_focus" placeholder="Saisir votre numero" autocomplete="on" required>
+          <label for="numero" class="label">Votre numéro</label>
         </div>
 
         <!-- input de votre sexe  -->
@@ -70,7 +70,7 @@
           <label for="prenom" class="label">Votre prénom</label>
         </div> -->
 
-        <div class="champ_input" style="margin-top: -10px;">
+        <!-- <div class="champ_input" style="margin-top: -10px;">   
 
           <select class="input_focus">
             <option class="option_input" value="">Genre</option>
@@ -78,9 +78,14 @@
             <option class="option_input" value="">Femme</option>
           </select>
         
-        </div>
+        </div> -->
 
-        <div class="champ_input" style="margin-top: -10px;">
+        <div class="champ_input">
+          <input [(ngModel)]="genre"  id="genre" name="genre" type="text" class="input_focus" placeholder="Saisir votre genre" autocomplete="on" required>
+          <label for="genre" class="label">Votre sexe</label>
+        </div>
+        
+        <!-- <div class="champ_input" style="margin-top: -10px;">
 
           <select class="input_focus">
             <option class="option_input" value="">Langue parlée</option>
@@ -89,6 +94,11 @@
             <option class="option_input" value="">Anglais</option>
           </select>
         
+        </div> -->
+
+        <div class="champ_input">
+          <input [(ngModel)]="langueParler"  id="langueParler" name="langueParler" type="text" class="input_focus" placeholder="Saisir votre langue Parler" autocomplete="on" required>
+          <label for="langueParler" class="label">Langue parlée</label>
         </div>
 
 
@@ -105,25 +115,35 @@
 
           <div class="champ_input">
 
-            <div class="jour_div">
+            <!-- <div class="jour_div">
               <select class="input_focus2" name="jours" id="jours">
                 <option value="">Jours</option>
                 <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
               </select>
-            </div>
+            </div> -->
+            
+          <div class="champ_input">
+            <input [(ngModel)]="jours"  id="jours" name="jours" type="text" class=" input_focus2" placeholder="ex: 10" autocomplete="on" required>
+            <label for="jours" class="label">Jours</label>
+          </div>
 
-            <div class="mois_div">
+            <!-- <div class="mois_div">
               <select class="input_focus2 input_focus3" name="jours" id="jours">
                 <option value="">Mois</option>
                 <option value="">Janvier</option>
                 <option value="">Février</option>
                 <option value="">Mars</option>
               </select>
-            </div>
+            </div> -->
+            
+          <div class="champ_input">
+            <input [(ngModel)]="mois"  id="mois" name="mois" type="text" class=" input_focus2" placeholder="ex: Janvier" autocomplete="on" required>
+            <label for="mois" class="label">Mois</label>
+          </div>
 
-            <div class="annee_div">
+            <!-- <div class="annee_div">
               <select class="input_focus2 input_focus4" name="jours" id="jours">
                 <option value="">Année</option>
                 <option value="">1815</option>
@@ -131,7 +151,12 @@
                 <option value="">....</option>
                 <option value="">2100</option>
               </select>
-            </div>
+            </div> -->
+            
+          <div class="champ_input">
+            <input [(ngModel)]="annee"  id="annee" name="annee" type="text" class=" input_focus2"  placeholder="ex: 1999" autocomplete="on" required>
+            <label for="annee" class="label">année</label>
+          </div>
 
           </div>
 
@@ -143,7 +168,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global" routerLink="/page3-inscription">
-          <button type="submit" class="btn_submit"> Suivant </button>
+          <button (click)="onSubmit()" type="submit" class="btn_submit"> Suivant </button>
         </div>
 
 
