@@ -14,9 +14,11 @@ export class MedicamentService {
   constructor(private http: HttpClient) { }
 
     medicament : Medicament = new Medicament;
+    currentFile : File | undefined;
     ajouterMedicaments() {
-        return this.http.post(this.apiUrl+"/ajouter", {
-          "suiviMedicamentId" : this.medicament.suiviMedicamentId,
+      const formData = new FormData();
+      formData.append("suiviMedicament", JSON.stringify ({
+        "suiviMedicamentId" : this.medicament.suiviMedicamentId,
           "dateDebut" : this.medicament.dateDebut,
           "dateFin" : this.medicament.dateFin,
           "nomMedicament" : this.medicament.nomMedicament,
@@ -24,13 +26,17 @@ export class MedicamentService {
           "frequense" : this.medicament.frequense,
           "dosage" : this.medicament.dosage,
           "reveil" : this.medicament.reveil,
+          "photo" : this.medicament.photo,
           "description" : this.medicament.description,
-    });
+      }))
+      formData.append("image",this.currentFile!);
+        return this.http.post(this.apiUrl+"/ajouter", formData);
     }
 
     ////////////////// Liste les medicament 
 
   listMedicament(): Observable<Medicament[]> {
+    const formData = new FormData();
     return this.http.get<any[]>(this.apiUrl+ '/list').pipe(
       map((response: any[]) => {
         return response.map((item: any) => {
@@ -44,6 +50,7 @@ export class MedicamentService {
             dosage: item.dosage,
             reveil: item.reveil,
             description: item.description,
+            photo: item.photo,
           } as Medicament;
         })
       })
@@ -68,6 +75,7 @@ export class MedicamentService {
       "frequense" : medi.frequense,
       "dosage" : medi.dosage,
       "reveil" : medi.reveil,
+      "photo" : medi.photo,
       "description" : medi.description,
     });
   }
@@ -88,6 +96,10 @@ export class MedicamentService {
     }
 
 
+    // ajouterMedicamentAvecImage(suiviMedicament: any): Observable<any> {
+    //   // Enregistrez le médicament sur le serveur JSON
+    //   return this.http.post(`${this.apiUrl}`, suiviMedicament);
+    // }
 
 
 
