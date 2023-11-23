@@ -20,6 +20,7 @@ export class ProfilModificationUserPage implements OnInit {
   dateNaissance:string="";
   quartier:string="";
   description:string=""
+  photo:string=""
 
   // La creation de l'image 
   selectedFile: File | null = null;
@@ -52,6 +53,7 @@ export class ProfilModificationUserPage implements OnInit {
   ////////////////////////////////// MODIFICATION 
 
   onSubmit() {
+    this.userService.currentFile = this.selectedFile!;
     let user : Utilisateur = JSON.parse(localStorage.getItem("utilisateur")!);
     user.nom = this.nom
     user.prenom = this.prenom
@@ -62,10 +64,11 @@ export class ProfilModificationUserPage implements OnInit {
     user.dateNaissance = this.dateNaissance
     user.quartier = this.quartier
     user.description = this.description
+    user.photo = this.photo
     this.userService.modifierUtilisateur(this.userconnect).subscribe((result) => {
       console.log("modif",result);
       localStorage.setItem('utilisateur', JSON.stringify(result));
-      this.router.navigate(['/profil-user'])
+      this.router.navigate(['/tabs/profil-user'])
     }
     )
   }

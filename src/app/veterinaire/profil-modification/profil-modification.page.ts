@@ -26,7 +26,8 @@ export class ProfilModificationPage implements OnInit {
     mois:string="";
     annee:string="";
     anneeExperience:string="";
-    imageCV:string="";
+    // imageCV:string="";
+    imagePRO:string="";
     motDePasse:string="";
   
   // La creation de l'image 
@@ -61,6 +62,8 @@ export class ProfilModificationPage implements OnInit {
   }
 
   onSubmit() {
+    this.veteService.currentFile = this.selectedFile!;
+    // this.veteService.currentFile = this.selectedFile!;
     let vete : Veterinaire = JSON.parse(localStorage.getItem("veterinaire")!);
     vete.nom = this.nom
     vete.prenom = this.prenom
@@ -78,7 +81,8 @@ export class ProfilModificationPage implements OnInit {
     vete.mois = this.mois
     vete.annee = this.annee
     vete.anneeExperience = this.anneeExperience
-    vete.imageCV = this.imageCV
+    // vete.imageCV = this.imageCV
+    vete.imagePRO = this.imagePRO
     vete.motDePasse = this.motDePasse
     this.veteService.modifierVeterinaire(this.veteconnect).subscribe((result) => {
       console.log("modification veterinaire", result);

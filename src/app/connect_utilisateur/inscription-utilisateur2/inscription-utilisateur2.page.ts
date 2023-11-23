@@ -19,6 +19,12 @@ export class InscriptionUtilisateur2Page implements OnInit {
   dateNaissance:string="";
   quartier:string="";
   description:string=""
+  photo:string=""
+
+  
+  // La creation de l'image 
+  selectedFile: File | null = null;
+  selectedFileDataUrl: string | null = null;
 
   constructor(private userService : VetcareLiaisonService, private router: Router) { }
 
@@ -26,8 +32,9 @@ export class InscriptionUtilisateur2Page implements OnInit {
   }
 
   
-    onSubmit() {
-
+    onSubmit() {  
+      this.userService.currentFile = this.selectedFile!;
+      this.userService.utilisateur.photo = this.photo;
       this.userService.utilisateur.numero = this.numero;
       this.userService.utilisateur.genre = this.genre;
       this.userService.utilisateur.dateNaissance = this.dateNaissance;
@@ -40,6 +47,23 @@ export class InscriptionUtilisateur2Page implements OnInit {
       }
       )
     }
+
+
+    
+  handleFileInput(event: any) {
+    this.selectedFile = event.target.files[0];
+
+    // Afficher l'image instantanément
+    if (this.selectedFile) {
+      const reader = new FileReader();
+      reader.readAsDataURL(this.selectedFile);
+
+      reader.onload = () => {
+        this.selectedFileDataUrl = reader.result as string
+        // this.medicament.photo = reader.result as string; // Stockez les données d'image
+      };
+    }
+  }
 
       // this.router.navigate( [`/connexion-utilisateur`] ).then()
     //   this.userService.inscriptionUtilisateur().subscribe((result)=>{

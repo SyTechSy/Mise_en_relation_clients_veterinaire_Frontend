@@ -15,7 +15,6 @@ export class AjouterMedicamentPage implements OnInit {
 
   
   // public meditof : Medicament = {} as Medicament;
-
   
   dateDebut:string="";
   dateFin:string="";
@@ -52,24 +51,6 @@ export class AjouterMedicamentPage implements OnInit {
     }
   }
 
-  // ajouterMedicamentAvecImage() {
-  //   if (this.meditof && this.meditof.photo) {
-  //     // Appelez le service pour ajouter le médicament avec image
-  //     this.mediService.ajouterMedicamentAvecImage(this.meditof).subscribe(
-  //       (response) => {
-  //         // Traitez la réponse du serveur, qui peut inclure des informations sur le médicament ajouté
-  //         console.log('Réponse du serveur :', response);
-  //       },
-  //       (error) => {
-  //         console.error('Erreur lors de l\'ajout du médicament :', error);
-  //       }
-  //     );
-  //   } else {
-  //     console.error('Veuillez sélectionner un fichier image.');
-  //   }
-  // }
-  
-
   onSubmit() {
     this.mediService.currentFile = this.selectedFile!;
     this.mediService.medicament.photo = this.photo;
@@ -83,20 +64,5 @@ export class AjouterMedicamentPage implements OnInit {
     this.router.navigate( [`/ajouter-rappel`] ).then()
     
   }
-
-  // handleFileInput(event) {
-  //   const file:File = event.target.files[0];
-
-  //   if (file) {
-  //     this.fileName = file.name;
-
-  //           const formData = new FormData();
-  //           formData.append("image", file);
-
-  //           const upload$ = this.http.post("api/suiviMedicament")
-  //   }
-
-  // }
-
 
 }

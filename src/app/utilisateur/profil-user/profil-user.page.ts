@@ -11,7 +11,10 @@ import { VetcareLiaisonService } from 'src/app/monService/vetcare-liaison.servic
 export class ProfilUserPage implements OnInit {
   userconnect: Utilisateur | any;
   
-  constructor(private userService: VetcareLiaisonService, private router: Router) { 
+  constructor(
+      private userService: VetcareLiaisonService, 
+      private router: Router
+    ) { 
    // this.userconnect = userService.getUser();
   }
 

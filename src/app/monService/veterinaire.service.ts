@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Veterinaire } from '../model/veterinaire';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class VeterinaireService {
   constructor(private http : HttpClient) { }
 
   veterinaire : Veterinaire = new Veterinaire();
+  currentFile : File | undefined;
+  // currentFile2 : File | undefined;
 
   inscriptionVeterinaire() {
     const formData = new FormData();
@@ -34,9 +37,12 @@ export class VeterinaireService {
       "mois" :this.veterinaire.mois,
       "annee" :this.veterinaire.annee,
       "anneeExperience" :this.veterinaire.anneeExperience,
-      "imageCV" :this.veterinaire.imageCV,
+      // "imageCV" :this.veterinaire.imageCV,
       "motDePasse" :this.veterinaire.motDePasse,
+      "imagePRO" :this.veterinaire.imagePRO,
     }))
+    formData.append("image", this.currentFile!);
+    // formData.append("image2", this.currentFile!);
     return this.http.post(this.apiUrl+"/ajouter", formData)
   }
 
@@ -66,11 +72,52 @@ export class VeterinaireService {
       "mois" : vete.mois,
       "annee" : vete.annee,
       "anneeExperience" : vete.anneeExperience,
-      "imageCV" : vete.imageCV,
+      // "imageCV" : vete.imageCV,
+      "imagePRO" : vete.imagePRO,
       "motDePasse" : vete.motDePasse,
     }))
+    formData.append("image", this.currentFile!)
+    // formData.append("image2", this.currentFile2!)
     return this.http.put(this.apiUrl+"/modifier", formData)
   }
+
+
+  listDesVeterinaire(): Observable<Veterinaire[]> {
+    const formData = new FormData();
+    return this.http.get<any[]>(this.apiUrl+ '/list').pipe(
+      map((response: any[]) => {
+        return response.map((item: any) => {
+          return {
+            "veteriniareId" : item.veteriniareId,
+            "nom" : item.nom, 
+            "prenom" : item.prenom,
+            "email" : item.email,
+            "numero" : item.numero,
+            "genre" : item.genre,
+            "langueParler" : item.langueParler,
+            "pays" : item.pays,
+            "quartier" : item.quartier,
+            "rue" : item.rue,
+            "codePostal" : item.codePostal,
+            "diplomeOuCertificat" : item.diplomeOuCertificat,
+            "domaineSpecialisation" : item.domaineSpecialisation,
+            "jours" : item.jours,
+            "mois" : item.mois,
+            "annee" : item.annee,
+            "anneeExperience" : item.anneeExperience,
+            // "imageCV" : vete.imageCV,
+            "imagePRO" : item.imagePRO,
+            "motDePasse" : item.motDePasse,
+          } as Veterinaire;
+        })
+      })
+    )
+  }
+
+  listVeterinaireID(id : number) {
+    return this.http.get<any[]>(this.apiUrl+ '/suiviVete/'+id)
+  }
+
 
 
     /////////////// Pour la connexion de veterinaire

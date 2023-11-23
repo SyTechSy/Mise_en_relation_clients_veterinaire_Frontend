@@ -9,7 +9,7 @@
   <div class="hearder">
 
     <!-- // icon de retour  -->
-    <div class="icon_retour" routerLink="/accueil">
+    <div class="icon_retour" routerLink="/tabs/accueil">
       <i class="ri-arrow-left-s-line"></i>
     </div>
 
@@ -49,29 +49,29 @@
   
 <!-- // les verinaire qui est choisis  -->
 
-<div class="container_veterinaire">
+<div class="container_veterinaire" *ngFor="let afficheveterinaire of listveterinaire">
 
   <!-- // content veterinaire 1 -->
   <div class="veterinaire">
 
-    <div class="info_vete">
+    <div class="info_vete"  routerLink="/profil-veterinaire-vue-par-clients/{{afficheveterinaire.veteriniareId}}">
 
       <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
+        <img [src]="afficheveterinaire.imagePRO" alt="">
       </div>
 
       <div class="info_name">
         <!-- // nom et prenom  -->
         <div class="nom_prenom">
           <p>
-            Diakaridia SY
+            {{afficheveterinaire.nom}}
           </p>
         </div>
 
         <!-- // domaine de specialiter  -->
         <div class="domaine">
           <p>
-            Domaine de specialisation 
+            {{afficheveterinaire.domaineSpecialisation}}
           </p>
         </div>
 
@@ -79,7 +79,7 @@
 
         <div class="vete_pays">
           <p>
-            Mali
+            {{afficheveterinaire.pays}}
           </p>
         </div>
 
@@ -95,313 +95,6 @@
 
   </div>
 
-  <!-- // content veterinaire 2 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 3 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 4 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 5 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 6 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 7 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-  <!-- // content veterinaire 8 -->
-  <div class="veterinaire">
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
 
 </div>
 

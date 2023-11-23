@@ -13,7 +13,7 @@
       <i class="ri-arrow-left-s-line"></i>
     </div> -->
 
-    <div class="icon_retour">
+    <div class="icon_retour" routerLink="/list-veterinaire">
       <i class="ri-arrow-left-s-line"></i>
 
       <div class="nom_retour">
@@ -25,7 +25,7 @@
 
     <!-- // deconnexion  -->
     <div class="cadre_nom" routerLink="/home-veterinaire-vue-par-clients">
-      <p>Information</p>
+      <p>Savoir plus...</p>
     </div>
 
     
@@ -36,13 +36,13 @@
 
 
 
-  <div class="profil_container">
+  <div class="profil_container" *ngIf="veteconnect">
 
     <div class="profil_content">
 
       <!-- // c'est pour l'image  -->
       <div class="image">
-        <img src="../../../assets/profil.jpg" alt="">
+        <img [src]="veteconnect.imagePRO" alt="">
       </div>
 
       <!-- // information de cette image qui est n otre profil  -->
@@ -51,21 +51,24 @@
         <!-- // le nom de Vétérinaire -->
         <div class="nom">
           <p>
-            Koureissi
+            {{veteconnect.nom}}
           </p>
         </div>
+        <!-- <pre>{{veteconnect|json}}</pre> -->
 
         <!-- // le nom de Vétérinaire -->
         <div class="prenom">
           <p>
-            Diakaridia
+            {{veteconnect.prenom}}
           </p>
         </div>
+
+        <!-- <pre> {{veteconnect | json}} </pre> -->
 
         <!-- // le nom de Vétérinaire -->
         <div class="domaine">
           <p>
-            Diplôme/Certificat
+            {{veteconnect.diplomeOuCertificat}}
           </p>
         </div>
 
@@ -76,12 +79,21 @@
 
             <!-- // email  -->
             <div class="email">
+              <a [href]="'mailto:' + veteconnect.email" style="text-decoration: none;">
               <i class="ri-mail-line"></i>
+              </a>
             </div>
 
             <!-- // telephone  -->
+            <!-- <div class="phone">
+              <a [href]="veteconnect.numero">
+                <i class="ri-phone-line"></i>
+              </a>
+            </div> -->
             <div class="phone">
-              <i class="ri-phone-line"></i>
+              <a [href]="'tel:' + veteconnect.numero" style="text-decoration: none;">
+                <i class="ri-phone-line"></i>
+              </a>
             </div>
 
             <!-- // message  -->
@@ -111,7 +123,7 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content *ngIf="veteconnect">
   <div class="profil_container">
 
 
@@ -127,7 +139,7 @@
 
       <div class="description_bio">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas iste veniam nemo vel quis porro?
+          en cours sur les informations ...
         </p>
       </div>
 
@@ -161,11 +173,12 @@
             <!-- // detaille -->
 
             <div class="adress_detaille">
-              <p>Pays : MALI, Quartier : </p>
-              <p>Boulkassoumbougou,</p>
-              <p>Rue : 216.</p>
+              <p>Pays : {{veteconnect.pays}}, Quartier : </p>
+              <p>{{veteconnect.quartier}},</p>
+              <p>Rue : {{veteconnect.rue}}.</p>
             </div>
           </div>
+          
 
         </div>
 
@@ -266,7 +279,7 @@
         <div class="input_commente">
           <textarea [(ngModel)]="text" maxlength="100" (ionChange)="textareaMaxLengthValidation()" name="comment" placeholder="Émettre un avis sur le service rendu par le vétérinaire"></textarea>
           <p class="max" *ngIf="wordsCount !== undefined">
-            {{ wordsCount }} mots saisis (limite : 100)
+             mots saisis (limite : 100)
           </p>
           
         </div>

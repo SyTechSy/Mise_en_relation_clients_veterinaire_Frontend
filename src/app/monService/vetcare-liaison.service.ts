@@ -13,9 +13,11 @@ export class VetcareLiaisonService {
   constructor(private http : HttpClient) { }
 
   utilisateur : Utilisateur = new Utilisateur();
+  currentFile : File | undefined;
   /////////////// Pour l'inscription 1 de utilisateur
   inscriptionUtilisateur() {
-    return this.http.post(this.apiUrl+"/ajouter", {
+    const formData = new FormData();
+    formData.append("utilisateur", JSON.stringify ({
       "utilisateurId" : this.utilisateur.utilisateurId,
       "nom" : this.utilisateur.nom, 
       "prenom" : this.utilisateur.prenom,
@@ -26,16 +28,18 @@ export class VetcareLiaisonService {
       "dateNaissance" : this.utilisateur.dateNaissance,
       "quartier" : this.utilisateur.quartier,
       "description" :this.utilisateur.description,
-
-    });
+      "photo" :this.utilisateur.photo,
+    }))
+    formData.append("image",this.currentFile!);
+    return this.http.post(this.apiUrl+"/ajouter", formData);
   }
 
   
 
   /////////////// Pour modifier de utilisateur
   modifierUtilisateur(user : Utilisateur) {
-    console.log("test",user)
-    return this.http.put(this.apiUrl+"/modifier", {
+    const formData = new FormData();
+    formData.append("utilisateur", JSON.stringify( {
       "utilisateurId" : user.utilisateurId, 
       "nom" : user.nom, 
       "prenom" : user.prenom,
@@ -46,7 +50,11 @@ export class VetcareLiaisonService {
       "dateNaissance" : user.dateNaissance,
       "quartier" : user.quartier,
       "description" : user.description,
-    });
+      "photo" : user.photo,
+    }))
+    formData.append("image", this.currentFile!);
+    console.log("test",user)
+    return this.http.put(this.apiUrl+"/modifier", formData);
   }
 
 

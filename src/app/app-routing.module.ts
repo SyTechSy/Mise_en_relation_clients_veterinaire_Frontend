@@ -91,6 +91,10 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/modification-medicament/modification-medicament.module').then( m => m.ModificationMedicamentPageModule)
   },
   {
+    path: 'profil-veterinaire-vue-par-clients/:id',
+    loadChildren: () => import('./utilisateur/profil-veterinaire-vue-par-clients/profil-veterinaire-vue-par-clients.module').then( m => m.ProfilVeterinaireVueParClientsPageModule)
+  },
+  {
     path: 'modifier-animal',
     loadChildren: () => import('./utilisateur/modifier-animal/modifier-animal.module').then( m => m.ModifierAnimalPageModule)
   },
@@ -135,10 +139,6 @@ const routes: Routes = [
     loadChildren: () => import('./veterinaire/home-veterinaire-planning-modification/home-veterinaire-planning-modification.module').then( m => m.HomeVeterinairePlanningModificationPageModule)
   },
   {
-    path: 'profil-veterinaire-vue-par-clients',
-    loadChildren: () => import('./utilisateur/profil-veterinaire-vue-par-clients/profil-veterinaire-vue-par-clients.module').then( m => m.ProfilVeterinaireVueParClientsPageModule)
-  },
-  {
     path: 'home-veterinaire-vue-par-clients',
     loadChildren: () => import('./veterinaire/home-veterinaire-vue-par-clients/home-veterinaire-vue-par-clients.module').then( m => m.HomeVeterinaireVueParClientsPageModule)
   },
@@ -173,6 +173,10 @@ const routes: Routes = [
   {
     path: 'tabs-v',
     loadChildren: () => import('./tabs-v/tabs-v.module').then( m => m.TabsVPageModule)
+  },
+  {
+    path: 'ajouter-heure',
+    loadChildren: () => import('./veterinaire/ajouter-heure/ajouter-heure.module').then( m => m.AjouterHeurePageModule)
   }
 ];
 @NgModule({

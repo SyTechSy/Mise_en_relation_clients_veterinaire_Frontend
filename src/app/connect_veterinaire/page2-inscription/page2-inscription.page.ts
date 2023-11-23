@@ -26,7 +26,14 @@ export class Page2InscriptionPage implements OnInit {
   annee:string="";
   anneeExperience:string="";
   imageCV:string="";
+  imagePRO:string="";
   motDePasse:string="";
+
+  
+  
+  // La creation de l'image 
+  selectedFile: File | null = null;
+  selectedFileDataUrl: string | null = null;
 
   constructor(
       private veteService: VeterinaireService,
@@ -37,6 +44,8 @@ export class Page2InscriptionPage implements OnInit {
   }
 
   onSubmit() {
+    this.veteService.currentFile = this.selectedFile!;
+    this.veteService.veterinaire.imagePRO = this.imagePRO;
     this.veteService.veterinaire.numero = this.numero;
     this.veteService.veterinaire.genre = this.genre;
     this.veteService.veterinaire.langueParler = this.langueParler;
@@ -45,5 +54,24 @@ export class Page2InscriptionPage implements OnInit {
     this.veteService.veterinaire.annee = this.annee;
     this.router.navigate( [`/page3-inscription`] ).then()
   }
+
+
+  
+    
+  handleFileInput(event: any) {
+    this.selectedFile = event.target.files[0];
+
+    // Afficher l'image instantanément
+    if (this.selectedFile) {
+      const reader = new FileReader();
+      reader.readAsDataURL(this.selectedFile);
+
+      reader.onload = () => {
+        this.selectedFileDataUrl = reader.result as string
+        // this.medicament.photo = reader.result as string; // Stockez les données d'image
+      };
+    }
+  }
+
 
 }

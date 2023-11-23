@@ -26,7 +26,8 @@ export class Page4InscriptionPage implements OnInit {
   mois:string="";
   annee:string="";
   anneeExperience:string="";
-  imageCV:string="";
+  // imageCV:string="";
+  imagePRO:string="";
   motDePasse:string="";
 
   constructor(
@@ -42,24 +43,24 @@ export class Page4InscriptionPage implements OnInit {
     this.veteService.veterinaire.diplomeOuCertificat = this.diplomeOuCertificat;
     this.veteService.veterinaire.domaineSpecialisation = this.domaineSpecialisation;
     this.veteService.veterinaire.anneeExperience = this.anneeExperience;
-    this.veteService.veterinaire.imageCV = this.imageCV;
+    // this.veteService.veterinaire.imageCV = this.imageCV;
     this.router.navigate( [`/page4-inscription`] ).then()
   }
 
 
   
   // La creation de l'image 
-  selectedFile: File | null = null;
+  selectedFile1: File | null = null;
   selectedFileDataUrl: string | null = null;
 
   
   handleFileInput(event: any) {
-    this.selectedFile = event.target.files[0];
+    this.selectedFile1 = event.target.files[0];
 
     // Afficher l'image instantanément
-    if (this.selectedFile) {
+    if (this.selectedFile1) {
       const reader = new FileReader();
-      reader.readAsDataURL(this.selectedFile);
+      reader.readAsDataURL(this.selectedFile1);
 
       reader.onload = () => {
         this.selectedFileDataUrl = reader.result as string

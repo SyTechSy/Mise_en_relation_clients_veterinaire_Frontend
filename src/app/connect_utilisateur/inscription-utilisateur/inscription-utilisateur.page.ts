@@ -20,6 +20,7 @@ export class InscriptionUtilisateurPage implements OnInit {
   dateNaissance:string="";
   quartier:string="";
   description:string="";
+  photo:string="";
   // confirmMotDePasse:string="";
 
   constructor(private userService : VetcareLiaisonService,  private router: Router) { }

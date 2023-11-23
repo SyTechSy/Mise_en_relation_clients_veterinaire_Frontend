@@ -1,4 +1,81 @@
 
+
+
+
+
+
+//////////////////// Style de médicament
+/// 
+
+
+
+.camera-icon {
+    font-size: 20px;
+    position: relative;
+    left: 110px;
+    top: -30px;
+    background-color: #008000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: 200;
+}
+
+
+.roudel_img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-image: url("../../../assets/appa.jpg");
+    background-size: cover;
+    background-position: center;
+    // background-color: #3d3737;
+    border: none;
+    z-index: 1;
+}
+
+.roudel_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.image_user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ajoute_photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ajoute_photo input[type="file"] {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    background-color: #86868663;
+    border-radius: 10px;
+  }
+
+.ajoute_photo input[type="file"]::-webkit-file-upload-button {
+    color: #000; 
+    background: none;
+    border: none;
+}   
+
+
+
+
+
+
+
 .ecran .ecran_vue {
     width: 100%;
     height: 40px;

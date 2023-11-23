@@ -10,7 +10,7 @@
 
     <div class="hearder">
 
-      <div class="icon_retour" routerLink="/connexion">
+      <div class="icon_retour" routerLink="/inscription-utilisateur">
         <i class="ri-arrow-left-s-line"></i>
       </div>
 
@@ -23,23 +23,37 @@
       </div>
     </div>
 
-    <!-- Image  -->
 
-    <div class="image_logo">
-      <div class="logo">
-        <img src="../../../assets/LOGO2.png" alt="mon logo">
+    <div class="container_global_input">
+      <div class="titre_image" style="text-align: center;">
+        <p style="color: #000; letter-spacing: 0.60px; font-size: 20px; margin-top: 20px;">Ajouter Image</p>
+      </div>
+
+      <!-- Image qui sera a droit de notre formulaire -->
+      <div class="image_input">
+        <!-- Afficher l'image sélectionnée -->
+        <div class="image_user">
+          <div class="roudel_img" >
+            <img class="immmmmgggg" [src]="selectedFileDataUrl">
+
+            <label class="camera-icon" for="photoInput">
+              <i class="ri-camera-3-line"></i>
+            </label>
+          </div>
+
+
+        </div>
+        <!-- // Clien pour ajouter une photo  -->
+
+        <div class="ajoute_photo">
+          <div class="tof">
+            <input type="file" accept="image/*" capture="environment" id="photoInput" style="display: none;" name="photo" (change)="handleFileInput($event)">
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <div class="titre_logo">
-        <p>Comment vous appelez-vous ?</p>
-    </div>
-
-    <div class="description_logo">
-      <p>Entrez votre nom et votre prénom que vous <br> utilisez, et adresse email.</p>
-    </div>
-
-  </div>
+ 
 
   <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
 

@@ -9,12 +9,13 @@ export class Utilisateur {
     dateNaissance? : string;
     quartier? : string;
     description? : string;
+    photo? : string;
 
     constructor( 
             utilisateurId? : number, 
             nom? : string, prenom? : string, email? : string, motDePasse? : string, 
             numero? : string, genre? : string, dateNaissance? : string, quartier? : string,
-            description? : string
+            description? : string, photo? : string
         ) {
         this.utilisateurId = utilisateurId;
         this.nom = nom;
@@ -25,6 +26,7 @@ export class Utilisateur {
         this.genre = genre;
         this.dateNaissance = dateNaissance;
         this.quartier = quartier;
+        this.photo = photo
         this.description = description
     }
 }

@@ -27,6 +27,7 @@ export class Page3InscriptionPage implements OnInit {
   annee:string="";
   anneeExperience:string="";
   imageCV:string="";
+  imagePRO:string="";
   motDePasse:string="";
 
   constructor(

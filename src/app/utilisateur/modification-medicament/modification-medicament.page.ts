@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+// import { error } from 'console';
 import { Medicament } from 'src/app/model/medicament';
 import { MedicamentService } from 'src/app/monService/medicament.service';
 
@@ -21,6 +22,7 @@ export class ModificationMedicamentPage implements OnInit {
   dosage:string="";
   reveil:string="";
   description:string="";
+  photo:string="";
 
   // La creation de l'image 
   selectedFile: File | null = null;
@@ -33,28 +35,47 @@ export class ModificationMedicamentPage implements OnInit {
  
  
   ngOnInit() {
-    this.modifieMedi = Object.assign(new Medicament(),JSON.parse(localStorage.getItem("medicament")!));
-
+    this.modifieMedi = Object.assign(new Medicament(),JSON.parse(localStorage.getItem("suiviMedicament")!));
     /////////// modifier
     this.suiviMedicamentId = this.activatedRoute.snapshot.paramMap.get('id')!;
     console.log(this.suiviMedicamentId);
 
+    this.mediService.listMedicamentId(+this.suiviMedicamentId).subscribe((result) => {
+      this.modifieMedi = result;
+    }, (error) => {
+      console.log(error);
+    })
+  }  
+
+  chargerDonnee() {
+    this.modifieMedi = Object.assign(new Medicament(),JSON.parse(localStorage.getItem("suiviMedicament")!));
+    /////////// modifier
+    this.suiviMedicamentId = this.activatedRoute.snapshot.paramMap.get('id')!;
+    console.log(this.suiviMedicamentId);
 
     this.mediService.listMedicamentId(+this.suiviMedicamentId).subscribe((result) => {
       this.modifieMedi = result;
-    })
-  }  
+    }, (error) => {
+      console.log(error);
+    }
+    );
+  }
 
 
 
   onSubmit() {
 
+    
+    this.mediService.currentFile = this.selectedFile!;
     this.mediService.modifierMedicament(this.modifieMedi).subscribe((result) => {
-      console.log("modif", result);
+      this.chargerDonnee();
+      // console.log("modifiiii", result);
+      // console.log(this.modifieMedi);
+      // console.log("____________________________________________________________")
       // localStorage.setItem('medicament', JSON.stringify(result));
-      this.router.navigateByUrl('/suivi-medicament', { skipLocationChange: true }).then(() => {
+      // this.router.navigateByUrl('/suivi-medicament', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/suivi-medicament']);
-      }) 
+      // }) 
     });
 
   }

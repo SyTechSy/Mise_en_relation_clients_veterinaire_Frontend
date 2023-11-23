@@ -65,8 +65,8 @@ export class MedicamentService {
     
   /////////////// Pour modifier de utilisateur
   modifierMedicament(medi : Medicament) {
-    console.log("test",medi)
-    return this.http.put(this.apiUrl+"/modifier", {
+    const formData = new FormData();
+    formData.append("suiviMedicament", JSON.stringify( {
       "suiviMedicamentId" : medi.suiviMedicamentId, 
       "dateDebut" : medi.dateDebut, 
       "dateFin" : medi.dateFin,
@@ -77,7 +77,9 @@ export class MedicamentService {
       "reveil" : medi.reveil,
       "photo" : medi.photo,
       "description" : medi.description,
-    });
+    }))
+    formData.append("image", this.currentFile!);
+    return this.http.put(this.apiUrl+"/modifier", formData);
   }
 
   ////////////// SUPPRESSION 

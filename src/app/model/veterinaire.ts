@@ -16,7 +16,8 @@ export class Veterinaire {
   mois?:string;
   annee?:string;
   anneeExperience?:string;
-  imageCV?:string;
+  // imageCV?:string;
+  imagePRO?:string;
   motDePasse?:string;
 
   constructor (
@@ -25,7 +26,7 @@ export class Veterinaire {
     langueParler?:string, pays?:string, quartier?:string, rue?: number | undefined,
     codePostal?:number | undefined, diplomeOuCertificat?:string,
     domaineSpecialisation?:string, jours?:string, mois?:string, annee?:string,
-    anneeExperience?:string, imageCV?:string, motDePasse?:string,
+    anneeExperience?:string, motDePasse?:string, imagePRO?:string //imageCV?:string,
   ) {
     this.veteriniareId = veteriniareId;
     this.nom = nom;
@@ -44,7 +45,8 @@ export class Veterinaire {
     this.mois = mois;
     this.annee = annee;
     this.anneeExperience = anneeExperience;
-    this.imageCV = imageCV;
+    // this.imageCV = imageCV;
+    this.imagePRO = imagePRO;
     this.motDePasse = motDePasse;
   }
 }

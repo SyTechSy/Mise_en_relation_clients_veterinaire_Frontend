@@ -68,11 +68,12 @@
     height: 150px;
     border: 1px solid #000;
     border-radius: 50%;
-    background-image: url("../../../assets/profil.jpg");
+    background-image: url("../../../assets/appa.jpg");
     background-size: cover;
     background-position: center;
     // background-color: #3d3737;
     border: none;
+    z-index: 1;
 }
 
 .roudel_img img {

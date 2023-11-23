@@ -184,7 +184,12 @@
 .content_adresse {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;  ///////////
+    margin-bottom: 25px;  ///////////
+}
+
+.content_global {
+    margin-left: 10px;
+    line-height: 20px;
 }
 
 .icon_adress i{
@@ -200,6 +205,8 @@
 .adresse_contact {
     margin: 30px 0;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .info_name p {
@@ -221,14 +228,15 @@
 ///  Cadre localisation 
 
 .cadre_localisation {
-    margin-left: 20px;
+    margin-right: 10px;
 }
 
 .cadre {
     width: 158px;
-    height: 170px;
+    height: 180px;
     background-color: #00800015;
     border-radius: 10px;
+    margin-top: -20px;
 }
 
 ////////////////////////////////
@@ -263,6 +271,8 @@
 
 .formulaire_comment {
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .input_commente {
