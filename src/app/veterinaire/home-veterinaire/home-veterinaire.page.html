@@ -20,7 +20,11 @@
       <div class="div_bienvenu">
         <p class="para_bienvenu"> Bienvenu </p>
         <div class="nom_personne">
-          <h3 class="h3_personne"> Diakaridia Koureissi SY </h3>
+          <h3 class="h3_personne"> 
+            {{veteconnect.prenom}}
+            {{veteconnect.nom}}
+          </h3>
+          <!-- <pre>{{veteconnect|json}}</pre> -->
         </div>
       </div>
       <!-- ////////////////  -->
@@ -938,137 +942,141 @@
 
           </div>
           
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Lundi
-              </p>
+          <div class="pour_ngIf" *ngIf="listPlanning.length > 0" >
+            <div class="div_kele" *ngFor="let afficheplanning of listPlanning">
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 1">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Lundi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 2">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Mardi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 3" >
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Mercredi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 4">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Jeudi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 5">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Vendredi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 6">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Samedi
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
+              
+              <!-- // content de planing pour jour et disponiibilite -->
+              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 7">
+  
+                <!-- // name et Modification  -->
+                <div class="planing_jour2">
+                  <p>
+                    Dimanche
+                  </p>
+                </div>
+  
+                <!-- // Modification  -->
+                <div class="planning_disponibilite2">
+                  <p>
+                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                  </p>
+                </div>
+  
+              </div>
             </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 16h à 18h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Mardi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 08h à 11h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Mercredi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 10h à 15h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Jeudi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 15h à 16h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Vendredi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 16h à 18h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Samedi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 12h à 15h
-              </p>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Dimanche
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                de 17h à 21h
-              </p>
-            </div>
-
           </div>
 
         </div>

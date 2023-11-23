@@ -25,14 +25,14 @@
       <!-- // Fin de hearder  -->
     </div>
 
-<!-- <ion-content> -->
+  <!-- <ion-content> -->
  
   
         <!-- ///////////////////// LEs planing espace Debut  -->
 
 
         <!-- // container de planing  -->
-        <div class="container_planing">
+        <form class="container_planing">
           
           <!-- // content de planing pour jour et disponiibilite -->
           <div class="name_content_planning name_content_planning_margin" >
@@ -54,13 +54,19 @@
           </div>
           
           <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
+          <div class="name_content_planning name_content_planning_jour"> <!--  routerLink="/information-planning-modifier"  -->
 
             <!-- // name et Modification  -->
             <div class="planing_jour2">
-              <p>
-                Lundi
-              </p>
+              <select class="select" [(ngModel)]="priorite" name="priorite">
+                <option value="1">Lundi</option>
+                <option value="2">Mardi</option>
+                <option value="3">Mercredi</option>
+                <option value="4">Jeudi</option>
+                <option value="5">Vendredi</option>
+                <option value="6">Samedi</option>
+                <option value="7">Dimanche</option>
+              </select>
             </div>
 
             <!-- // Modification  -->
@@ -69,187 +75,25 @@
                 De
               </p>
               <div class="dateDebut">
-                <input type="time" class="date_time">
+                <input [(ngModel)]="heureDebut" name="heureDebut" type="time" class="date_time">
               </div>
               <p style="padding-left: 5px;">
                 à
               </p>
               <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Mardi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Mercredi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Jeudi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Vendredi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Samedi
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-            </div>
-
-          </div>
-          
-          <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_jour" routerLink="/information-planning-modifier" >
-
-            <!-- // name et Modification  -->
-            <div class="planing_jour2">
-              <p>
-                Dimanche
-              </p>
-            </div>
-
-            <!-- // Modification  -->
-            <div class="planning_disponibilite2">
-              <p>
-                De
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
-              </div>
-              <p style="padding-left: 5px;">
-                à
-              </p>
-              <div class="dateDebut">
-                <input type="time" class="date_time">
+                <input [(ngModel)]="heureFin" name="heureFin" type="time" class="date_time">
               </div>
             </div>
 
           </div>
 
-        </div>
+          <div class="btn_submit"  (click)="onSubmit()">
+            <button class="btn" type="submit">
+              Ajouter
+            </button>
+          </div>
+
+        </form>
 
 
 

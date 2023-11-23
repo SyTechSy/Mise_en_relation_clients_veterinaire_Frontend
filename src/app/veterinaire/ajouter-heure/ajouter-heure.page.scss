@@ -165,7 +165,7 @@
     margin-top: 6px;
     border-bottom: 1px solid #00000042;
     padding-bottom: 5px;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 .planning_disponibilite2 p {
@@ -204,4 +204,30 @@
     background: transparent;
     border: none;
     outline: none;
+}
+
+.select {
+    width: 150px;
+    border: none;
+    background: transparent;
+    outline-style: solid;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.btn_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn_submit .btn {
+    background-color: #008000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 20px;
+    border-radius: 10px;
 }

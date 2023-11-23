@@ -139,7 +139,7 @@ const routes: Routes = [
     loadChildren: () => import('./veterinaire/home-veterinaire-planning-modification/home-veterinaire-planning-modification.module').then( m => m.HomeVeterinairePlanningModificationPageModule)
   },
   {
-    path: 'home-veterinaire-vue-par-clients',
+    path: 'home-veterinaire-vue-par-clients/:id',
     loadChildren: () => import('./veterinaire/home-veterinaire-vue-par-clients/home-veterinaire-vue-par-clients.module').then( m => m.HomeVeterinaireVueParClientsPageModule)
   },
   {
