@@ -1,0 +1,106 @@
+<div class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+
+    <!-- // hearder  -->
+    <div class="hearder">
+
+      <!-- // annulation  -->
+      <div class="annuler_retour" routerLink="/tabs-v/home-veterinaire">
+        <h3> Annuler </h3>
+      </div>
+
+      <!-- // titre ajouter un rappel  -->
+      <div class="titre_ajouter_rappel">
+        <h3>Modif.. planning</h3>
+      </div>
+
+      
+
+      <!-- // Fin de hearder  -->
+    </div>
+
+  <!-- <ion-content> -->
+ 
+  
+        <!-- ///////////////////// LEs planing espace Debut  -->
+
+
+        <!-- // container de planing  -->
+        <form class="container_planing" (submit)="submitUpdate()">
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_margin" >
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour">
+              <p>
+                Jours
+              </p>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite">
+              <p>
+                disponibilité
+              </p>
+            </div>
+
+          </div>
+          
+          <!-- // content de planing pour jour et disponiibilite -->
+          <div class="name_content_planning name_content_planning_jour"> <!--  routerLink="/information-planning-modifier"  -->
+
+            <!-- // name et Modification  -->
+            <div class="planing_jour2">
+              <select class="select" [(ngModel)]="modifiePlanning.priorite" name="priorite">
+                <option value="1">Lundi</option>
+                <option value="2">Mardi</option>
+                <option value="3">Mercredi</option>
+                <option value="4">Jeudi</option>
+                <option value="5">Vendredi</option>
+                <option value="6">Samedi</option>
+                <option value="7">Dimanche</option>
+              </select>
+            </div>
+
+            <!-- // Modification  -->
+            <div class="planning_disponibilite2">
+              <p>
+                De
+              </p>
+              <div class="dateDebut">
+                <input [(ngModel)]="modifiePlanning.heureDebut" name="heureDebut" type="time" class="date_time">
+              </div>
+              <p style="padding-left: 5px;">
+                à
+              </p>
+              <div class="dateDebut">
+                <input [(ngModel)]="modifiePlanning.heureFin" name="heureFin" type="time" class="date_time">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn_submit"> <!--   -->
+            <button class="btn" type="submit">
+              Modifier
+            </button>
+          </div>
+
+        </form>
+
+
+
+        <!-- ///////////////////// LEs planing espace Fin  -->
+
+  
+<!-- </ion-content> -->
+
+
+</div>

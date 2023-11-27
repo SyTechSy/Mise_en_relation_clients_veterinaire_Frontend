@@ -31,7 +31,11 @@ export class AjouterMedicamentPage implements OnInit {
   selectedFile: File | null = null;
   selectedFileDataUrl: string | null = null;
 
-  constructor(private mediService : MedicamentService,  private router: Router, private http: HttpClient) { }
+  constructor(
+      private mediService : MedicamentService,  
+      private router: Router, 
+      private http: HttpClient
+    ) { }
 
   ngOnInit() {
   }

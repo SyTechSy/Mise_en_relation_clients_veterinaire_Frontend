@@ -13,7 +13,7 @@
       <i class="ri-arrow-left-s-line"></i>
     </div> -->
 
-    <div class="icon_retour" routerLink="/mes-rdv">
+    <div class="icon_retour"> <!--  routerLink="/mes-rdv" -->
       <i class="ri-arrow-left-s-line"></i>
 
       <div class="nom_retour">
@@ -178,10 +178,16 @@
             </div>
 
              <!-- input de votre numero  -->
-             <div class="champ_input">
+             <!-- <div class="champ_input">
               <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="Sexe animal" autocomplete="on" required>
               <label for="postal" class="label">Sexe animal</label>
-            </div>
+            </div> -->
+
+            <select class="input_focus2">
+              <option value="">Sexe Animal</option>
+              <option value="homme">homme</option>
+              <option value="femme">Femme</option>
+            </select>
 
           </div>
 
@@ -208,7 +214,7 @@
         <!-- button envoie  -->
 
         <!-- le button de submit  -->
-        <div class="btn_submit_global" routerLink="/mes-rdv">
+        <div class="btn_submit_global"> <!--  routerLink="/mes-rdv" -->
           <button type="submit" class="btn_submit"> Prendre RDV </button>
         </div>
 

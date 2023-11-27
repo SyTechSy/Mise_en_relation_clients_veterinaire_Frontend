@@ -1,0 +1,86 @@
+<div class="container_global">
+
+  <div class="content">
+
+    <div class="ecran">
+      <div class="ecran_vue">
+
+      </div>
+    </div>
+
+    <div class="hearder">
+
+      <div class="icon_retour" routerLink="/ajouter-sante-age">
+        <i class="ri-arrow-left-s-line"></i>
+      </div>
+
+      <div class="titre_inscription">
+        <h3>Ajouter le nom</h3>
+      </div>
+
+      <div class="sauter" style="margin-right: 10px;" routerLink="/ajouter-sante-date-vaccination">
+        <p style="color: #008000; font-size: 18px; letter-spacing: 0.60px;"> Sauter </p>
+      </div>
+    </div>
+
+    <!-- Image  -->
+
+    <div class="image_logo">
+      <div class="logo">
+        <img src="../../../../assets/LOGO2.png" alt="mon logo">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
+
+  <aside class="formulaire">
+
+    <form class="container_formulaire">
+
+      
+
+      <div class="formulaire">
+
+        <!-- ///// TITRE  -->
+
+        <div class="title_mot">
+          <h4>Information de modification</h4>
+        </div>
+
+      
+        <!-- input de type file  -->
+
+        <div class="input_file">
+          <input type="file" accept="image/*" id="file" (change)="handleFileInput($event)">
+          <div class="label_input">
+            <label for="file" class="label_download">
+              <!-- <div class="image_user"> -->
+                <div class="roudel_img" >
+                  <img class="immmmmgggg" [src]="selectedFileDataUrl">
+                </div>
+                <p class="para_telecharger">Image animal</p>
+              <!-- </div> -->
+              <i class="ri-download-cloud-2-line icon_telecharger"></i>
+            </label>
+          </div>
+
+        </div>
+
+        <!-- button envoie  -->
+
+        <!-- le button de submit  -->
+        <div class="btn_submit_global">
+          <button type="submit" class="btn_submit"> Ajouter</button>
+        </div>
+
+
+
+      </div>
+
+    </form>
+
+  </aside>
+
+</div>

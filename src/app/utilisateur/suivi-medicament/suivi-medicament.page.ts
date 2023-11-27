@@ -76,13 +76,13 @@ export class SuiviMedicamentPage implements OnInit {
       this.mediService.supprimerMedicament(id).subscribe(
         () => {
           console.log('Suppression réussie !');
-          this.router.navigate(['//suivi-medicament']);
+          this.router.navigate(['/suivi-medicament']);
         },
         (error) => {
           // console.error('message :', error.error.text);
           const dddd = error.error.text;
           if (dddd == "succès"){
-            console.log("connexion reussi");
+            console.log("suppression reussi");
             this.chargerDonnee();
             this.router.navigate(['/suivi-medicament']);
           } else {

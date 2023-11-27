@@ -65,20 +65,22 @@ export class ModificationMedicamentPage implements OnInit {
 
   onSubmit() {
 
-    
     this.mediService.currentFile = this.selectedFile!;
     this.mediService.modifierMedicament(this.modifieMedi).subscribe((result) => {
       this.chargerDonnee();
-      // console.log("modifiiii", result);
-      // console.log(this.modifieMedi);
-      // console.log("____________________________________________________________")
-      // localStorage.setItem('medicament', JSON.stringify(result));
-      // this.router.navigateByUrl('/suivi-medicament', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/suivi-medicament']);
       // }) 
     });
 
   }
+
+  /*
+// console.log("modifiiii", result);
+      // console.log(this.modifieMedi);
+      // console.log("____________________________________________________________")
+      // localStorage.setItem('medicament', JSON.stringify(result));
+      // this.router.navigateByUrl('/suivi-medicament', { skipLocationChange: true }).then(() => {
+  */
 
   /*
 onSubmit() {

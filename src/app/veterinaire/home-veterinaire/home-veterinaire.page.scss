@@ -324,9 +324,33 @@
     padding-top: 5px;
 }
 
+.planning_Jour p{
+    font-size: 20px;
+}
+
 .planning_disponibilite2 p {
-    font-size: 16px;
+    font-size: 18px;
     // font-weight: 600;
     letter-spacing: 0.50px;
-    text-align: right;
+    // text-align: right;
 }
+
+ion-modal {
+    // --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: #008000;
+    --color: white;
+  }
+
+  .okokoko {
+    margin-left: -10px;
+  }

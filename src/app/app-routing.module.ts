@@ -75,7 +75,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/ajouter-rappel/ajouter-rappel.module').then( m => m.AjouterRappelPageModule)
   },
   {
-    path: 'detail-suivi-animal',
+    path: 'detail-suivi-animal/:id',
     loadChildren: () => import('./utilisateur/detail-suivi-animal/detail-suivi-animal.module').then( m => m.DetailSuiviAnimalPageModule)
   },
   {
@@ -95,7 +95,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/profil-veterinaire-vue-par-clients/profil-veterinaire-vue-par-clients.module').then( m => m.ProfilVeterinaireVueParClientsPageModule)
   },
   {
-    path: 'modifier-animal',
+    path: 'modifier-animal/:id',
     loadChildren: () => import('./utilisateur/modifier-animal/modifier-animal.module').then( m => m.ModifierAnimalPageModule)
   },
   {
@@ -177,6 +177,78 @@ const routes: Routes = [
   {
     path: 'ajouter-heure',
     loadChildren: () => import('./veterinaire/ajouter-heure/ajouter-heure.module').then( m => m.AjouterHeurePageModule)
+  },
+  {
+    path: 'modifier-heure/:id',
+    loadChildren: () => import('./veterinaire/modifier-heure/modifier-heure.module').then( m => m.ModifierHeurePageModule)
+  },
+  {
+    path: 'suivi-sante',
+    loadChildren: () => import('./utilisateur/suivi-sante/suivi-sante.module').then( m => m.SuiviSantePageModule)
+  },
+  {
+    path: 'detail-animal-sante',
+    loadChildren: () => import('./utilisateur/detail-animal-sante/detail-animal-sante.module').then( m => m.DetailAnimalSantePageModule)
+  },
+  {
+    path: 'modifier-sante-nom',
+    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-nom/modifier-sante-nom.module').then( m => m.ModifierSanteNomPageModule)
+  },
+  {
+    path: 'modifier-sante-race',
+    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-race/modifier-sante-race.module').then( m => m.ModifierSanteRacePageModule)
+  },
+  {
+    path: 'modifier-sante-age',
+    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-age/modifier-sante-age.module').then( m => m.ModifierSanteAgePageModule)
+  },
+  {
+    path: 'modifier-sante-sexe',
+    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-sexe/modifier-sante-sexe.module').then( m => m.ModifierSanteSexePageModule)
+  },
+  {
+    path: 'ajouter-sante-age',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-age/ajouter-sante-age.module').then( m => m.AjouterSanteAgePageModule)
+  },
+  {
+    path: 'ajouter-sante-nom',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom/ajouter-sante-nom.module').then( m => m.AjouterSanteNomPageModule)
+  },
+  {
+    path: 'ajouter-sante-race',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-race/ajouter-sante-race.module').then( m => m.AjouterSanteRacePageModule)
+  },
+  {
+    path: 'ajouter-sante-sexe',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-sexe/ajouter-sante-sexe.module').then( m => m.AjouterSanteSexePageModule)
+  },
+  {
+    path: 'ajouter-sante-photo',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-photo/ajouter-sante-photo.module').then( m => m.AjouterSantePhotoPageModule)
+  },
+  {
+    path: 'ajouter-sante-date-vaccination',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-date-vaccination/ajouter-sante-date-vaccination.module').then( m => m.AjouterSanteDateVaccinationPageModule)
+  },
+  {
+    path: 'ajouter-sante-nom-veterinaire-vaccin',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-veterinaire-vaccin/ajouter-sante-nom-veterinaire-vaccin.module').then( m => m.AjouterSanteNomVeterinaireVaccinPageModule)
+  },
+  {
+    path: 'ajouter-sante-nom-vaccin',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-vaccin/ajouter-sante-nom-vaccin.module').then( m => m.AjouterSanteNomVaccinPageModule)
+  },
+  {
+    path: 'ajouter-sante-date-traitement',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-date-traitement/ajouter-sante-date-traitement.module').then( m => m.AjouterSanteDateTraitementPageModule)
+  },
+  {
+    path: 'ajouter-sante-nom-veterinaire-traitement',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-veterinaire-traitement/ajouter-sante-nom-veterinaire-traitement.module').then( m => m.AjouterSanteNomVeterinaireTraitementPageModule)
+  },
+  {
+    path: 'ajouter-sante-nom-traitement',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-traitement/ajouter-sante-nom-traitement.module').then( m => m.AjouterSanteNomTraitementPageModule)
   }
 ];
 @NgModule({

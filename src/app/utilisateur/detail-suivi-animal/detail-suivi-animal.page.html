@@ -21,7 +21,7 @@
 
 <ion-content>
 
-  <div class="container_detaille_animal">
+  <div class="container_detaille_animal"  *ngIf="animalconnect">
 
     <!-- // contentr de mes animals  -->
     <div class="content_animal">
@@ -31,7 +31,7 @@
 
         <!-- // image de animal  -->
         <div class="image_animal">
-          <img src="../../../assets/dog.jpg" alt="">
+          <img [src]="animalconnect.photo" alt="">
         </div>
 
       </div>
@@ -56,7 +56,7 @@
             </div>
 
             <h3 class="nom_en_question">
-              Raven
+              {{animalconnect.nom}}
             </h3>
           </div>
   
@@ -71,7 +71,7 @@
             <!-- // name  -->
             <div class="name">
               <p>
-                5 ans 
+                {{animalconnect.age}}
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@
             <!-- // name  -->
             <div class="name">
               <p>
-                Chien
+                {{animalconnect.categorie}}
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@
             <!-- // name  -->
             <div class="name">
               <p>
-                Masculin
+                {{animalconnect.priorite}}
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <!-- // paragraphe  -->
             <div class="paragraphe">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, aliquid.
+                {{animalconnect.description}}
               </p>
             </div>
           </div>
@@ -121,12 +121,12 @@
           <!-- ///////////// action pour supprimer ou modifier -->
           <div class="container_action">
             <!-- // pour modifier  -->
-            <div class="icon_modifier" routerLink="/modifier-animal">
+            <div class="icon_modifier" routerLink="/modifier-animal/{{animalconnect.suiviSanterId}}"> <!-- routerLink="/modifier-animal" -->
               <i class="ri-edit-box-line"></i>
             </div>
 
             <!-- // pour supprimer  -->
-            <div class="icon_supprimer">
+            <div class="icon_supprimer"  (click)="deleteAnimal(animalconnect.suiviSanterId!)">
               <i class="ri-delete-bin-3-line"></i>
             </div>
           </div>

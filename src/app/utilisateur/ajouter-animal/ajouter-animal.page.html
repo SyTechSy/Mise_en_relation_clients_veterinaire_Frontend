@@ -51,23 +51,29 @@
 
         <!-- input de nom d'animal  -->
         <div class="champ_input">
-          <input type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
+          <input [(ngModel)]="nom" name="nom" type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
           <label for="nom" class="label">Nom d'animal</label>
         </div>
 
         <!-- input de vcategorie d'animal  -->
         <div class="champ_input" style="margin-top: -10px;">
-          <input type="text" class="input_focus"  id="categorie" placeholder="Exemple : Chien ou ....." autocomplete="on" required>
-          <label for="categorie" class="label">C'est quel animal</label>
+          <input [(ngModel)]="age" name="age" type="text" class="input_focus"  id="age" placeholder="Exemple : 12 ans" autocomplete="on" required>
+          <label for="age" class="label">Âge</label>
+        </div>
+
+        <!-- input de vcategorie d'animal  -->
+        <div class="champ_input" style="margin-top: -10px;">
+          <input [(ngModel)]="categorie" name="categorie" maxlength="10" type="text" class="input_focus"  id="categorie" placeholder="Exemple : Chien ou ....." autocomplete="on" required>
+          <label for="categorie" class="label">Categoriel</label>
         </div>
 
         <!-- // sexe animal  -->
         <div class="champ_input" style="margin-top: -10px;">
 
-          <select class="input_focus">
+          <select class="input_focus" [(ngModel)]="priorite" name="priorite">
             <option class="option_input" value="">Genre</option>
-            <option class="option_input" value="">Homme</option>
-            <option class="option_input" value="">Femme</option>
+            <option class="option_input" value="homme">Homme</option>
+            <option class="option_input" value="femme">Femme</option>
           </select>
         
         </div>
@@ -92,7 +98,7 @@
         
         <!-- // description -->
         <div class="champ_input">
-          <textarea type="text" class="input_focus input_focus_textarea" id="descript" placeholder="Une petite description" autocomplete="off" required></textarea>
+          <textarea [(ngModel)]="description" name="description" type="text" class="input_focus input_focus_textarea" id="descript" placeholder="Une petite description" autocomplete="off" required></textarea>
           <label for="descript" class="label">Description</label>
         </div>
 
@@ -102,7 +108,7 @@
 
         <!-- le button de submit  -->
         <div class="btn_submit_global" routerLink="/suivi-animal">
-          <button type="submit" class="btn_submit"> Ajouter </button>
+          <button type="submit" (click)="onSubmit()" class="btn_submit"> Ajouter </button>
         </div>
 
 

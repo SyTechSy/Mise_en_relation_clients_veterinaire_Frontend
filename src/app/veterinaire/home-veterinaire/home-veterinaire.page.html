@@ -914,7 +914,7 @@
             </div>
 
             <!-- // Modification  -->
-            <div class="modifier_planning" routerLink="/ajouter-heure">
+            <div class="modifier_planning" routerLink="/ajouter-heure"> <!--   -->
               <p>
                 Ajouter
               </p>
@@ -924,7 +924,7 @@
           </div>
           
           <!-- // content de planing pour jour et disponiibilite -->
-          <div class="name_content_planning name_content_planning_margin" >
+          <div class="name_content_planning name_content_planning_margin" style="margin-bottom: 10px;">
 
             <!-- // name et Modification  -->
             <div class="planing_jour">
@@ -943,139 +943,205 @@
           </div>
           
           <div class="pour_ngIf" *ngIf="listPlanning.length > 0" >
-            <div class="div_kele" *ngFor="let afficheplanning of listPlanning">
+            <div class="div_kele" *ngFor="let afficheplanning of listPlanning" style="margin: 0px -20px 0 0px;">
               <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 1">
+
+              <!-- <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 1">
   
-                <!-- // name et Modification  -->
+                
                 <div class="planing_jour2">
                   <p>
                     Lundi
                   </p>
                 </div>
   
-                <!-- // Modification  -->
                 <div class="planning_disponibilite2">
                   <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                    
                   </p>
                 </div>
   
-              </div>
+              </div> -->
+
+              <!-- <ion-list> -->
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 1">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Lundi</p>
+                      </div>
+  
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 2">
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+              <!-- </ion-list> -->
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 2">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Mardi</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Mardi
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 3" >
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 3">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Mercredi</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Mercredi
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 4">
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 4">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Jeudi</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Jeudi
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 5">
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 5">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Vendredi</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Vendredi
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 6">
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 6">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Samedi</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Samedi
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
               
-              <!-- // content de planing pour jour et disponiibilite -->
-              <div class="name_content_planning name_content_planning_jour" *ngIf="afficheplanning.priorite == 7">
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding class="okokoko" *ngIf="afficheplanning.priorite == 7">
+                  <ion-item>
+                    
+                    <div class="display" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+                      <div class="planning_Jour">
+                        <p>Dimanche</p>
+                      </div>
   
-                <!-- // name et Modification  -->
-                <div class="planing_jour2">
-                  <p>
-                    Dimanche
-                  </p>
-                </div>
-  
-                <!-- // Modification  -->
-                <div class="planning_disponibilite2">
-                  <p>
-                    de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
-                  </p>
-                </div>
-  
-              </div>
+                      <div class="planning_disponibilite2">
+                        <p>
+                          de {{afficheplanning.heureDebut}} à {{afficheplanning.heureFin}}
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </ion-item>
+              
+                  <ion-item-options side="end">
+                    <ion-item-option style="background: #008000;" routerLink="/modifier-heure/{{afficheplanning.planningId}}">Modifier</ion-item-option>
+                    <ion-item-option color="danger" expandable (click)="deletePlanning(afficheplanning.planningId!)">Delete</ion-item-option>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+
+              
+              
             </div>
           </div>
 

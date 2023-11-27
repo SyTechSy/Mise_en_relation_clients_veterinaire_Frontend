@@ -11,7 +11,7 @@ import { VeterinaireService } from 'src/app/monService/veterinaire.service';
 export class ProfilVeterinaireVueParClientsPage implements OnInit {
   veteconnect: Veterinaire | any;
 
-  public veteriniareId: string | undefined
+  public veteriniareId: string | undefined;
   // constructor() { }
 
   constructor(

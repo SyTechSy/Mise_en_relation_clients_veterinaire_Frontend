@@ -9,7 +9,7 @@
   <div class="hearder">
 
     <!-- // icon de retour  -->
-    <div class="icon_retour" routerLink="/accueil">
+    <div class="icon_retour" routerLink="/tabs/accueil">
       <i class="ri-arrow-left-s-line"></i>
     </div>
 
@@ -56,7 +56,7 @@
 <ion-content>
 
   <!-- // Suivre la sante de son animal  -->
-  <div class="container_suivi_sante">
+  <div class="container_suivi_sante" *ngFor="let afficheAnimal of listAnimals"> 
     <!-- // content 1 -->
     <div class="content_suivi">
       <!-- // container de category d'animal  -->
@@ -64,14 +64,14 @@
 
         <!-- // image_cadre -->
         <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
+          <img [src]="afficheAnimal.photo" alt="">
         </div>
 
         <!-- // information de cadre  -->
         <div class="information_cadre">
           <!-- // titre  -->
           <h3 class="title_dog">
-            Raven
+            {{afficheAnimal.nom}}
           </h3>
 
           <!-- // age  -->
@@ -82,263 +82,23 @@
             </p>
             <!-- // age  -->
             <p class="name_information">
-              5 ans
+              {{afficheAnimal.age}}
             </p>
           </div>
 
           <!-- // breed  -->
           <div class="para_info_name">
             <!-- // name age  -->
-            <p class="titre_name">
+            <p class="titre_name" style="width: 90px;">
               Categorie : 
             </p>
             <!-- // age  -->
-            <p class="name_information">
-              Chien
+            <p class="name_information" style="width: 150px;">
+              {{afficheAnimal.categorie}}
             </p>
           </div>
           <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- // content 2 -->
-    <div class="content_suivi">
-      <!-- // container de category d'animal  -->
-      <div class="category_container">
-
-        <!-- // image_cadre -->
-        <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
-        </div>
-
-        <!-- // information de cadre  -->
-        <div class="information_cadre">
-          <!-- // titre  -->
-          <h3 class="title_dog">
-            Chiot
-          </h3>
-
-          <!-- // age  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Age : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              2 ans
-            </p>
-          </div>
-
-          <!-- // breed  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Categorie : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              Chien
-            </p>
-          </div>
-          <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- // content 3 -->
-    <div class="content_suivi">
-      <!-- // container de category d'animal  -->
-      <div class="category_container">
-
-        <!-- // image_cadre -->
-        <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
-        </div>
-
-        <!-- // information de cadre  -->
-        <div class="information_cadre">
-          <!-- // titre  -->
-          <h3 class="title_dog">
-            Oscar
-          </h3>
-
-          <!-- // age  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Age : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              1 ans
-            </p>
-          </div>
-
-          <!-- // breed  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Categorie : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              Chien
-            </p>
-          </div>
-          <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- // content 4 -->
-    <div class="content_suivi">
-      <!-- // container de category d'animal  -->
-      <div class="category_container">
-
-        <!-- // image_cadre -->
-        <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
-        </div>
-
-        <!-- // information de cadre  -->
-        <div class="information_cadre">
-          <!-- // titre  -->
-          <h3 class="title_dog">
-            Dligue
-          </h3>
-
-          <!-- // age  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Age : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              7 ans
-            </p>
-          </div>
-
-          <!-- // breed  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Categorie : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              Chien
-            </p>
-          </div>
-          <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- // content 5 -->
-    <div class="content_suivi">
-      <!-- // container de category d'animal  -->
-      <div class="category_container">
-
-        <!-- // image_cadre -->
-        <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
-        </div>
-
-        <!-- // information de cadre  -->
-        <div class="information_cadre">
-          <!-- // titre  -->
-          <h3 class="title_dog">
-            Jerry
-          </h3>
-
-          <!-- // age  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Age : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              3 ans
-            </p>
-          </div>
-
-          <!-- // breed  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Categorie : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              Chien
-            </p>
-          </div>
-          <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- // content 6 -->
-    <div class="content_suivi">
-      <!-- // container de category d'animal  -->
-      <div class="category_container">
-
-        <!-- // image_cadre -->
-        <div class="category_cadre">
-          <img src="../../../assets/dog.jpg" alt="">
-        </div>
-
-        <!-- // information de cadre  -->
-        <div class="information_cadre">
-          <!-- // titre  -->
-          <h3 class="title_dog">
-            Okay
-          </h3>
-
-          <!-- // age  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Age : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              4 ans
-            </p>
-          </div>
-
-          <!-- // breed  -->
-          <div class="para_info_name">
-            <!-- // name age  -->
-            <p class="titre_name">
-              Categorie : 
-            </p>
-            <!-- // age  -->
-            <p class="name_information">
-              Chien
-            </p>
-          </div>
-          <!-- // cadre detaille  -->
-          <div class="icon_detaille"  routerLink="/detail-suivi-animal">
+          <div class="icon_detaille"   routerLink="/detail-suivi-animal/{{afficheAnimal.suiviSanterId}}">
             <i class="ri-arrow-right-s-line"></i>
           </div>
         </div>

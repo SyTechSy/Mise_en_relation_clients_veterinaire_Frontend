@@ -38,11 +38,14 @@
 
   <div class="profil_container" *ngIf="veteconnect">
 
-    <div class="profil_content">
+    <div class="profil_content" style="position: relative;">
 
       <!-- // c'est pour l'image  -->
       <div class="image">
         <img [src]="veteconnect.imagePRO" alt="">
+        <!-- <p>
+          rendez-vous
+        </p> -->
       </div>
 
       <!-- // information de cette image qui est n otre profil  -->
@@ -72,6 +75,12 @@
           </p>
         </div>
 
+        <div class="rdv" style="position: absolute; top: 0px; right: 5px;" routerLink="/prendre-rdv" >
+          <p style="color: rgba(255, 0, 0, 0.726); letter-spacing: 0.60px;"> 
+            Prendre Rdv
+          </p>
+        </div>
+
         <!-- /////////////////////////////// Contact direct  -->
         <div class="profil_contact">
 
@@ -83,13 +92,7 @@
               <i class="ri-mail-line"></i>
               </a>
             </div>
-
-            <!-- // telephone  -->
-            <!-- <div class="phone">
-              <a [href]="veteconnect.numero">
-                <i class="ri-phone-line"></i>
-              </a>
-            </div> -->
+            
             <div class="phone">
               <a [href]="'tel:' + veteconnect.numero" style="text-decoration: none;">
                 <i class="ri-phone-line"></i>

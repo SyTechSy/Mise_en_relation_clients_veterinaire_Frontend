@@ -1,0 +1,511 @@
+<ion-header class="font_hearder">
+
+  <div class="ecran">
+    <div class="ecran_vue">
+
+    </div>
+  </div>
+
+  <div class="hearder">
+
+    <!-- // icon de retour  -->
+    <div class="icon_retour" routerLink="/suivi-sante">
+      <i class="ri-arrow-left-s-line"></i>
+    </div>
+
+    <!-- titre de suivi medicament  -->
+    <div class="TitreSuiviMedicament">
+      <h3>Suivi santé</h3>
+    </div>
+
+    <div class="Modifier">
+      <p> <!-- style="color: #008000; font-size: 18px; margin-right: 10px;" -->
+        
+      </p>
+    </div>
+  
+  </div>
+
+  
+  <div class="profil_container">
+
+    <div class="profil_content" style="position: relative;">
+
+      <!-- // c'est pour l'image  -->
+      <div class="image">
+        <img src="../../../assets/dog.jpg" alt="">
+        <!-- <p>
+          rendez-vous
+        </p> -->
+      </div>
+
+      <!-- // information de cette image qui est n otre profil  -->
+      <div class="info_profil_vete">
+
+        <!-- // le nom de Vétérinaire -->
+        <div class="info_perso">
+          <p style="font-weight: 600; letter-spacing: 0.50px; font-size: 14px;">
+            Informations génerales
+          </p>
+        </div>
+
+        <div class="container_name">
+          <!-- // le nom de Vétérinaire -->
+          <div class="display_info">
+            <div class="name">
+              <p>
+                Nom : 
+              </p>
+              <p class="info_actu">
+                Chiot
+              </p>
+            </div>
+            <!-- ///  -->
+            <div class="icon_point" routerLink="/modifier-sante-nom">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          
+          </div>
+          <!-- <pre>{{veteconnect|json}}</pre> -->
+
+          <!-- // le nom de Vétérinaire -->
+          <div class="display_info">
+            <div class="name">
+              <p>
+                Race : 
+              </p>
+              <p class="info_actu">
+                Golden
+              </p>
+            </div>
+            <!-- ///  -->
+            <div class="icon_point" routerLink="/modifier-sante-race">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          
+          </div>
+
+          <!-- // le nom de Vétérinaire -->
+          <div class="display_info">
+            <div class="name">
+              <p>
+                Sexe :
+              </p>
+              <p class="info_actu">
+                Homme
+              </p>
+            </div>
+            <!-- ///  -->
+            <div class="icon_point" routerLink="/modifier-sante-sexe">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          
+          </div>
+
+          <!-- // le nom de Vétérinaire -->
+          <div class="display_info">
+            <div class="name">
+              <p>
+                Âge :
+              </p>
+              <p class="info_actu">
+                2 ans
+              </p>
+            </div>
+            <!-- ///  -->
+            <div class="icon_point" routerLink="/modifier-sante-age">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ///// Debut de mon bare  -->
+    <div class="bare">
+      <div class="ligne">
+        <!-- ////////////////////// -->
+      </div>
+    </div>
+    <!-- ///// Fin de mon bare  -->
+  </div>
+
+
+</ion-header>
+
+<ion-content>
+  
+ <div class="containe_contenu">
+
+  <div class="info_title">
+    <p style="font-weight: 600; letter-spacing: 0.50px; font-size: 14px; color: rgba(0, 0, 0, 0.753);">
+      Historique médical
+    </p>
+  </div>
+
+  <!-- ////////////////////////////  -->
+
+  <div class="content_g">
+    <!-- /////////////  -->
+    <div class="content">
+
+      <!-- // titre  //////////////////////////// VACCINATION -->
+      <div class="titre_historique">
+        <p>
+          Vaccinations
+        </p>
+      </div>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Dates des vaccinations
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                24/10/2023
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Les vaccins administrés
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Le nom de vaccins
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Nom vétérinaire qui les ont administres
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Le nom vete
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- // titre /////////////////////////////// TRAITEMENT -->
+      <div class="titre_historique">
+        <p>
+          Traitements
+        </p>
+      </div>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Dates des traitements
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                24/10/2023
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Les traitements administés  
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Le nom de traitements
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Nom vétérinaire qui ont fait le traitement
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Le nom vete
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      
+
+      <!-- // titre  ///////////////////////////////// MALADIE -->
+      <div class="titre_historique">
+        <p>
+          Maladie
+        </p>
+      </div>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Jour de la maladie
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                24/10/2024
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Maladie dont animal a souffert
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Nom de la maladie
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Les symptômes
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                Fièvre/Vomis.....
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- // titre  /////////////////////////////// POID-->
+
+      <div class="titre_historique">
+        <p>
+          Suivi poids
+        </p>
+      </div>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko">
+        <ion-item class="ion_item">
+          
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 170px;">
+                Poids de l'animal
+              </p>
+            </div>
+  
+            <!-- // information -->
+            <div class="information_i">
+              <p>
+                120
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- // titre  /////////////////////////////// -->
+      <div class="titre_historique">
+        <p>
+          Description
+        </p>
+      </div>
+
+      <!-- <ion-list> -->
+      <ion-item-sliding class="okokoko" style="background-color: #F2F6FA;">
+        <ion-item class="ion_item">
+
+          <div class="titre_information">
+            <!-- // titre  -->
+            <div class="titre_i">
+              <p style="width: 330px; padding-top: 10px ; padding-bottom: 10px;">
+                Description de l'état de animal Description de l'état de animal Description de l'état de animal
+              </p>
+            </div>
+            <!-- ///// -->
+          </div>
+          
+        </ion-item>
+    
+        <ion-item-options side="end">
+          <ion-item-option style="background: #008000;">Modifier</ion-item-option>
+          <ion-item-option color="danger" expandable >Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </div>
+    <!-- // content  -->
+  </div>
+
+ </div>
+
+</ion-content>

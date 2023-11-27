@@ -30,7 +30,7 @@ export class MedicamentService {
           "description" : this.medicament.description,
       }))
       formData.append("image",this.currentFile!);
-        return this.http.post(this.apiUrl+"/ajouter", formData);
+      return this.http.post(this.apiUrl+"/ajouter", formData);
     }
 
     ////////////////// Liste les medicament 
@@ -63,7 +63,7 @@ export class MedicamentService {
   }
 
     
-  /////////////// Pour modifier de utilisateur
+  /////////////// Pour modifier un medicament
   modifierMedicament(medi : Medicament) {
     const formData = new FormData();
     formData.append("suiviMedicament", JSON.stringify( {
