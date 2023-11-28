@@ -249,6 +249,34 @@ const routes: Routes = [
   {
     path: 'ajouter-sante-nom-traitement',
     loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-traitement/ajouter-sante-nom-traitement.module').then( m => m.AjouterSanteNomTraitementPageModule)
+  },
+  {
+    path: 'ajouter-sante-date-maladie',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-date-maladie/ajouter-sante-date-maladie.module').then( m => m.AjouterSanteDateMaladiePageModule)
+  },
+  {
+    path: 'ajouter-sante-nom-maladie',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-nom-maladie/ajouter-sante-nom-maladie.module').then( m => m.AjouterSanteNomMaladiePageModule)
+  },
+  {
+    path: 'ajouter-sante-symptome',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-symptome/ajouter-sante-symptome.module').then( m => m.AjouterSanteSymptomePageModule)
+  },
+  {
+    path: 'ajouter-sante-poid',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-poid/ajouter-sante-poid.module').then( m => m.AjouterSantePoidPageModule)
+  },
+  {
+    path: 'ajouter-sante-description',
+    loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-description/ajouter-sante-description.module').then( m => m.AjouterSanteDescriptionPageModule)
+  },
+  {
+    path: 'ajouter-suivi-animaux',
+    loadChildren: () => import('./utilisateur/ajouter-suivi-animaux/ajouter-suivi-animaux.module').then( m => m.AjouterSuiviAnimauxPageModule)
+  },
+  {
+    path: 'modifier-suivi-animaux',
+    loadChildren: () => import('./utilisateur/modifier-suivi-animaux/modifier-suivi-animaux.module').then( m => m.ModifierSuiviAnimauxPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,226 @@
+<div class="container_global">
+
+  <ion-header>
+    <div class="content">
+
+      <div class="ecran">
+        <div class="ecran_vue">
+  
+        </div>
+      </div>
+  
+      <div class="hearder">
+  
+        <div class="icon_retour" routerLink="/suivi-sante">
+          <i class="ri-arrow-left-s-line"></i>
+        </div>
+  
+        <div class="titre_inscription">
+          <h3>Ajouter la santé d'un animal</h3>
+        </div>
+  
+        <div class="vide">
+  
+        </div>
+      </div>
+  
+      <!-- Image  -->
+  
+      <div class="image_logo" style="padding-bottom: 10px;">
+        <div class="logo">
+          <img src="../../../assets/LOGO2.png" alt="mon logo">
+        </div>
+      </div>
+  
+    </div>
+  </ion-header>
+
+</div>
+
+  <!-- /////////////////////////////////////////////////////////  FORMULAIRE -->
+
+
+  <ion-content>
+    <aside class="formulaire">
+        <form class="container_formulaire">
+
+          
+
+          <div class="formulaire">
+
+            <!-- ///// TITRE  -->
+
+            <div class="title_mot">
+              <h4>Information de animal</h4>
+            </div>
+
+            <!-- input de nom d'animal  -->
+            <div class="champ_input">
+              <input type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
+              <label for="nom" class="label">Nom</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="age" placeholder="Nom de la Race" autocomplete="on" required>
+              <label for="race" class="label">Race</label>
+            </div>
+
+            <!-- // sexe animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+
+              <select class="input_focus">
+                <option class="option_input" value="">Genre</option>
+                <option class="option_input" value="homme">Homme</option>
+                <option class="option_input" value="femme">Femme</option>
+              </select>
+            
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="age" placeholder="Exemple : 2 ans " autocomplete="on" required>
+              <label for="age" class="label">Âge</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <!-- <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="categorie" placeholder="Exemple : Chien ou ....." autocomplete="on" required>
+              <label for="categorie" class="label">Categoriel</label>
+            </div> -->
+          
+            <!-- input de type file  -->
+
+            <div class="input_file">
+              <input type="file" accept="image/*" id="file" (change)="handleFileInput($event)">
+              <div class="label_input">
+                <label for="file" class="label_download">
+                  <!-- <div class="image_user"> -->
+                    <div class="roudel_img" >
+                      <img class="immmmmgggg" [src]="selectedFileDataUrl">
+                    </div>
+                    <p class="para_telecharger">Image animal</p>
+                  <!-- </div> -->
+                  <i class="ri-download-cloud-2-line icon_telecharger"></i>
+                </label>
+              </div>
+
+            </div>
+
+            <!-- //////////////////////////////////////  -->
+
+            <div class="title_mot" style="margin-bottom: 15px;">
+              <h4 style="font-size: 22px; font-weight: 600;">Vaccination</h4>
+            </div>
+
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="date" class="input_focus"  id="date-vaccin" autocomplete="on" required>
+              <label for="date-vaccin" class="label">Date de vaccination</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="non-vaccin" placeholder="nom de vaccin" autocomplete="on" required>
+              <label for="nom-vaccin" class="label">Nom vaccin</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="nom-vete-vaccin" placeholder="Le nom de vétérinaire" autocomplete="on" required>
+              <label for="nom-vete-vaccin" class="label">Nom vétérinaire qui les ont administés</label>
+            </div>
+
+            <!-- //////////////////////////////////////  -->
+
+            <div class="title_mot" style="margin-bottom: 15px;">
+              <h4 style="font-size: 22px; font-weight: 600;">Traitement</h4>
+            </div>
+
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="date" class="input_focus"  id="date" autocomplete="on" required>
+              <label for="traitement" class="label">Date de traitement</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="non-traitement" placeholder="nom de traitement" autocomplete="on" required>
+              <label for="nom-traitement" class="label">Nom de traitement</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="non-vete-traitement" placeholder="Le nom de vétérinaire" autocomplete="on" required>
+              <label for="nom-vete-traitement" class="label">Nom vétérinaire qui les ont administés</label>
+            </div>
+
+            <!-- //////////////////////////////////////  -->
+
+            <div class="title_mot" style="margin-bottom: 15px;">
+              <h4 style="font-size: 22px; font-weight: 600;">Maladie</h4>
+            </div>
+
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="date" class="input_focus"  id="maladie" autocomplete="on" required>
+              <label for="maladie" class="label">Date de maladie</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="non-maladie" placeholder="nom de maladie" autocomplete="on" required>
+              <label for="nom-maladie" class="label">Nom de maladie</label>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="symptôme" placeholder="exple : fièvre..." autocomplete="on" required>
+              <label for="symptôme" class="label">symptôme</label>
+            </div>
+
+            <!-- //////////////////////////////////////  -->
+
+            <div class="title_mot" style="margin-bottom: 15px;">
+              <h4 style="font-size: 22px; font-weight: 600;">Suivi poids</h4>
+            </div>
+
+            <!-- input de vcategorie d'animal  -->
+            <div class="champ_input" style="margin-top: -10px;">
+              <input type="text" class="input_focus"  id="poids" placeholder="poids de animal..." autocomplete="on" required>
+              <label for="poids" class="label">Poids de l'animal</label>
+            </div>
+
+            <!-- //////////////////////////////////////  -->
+
+            <div class="title_mot" style="margin-bottom: 15px;">
+              <h4 style="font-size: 22px; font-weight: 600;">Description</h4>
+            </div>
+
+            <!-- // description -->
+            <div class="champ_input">
+              <textarea  name="description" type="text" class="input_focus input_focus_textarea" id="description" placeholder="Une petite description" autocomplete="off" required></textarea>
+              <label for="description" class="label">Description</label>
+            </div>
+
+
+
+            <!-- button envoie  -->
+
+            <!-- le button de submit  -->
+            <div class="btn_submit_global" routerLink="/suivi-animal" style="margin-bottom: 20px;">
+              <button type="submit" class="btn_submit"> Ajouter </button>
+            </div>
+
+
+
+          </div>
+
+        </form>
+    </aside>
+  </ion-content>
+
+
