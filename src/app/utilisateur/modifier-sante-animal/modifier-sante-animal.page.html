@@ -1,3 +1,4 @@
+
 <div class="container_global">
 
   <ion-header>
@@ -11,7 +12,7 @@
   
       <div class="hearder">
   
-        <div class="icon_retour" routerLink="">
+        <div class="icon_retour" routerLink="/detail-animal-sante/{{santeconnect.santeId}}">
           <i class="ri-arrow-left-s-line"></i>
         </div>
   
@@ -56,21 +57,21 @@
 
             <!-- input de nom d'animal  -->
             <div class="champ_input">
-              <input type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nom" [value]="santeconnect.nom" name="nom" type="text" class="input_focus"  id="nom" placeholder="Saisir le nom d'animal" autocomplete="on" required>
               <label for="nom" class="label">Nom</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="age" placeholder="Nom de la Race" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.race" [value]="santeconnect.race" name="race" type="text" class="input_focus"  id="age" placeholder="Nom de la Race" autocomplete="on" required>
               <label for="race" class="label">Race</label>
             </div>
 
             <!-- // sexe animal  -->
             <div class="champ_input" style="margin-top: -10px;">
 
-              <select class="input_focus">
-                <option class="option_input" value="">Genre</option>
+              <select [(ngModel)]="santeconnect.prioriteSexe" [value]="santeconnect.prioriteSexe" name="prioriteSexe" class="input_focus">
+                <!-- <option class="option_input" value="">Genre</option> -->
                 <option class="option_input" value="homme">Homme</option>
                 <option class="option_input" value="femme">Femme</option>
               </select>
@@ -79,7 +80,7 @@
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="age" placeholder="Exemple : 2 ans " autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.age" [value]="santeconnect.age" name="age" type="text" class="input_focus"  id="age" placeholder="Exemple : 2 ans " autocomplete="on" required>
               <label for="age" class="label">Âge</label>
             </div>
 
@@ -97,7 +98,7 @@
                 <label for="file" class="label_download">
                   <!-- <div class="image_user"> -->
                     <div class="roudel_img" >
-                      <img class="immmmmgggg" [src]="selectedFileDataUrl">
+                      <img class="immmmmgggg" [src]="selectedFileDataUrl" [src]="santeconnect.photo">
                     </div>
                     <p class="para_telecharger">Image animal</p>
                   <!-- </div> -->
@@ -116,19 +117,19 @@
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="date" class="input_focus"  id="date-vaccin" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.dateVaccin" [value]="santeconnect.dateVaccin" name="dateVaccin" type="date" class="input_focus"  id="date-vaccin" autocomplete="on" required>
               <label for="date-vaccin" class="label">Date de vaccination</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="non-vaccin" placeholder="nom de vaccin" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomVaccin" [value]="santeconnect.nomVaccin" name="nomVaccin" type="text" class="input_focus"  id="non-vaccin" placeholder="nom de vaccin" autocomplete="on" required>
               <label for="nom-vaccin" class="label">Nom vaccin</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="nom-vete-vaccin" placeholder="Le nom de vétérinaire" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomVeteVaccin" [value]="santeconnect.nomVeteVaccin" name="nomVeteVaccin" type="text" class="input_focus"  id="nom-vete-vaccin" placeholder="Le nom de vétérinaire" autocomplete="on" required>
               <label for="nom-vete-vaccin" class="label">Nom vétérinaire qui les ont administés</label>
             </div>
 
@@ -141,19 +142,19 @@
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="date" class="input_focus"  id="date" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.dateTraitement" [value]="santeconnect.dateTraitement" name="dateTraitement" type="date" class="input_focus"  id="date" autocomplete="on" required>
               <label for="traitement" class="label">Date de traitement</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="non-traitement" placeholder="nom de traitement" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomTraitement" [value]="santeconnect.nomTraitement" name="nomTraitement" type="text" class="input_focus"  id="non-traitement" placeholder="nom de traitement" autocomplete="on" required>
               <label for="nom-traitement" class="label">Nom de traitement</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="non-vete-traitement" placeholder="Le nom de vétérinaire" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomVeteTraitement" [value]="santeconnect.nomVeteTraitement" name="nomVeteTraitement" type="text" class="input_focus"  id="non-vete-traitement" placeholder="Le nom de vétérinaire" autocomplete="on" required>
               <label for="nom-vete-traitement" class="label">Nom vétérinaire qui les ont administés</label>
             </div>
 
@@ -166,19 +167,19 @@
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="date" class="input_focus"  id="maladie" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.dateMaladie" [value]="santeconnect.dateMaladie" name="dateMaladie" type="date" class="input_focus"  id="maladie" autocomplete="on" required>
               <label for="maladie" class="label">Date de maladie</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="non-maladie" placeholder="nom de maladie" autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomMaladie" [value]="santeconnect.nomMaladie" name="nomMaladie" type="text" class="input_focus"  id="non-maladie" placeholder="nom de maladie" autocomplete="on" required>
               <label for="nom-maladie" class="label">Nom de maladie</label>
             </div>
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="symptôme" placeholder="exple : fièvre..." autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.nomVeteMaladie" [value]="santeconnect.nomVeteMaladie" name="nomVeteMaladie" type="text" class="input_focus"  id="symptôme" placeholder="exple : fièvre..." autocomplete="on" required>
               <label for="symptôme" class="label">symptôme</label>
             </div>
 
@@ -190,7 +191,7 @@
 
             <!-- input de vcategorie d'animal  -->
             <div class="champ_input" style="margin-top: -10px;">
-              <input type="text" class="input_focus"  id="poids" placeholder="poids de animal..." autocomplete="on" required>
+              <input [(ngModel)]="santeconnect.poids" [value]="santeconnect.poids" name="poids" type="text" class="input_focus"  id="poids" placeholder="poids de animal..." autocomplete="on" required>
               <label for="poids" class="label">Poids de l'animal</label>
             </div>
 
@@ -202,7 +203,7 @@
 
             <!-- // description -->
             <div class="champ_input">
-              <textarea  name="description" type="text" class="input_focus input_focus_textarea" id="description" placeholder="Une petite description" autocomplete="off" required></textarea>
+              <textarea [(ngModel)]="santeconnect.description" [value]="santeconnect.description" name="description" type="text" class="input_focus input_focus_textarea" id="description" placeholder="Une petite description" autocomplete="off" required></textarea>
               <label for="description" class="label">Description</label>
             </div>
 
@@ -211,8 +212,8 @@
             <!-- button envoie  -->
 
             <!-- le button de submit  -->
-            <div class="btn_submit_global" routerLink="/suivi-animal" style="margin-bottom: 20px;">
-              <button type="submit" class="btn_submit"> Modifier </button>
+            <div class="btn_submit_global" style="margin-bottom: 20px;">
+              <button (click)="onSubmit()" type="submit" class="btn_submit"> Ajouter </button>
             </div>
 
 
@@ -224,3 +225,5 @@
   </ion-content>
 
 
+  
+  

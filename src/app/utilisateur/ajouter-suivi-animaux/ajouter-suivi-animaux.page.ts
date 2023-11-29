@@ -13,7 +13,7 @@ export class AjouterSuiviAnimauxPage implements OnInit {
   santeId : string = "";
   nom : string = "";
   race : string = "";
-  prioriteSexe : string = "homme";
+  prioriteSexe : string = "";
   age : string = "";
   photo : string = "";
   dateVaccin : string = "";
@@ -81,6 +81,8 @@ export class AjouterSuiviAnimauxPage implements OnInit {
     this.santeService.sante.utilisateur = JSON.parse(localStorage.getItem("utilisateur")!)
     this.santeService.ajouterSanteAnimal().subscribe((result) => {
       console.log(result);
+      localStorage.setItem('santeAnimal', JSON.stringify(result));
+      this.santeService.setAni(result)
       this.router.navigate( [`/suivi-sante`] ).then()
     })
     

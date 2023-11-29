@@ -105,6 +105,19 @@
 
         </div>
 
+        <!-- /////////////////////////// -->
+
+        <div class="icon">
+          <!-- /////: -->
+          <div class="iicon put"  routerLink="/modifier-sante-animal/{{santeconnecte.santeId}}">
+            <i class="ri-edit-box-line"></i>
+          </div>
+          <!-- ////////// -->
+          <div class="iicon delete" (click)="deleteSante(santeconnecte.santeId!)">
+            <i class="ri-delete-bin-3-line"></i>
+          </div>
+        </div>
+
       </div>
 
     </div>

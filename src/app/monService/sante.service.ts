@@ -8,6 +8,8 @@ import { Observable, map } from 'rxjs';
 })
 export class SanteService {
 
+  private modification1 : Sante | undefined;
+
   private apiUrl : string = "http://localhost:9000/api/santeAnimal"
 
   constructor(private http: HttpClient) { }
@@ -78,6 +80,52 @@ export class SanteService {
   listSanteAnimalID(id : number) {
     return this.http.get<any[]>(this.apiUrl+ '/sante/'+id)
   }
+
+  modifierSanteAnimal(modification : Sante) {
+    const formData = new FormData();
+    formData.append("santeAnimal", JSON.stringify({
+      "santeId": modification.santeId,
+      "nom": modification.nom,
+      "race": modification.race,
+      "prioriteSexe" : modification.prioriteSexe,
+      "age" : modification.age,
+      "photo" : modification.photo,
+      "dateVaccin" : modification.dateVaccin,
+      "nomVaccin" : modification.nomVaccin,
+      "nomVeteVaccin" : modification.nomVeteVaccin,
+      "dateTraitement" : modification.dateTraitement,
+      "nomTraitement" : modification.nomTraitement,
+      "nomVeteTraitement" : modification.nomVeteTraitement,
+      "dateMaladie" : modification.dateMaladie,
+      "nomMaladie" : modification.nomMaladie,
+      "nomVeteMaladie" : modification.nomVeteMaladie,
+      "poids" : modification.poids,
+      "description" : modification.description,
+      "utilisateur" : modification.utilisateur,
+    }))
+    formData.append("image", this.currentFile!);
+    return this.http.put(this.apiUrl+ "/modifier", formData);
+  }
+
+
+  
+
+  ////////////// SUPPRESSION 
+
+  supprimerSante(id: number) {
+    return this.http.delete(this.apiUrl+"/supprimer/"+id);
+  }
+
+  
+  
+  setAni(modification: Sante) {
+    this.modification1 = modification;
+  }
+
+  getAnis(): Sante|undefined {
+    return this.modification1
+  }
+
 
 
 }

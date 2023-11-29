@@ -60,7 +60,7 @@ export class ModifierAnimalPage implements OnInit {
     this.animauxService.currentFile = this.selectedFile!;
     this.animauxService.modifierAnimal(this.modifieAnimal).subscribe((result) => {
       this.chargerDonnee();
-      this.router.navigate(['/suivi-animal']);
+      this.router.navigate(['/detail-suivi-animal/'+this.suiviSanterId]);
     })
   }
   

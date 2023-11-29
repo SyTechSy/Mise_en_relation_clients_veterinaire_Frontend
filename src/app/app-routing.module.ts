@@ -191,22 +191,6 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/detail-animal-sante/detail-animal-sante.module').then( m => m.DetailAnimalSantePageModule)
   },
   {
-    path: 'modifier-sante-nom',
-    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-nom/modifier-sante-nom.module').then( m => m.ModifierSanteNomPageModule)
-  },
-  {
-    path: 'modifier-sante-race',
-    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-race/modifier-sante-race.module').then( m => m.ModifierSanteRacePageModule)
-  },
-  {
-    path: 'modifier-sante-age',
-    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-age/modifier-sante-age.module').then( m => m.ModifierSanteAgePageModule)
-  },
-  {
-    path: 'modifier-sante-sexe',
-    loadChildren: () => import('./utilisateur/modifier_suivi_sante/modifier-sante-sexe/modifier-sante-sexe.module').then( m => m.ModifierSanteSexePageModule)
-  },
-  {
     path: 'ajouter-sante-age',
     loadChildren: () => import('./utilisateur/ajouter_suivi_sante/ajouter-sante-age/ajouter-sante-age.module').then( m => m.AjouterSanteAgePageModule)
   },
@@ -275,8 +259,8 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/ajouter-suivi-animaux/ajouter-suivi-animaux.module').then( m => m.AjouterSuiviAnimauxPageModule)
   },
   {
-    path: 'modifier-suivi-animaux',
-    loadChildren: () => import('./utilisateur/modifier-suivi-animaux/modifier-suivi-animaux.module').then( m => m.ModifierSuiviAnimauxPageModule)
+    path: 'modifier-sante-animal/:id',
+    loadChildren: () => import('./utilisateur/modifier-sante-animal/modifier-sante-animal.module').then( m => m.ModifierSanteAnimalPageModule)
   }
 ];
 @NgModule({

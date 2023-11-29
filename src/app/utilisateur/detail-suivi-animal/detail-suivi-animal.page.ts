@@ -65,7 +65,7 @@ export class DetailSuiviAnimalPage implements OnInit {
           }
           // Traitez les erreurs ici si nécessaire
         }
-      );
+      )
     }
   }
 
