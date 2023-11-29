@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SanteService } from 'src/app/monService/sante.service';
 
 @Component({
   selector: 'app-ajouter-suivi-animaux',
@@ -7,7 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjouterSuiviAnimauxPage implements OnInit {
 
-  constructor() { }
+  santeId : string = "";
+  nom : string = "";
+  race : string = "";
+  prioriteSexe : string = "homme";
+  age : string = "";
+  photo : string = "";
+  dateVaccin : string = "";
+  nomVaccin : string = "";
+  nomVeteVaccin : string = "";
+  dateTraitement : string = "";
+  nomTraitement : string = "";
+  nomVeteTraitement : string = "";
+  dateMaladie : string = "";
+  nomMaladie : string = "";
+  nomVeteMaladie : string = "";
+  poids : string = "";
+  description : string = "";
+  // utilisateur : string = "";
+
+  constructor(
+    private santeService : SanteService,
+    private router : Router,
+    private http : HttpClient,
+  ) { }
 
   
   
@@ -32,6 +58,32 @@ export class AjouterSuiviAnimauxPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.santeService.currentFile = this.selectedFile!;
+    this.santeService.sante.nom = this.nom;
+    this.santeService.sante.race = this.race;
+    this.santeService.sante.prioriteSexe = this.prioriteSexe;
+    this.santeService.sante.age = this.age;
+    this.santeService.sante.photo = this.photo;
+    this.santeService.sante.dateVaccin = this.dateVaccin;
+    this.santeService.sante.nomVaccin = this.nomVaccin;
+    this.santeService.sante.nomVeteVaccin = this.nomVeteVaccin;
+    this.santeService.sante.dateTraitement = this.dateTraitement;
+    this.santeService.sante.nomTraitement = this.nomTraitement;
+    this.santeService.sante.nomVeteTraitement = this.nomVeteTraitement;
+    this.santeService.sante.dateMaladie = this.dateMaladie;
+    this.santeService.sante.nomMaladie = this.nomMaladie;
+    this.santeService.sante.nomVeteMaladie = this.nomVeteMaladie;
+    this.santeService.sante.poids = this.poids;
+    this.santeService.sante.description = this.description;
+    this.santeService.sante.utilisateur = JSON.parse(localStorage.getItem("utilisateur")!)
+    this.santeService.ajouterSanteAnimal().subscribe((result) => {
+      console.log(result);
+      this.router.navigate( [`/suivi-sante`] ).then()
+    })
+    
   }
 
 }

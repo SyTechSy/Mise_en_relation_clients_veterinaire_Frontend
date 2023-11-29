@@ -27,13 +27,13 @@
   </div>
 
   
-  <div class="profil_container">
+  <div class="profil_container" *ngIf="santeconnecte">
 
     <div class="profil_content" style="position: relative;">
 
       <!-- // c'est pour l'image  -->
       <div class="image">
-        <img src="../../../assets/dog.jpg" alt="">
+        <img [src]="santeconnecte.photo" alt="">
         <!-- <p>
           rendez-vous
         </p> -->
@@ -57,7 +57,7 @@
                 Nom : 
               </p>
               <p class="info_actu">
-                Chiot
+                {{ santeconnecte.nom }}
               </p>
             </div>
           
@@ -71,7 +71,7 @@
                 Race : 
               </p>
               <p class="info_actu">
-                Golden
+                {{ santeconnecte.race }}
               </p>
             </div>
           
@@ -84,7 +84,7 @@
                 Sexe :
               </p>
               <p class="info_actu">
-                Homme
+                {{ santeconnecte.prioriteSexe }}
               </p>
             </div>
           
@@ -97,7 +97,7 @@
                 Âge :
               </p>
               <p class="info_actu">
-                2 ans
+                {{ santeconnecte.age }}
               </p>
             </div>
           
@@ -121,7 +121,7 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="santeconnecte">
   
  <div class="containe_contenu">
 
@@ -133,7 +133,7 @@
 
   <!-- ////////////////////////////  -->
 
-  <div class="content_g">
+  <div class="content_g" >
     <!-- /////////////  -->
     <div class="content">
 
@@ -156,7 +156,7 @@
         <!-- // information -->
         <div class="information_i">
           <p>
-            24/10/2023
+            {{ santeconnecte.dateVaccin }}
           </p>
         </div>
         <!-- ///// -->
@@ -176,7 +176,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Le nom de vaccins
+                {{ santeconnecte.nomVaccin }}
               </p>
             </div>
             <!-- ///// -->
@@ -195,7 +195,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Le nom vete
+                {{ santeconnecte.nomVeteVaccin }}
               </p>
             </div>
             <!-- ///// -->
@@ -221,7 +221,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                24/10/2023
+                {{ santeconnecte.dateTraitement }}
               </p>
             </div>
             <!-- ///// -->
@@ -240,7 +240,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Le nom de traitements
+                {{ santeconnecte.nomTraitement }}
               </p>
             </div>
             <!-- ///// -->
@@ -259,7 +259,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Le nom vete
+                {{ santeconnecte.nomVeteTraitement }}
               </p>
             </div>
             <!-- ///// -->
@@ -286,7 +286,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                24/10/2024
+                {{ santeconnecte.dateMaladie }}
               </p>
             </div>
             <!-- ///// -->
@@ -305,7 +305,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Nom de la maladie
+                {{ santeconnecte.nomMaladie }}
               </p>
             </div>
             <!-- ///// -->
@@ -324,7 +324,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                Fièvre/Vomis.....
+                {{ santeconnecte.nomVeteMaladie }}
               </p>
             </div>
             <!-- ///// -->
@@ -351,7 +351,7 @@
             <!-- // information -->
             <div class="information_i">
               <p>
-                120
+                {{ santeconnecte.poids }}
               </p>
             </div>
             <!-- ///// -->
@@ -371,7 +371,7 @@
             <!-- // titre  -->
             <div class="titre_i">
               <p style="width: 330px; padding-top: 5px ; padding-bottom: 10px; padding-left: 10px;">
-                Description de l'état de animal Description de l'état de animal Description de l'état de animal
+                {{ santeconnecte.description }}
               </p>
             </div>
             <!-- ///// -->

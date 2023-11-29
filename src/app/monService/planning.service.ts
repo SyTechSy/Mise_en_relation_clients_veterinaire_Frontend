@@ -35,14 +35,13 @@ export class PlanningService {
   /// POUR LA MODIFICATION
 
   modifierPlanning(plag : Planning) {
-    const formData = new FormData();
-    formData.append("planning", JSON.stringify( {
+    return this.http.put(this.apiUrl+"/modifier", {
       "planningId" : plag.planningId,
       "heureDebut" : plag.heureDebut,
       "heureFin" : plag.heureFin,
+      "priorite" : plag.priorite,
       "veterinaire" : plag.veterinaire
-    }))
-    return this.http.put(this.apiUrl+"/modifier", formData);
+    });
   }
 
   // SUPPRESSION des PLANNINGs

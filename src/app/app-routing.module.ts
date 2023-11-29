@@ -187,7 +187,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/suivi-sante/suivi-sante.module').then( m => m.SuiviSantePageModule)
   },
   {
-    path: 'detail-animal-sante',
+    path: 'detail-animal-sante/:id',
     loadChildren: () => import('./utilisateur/detail-animal-sante/detail-animal-sante.module').then( m => m.DetailAnimalSantePageModule)
   },
   {
