@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Commentaire } from 'src/app/model/commentaire';
 import { Planning } from 'src/app/model/planning';
 import { Utilisateur } from 'src/app/model/utilisateur';
+import { CommentaireService } from 'src/app/monService/commentaire.service';
 import { PlanningService } from 'src/app/monService/planning.service';
 
 @Component({
@@ -15,6 +17,10 @@ export class HomeVeterinaireVueParClientsPage implements OnInit {
   subscription: Subscription | undefined;
   afficheplanning : Planning | any
 
+  // commentaire
+
+  listCommentaire : Commentaire[] = [];
+  affichecommentaire : Commentaire | any;
   
   userconnect: Utilisateur | any;
 
@@ -23,7 +29,8 @@ export class HomeVeterinaireVueParClientsPage implements OnInit {
   constructor(
     private planningService : PlanningService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private commentaireService : CommentaireService,
   ) { }
 
   canDismiss = false;
@@ -33,6 +40,16 @@ export class HomeVeterinaireVueParClientsPage implements OnInit {
 
 
   ngOnInit() {
+
+    this.listCommentaire = Object.assign(new Commentaire(),JSON.parse(localStorage.getItem("utilisateur")!));
+    this.subscription = this.commentaireService.listCommentaire().subscribe(
+      (commentaires : Commentaire[]) => {
+        this.listCommentaire = commentaires;
+        console.log(this.listCommentaire);
+      }
+    )
+
+
     this.userconnect = Object.assign(new Utilisateur(),JSON.parse(localStorage.getItem("utilisateur")!));
     this.planningId = this.activatedRoute.snapshot.paramMap.get('id')!;
     console.log(this.planningId)

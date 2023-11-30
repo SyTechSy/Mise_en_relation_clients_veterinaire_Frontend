@@ -3,8 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { error } from 'console';
 import { Subscription } from 'rxjs';
+import { Commentaire } from 'src/app/model/commentaire';
 import { Planning } from 'src/app/model/planning';
+import { Utilisateur } from 'src/app/model/utilisateur';
 import { Veterinaire } from 'src/app/model/veterinaire';
+import { CommentaireService } from 'src/app/monService/commentaire.service';
 import { PlanningService } from 'src/app/monService/planning.service';
 
 @Component({
@@ -16,15 +19,23 @@ export class HomeVeterinairePage implements OnInit {
 
   listPlanning: Planning[] = [];
   subscription: Subscription | undefined;
-  afficheplanning : Planning | any
+  afficheplanning : Planning | any;
+
+  ////////////////////////////////////
+
+  listCommentaire : Commentaire[] = [];
+  affichecommentaire : Commentaire | any;
 
   
   veteconnect: Veterinaire | any;
+  userconnect: Utilisateur | any;
+  // connectcomment: Commentaire | any;
 
   public planningId: string | null = null;
 
   constructor(
     private planningService : PlanningService,
+    private commentaireService : CommentaireService,
     private router: Router,
   ) { }
 
@@ -35,6 +46,17 @@ export class HomeVeterinairePage implements OnInit {
 
 
   ngOnInit() {
+
+    this.userconnect = Object.assign(new Utilisateur(),JSON.parse(localStorage.getItem("utilisateur")!));
+    
+    this.listCommentaire = Object.assign(new Commentaire(),JSON.parse(localStorage.getItem("utilisateur")!));
+    this.subscription = this.commentaireService.listCommentaire().subscribe(
+      (commentaires : Commentaire[]) => {
+        this.listCommentaire = commentaires;
+        console.log(this.listCommentaire);
+      }
+    )
+
     this.veteconnect = Object.assign(new Veterinaire(),JSON.parse(localStorage.getItem("veterinaire")!));
     this.listPlanning = Object.assign(new Planning(),JSON.parse(localStorage.getItem("veterinaire")!))
     this.subscription = this.planningService.listDesPlanning().subscribe(
@@ -76,6 +98,11 @@ export class HomeVeterinairePage implements OnInit {
       this.subscription.unsubscribe();
     }
   }
+
+
+
+
+
 
   // public deletePlanning(planningId: number | null) {
   //   if (planningId != null) {

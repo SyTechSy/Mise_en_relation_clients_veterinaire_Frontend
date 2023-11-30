@@ -233,7 +233,7 @@
                 <ion-toolbar>
                   <ion-title>Tout les avis</ion-title>
                   <ion-buttons slot="end">
-                    <ion-button (click)="modal.dismiss()">Close</ion-button>
+                    <ion-button style="color: #fff!important;" (click)="modal.dismiss()">Close</ion-button>
                   </ion-buttons>
                 </ion-toolbar>
               </ion-header>
@@ -241,7 +241,7 @@
                 
                 <!-- // les informations 000 -->
 
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
+                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;"  *ngFor="let affichecommentaire of listCommentaire">
 
                   <div class="content_avis">
         
@@ -250,12 +250,13 @@
                       <!-- // name des vétérinaire  -->
                       <div class="name_veterinaire">
                         <h2 class="h2_veterinaire">
-                          Diakaridia SY
+                          {{ affichecommentaire.utilisateur!.prenom }} 
+                          {{ affichecommentaire.utilisateur!.nom }}
                         </h2>
         
                         <div class="date_evaluation">
                           <p class="para_date">
-                            25/10/2023
+                            {{ affichecommentaire.date }}
                           </p>
                         </div>
                       </div>
@@ -293,7 +294,13 @@
                       <div class="para_commentaire_avis">
                         <!-- // commentaire  -->
                         <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                          {{ affichecommentaire.content }}
+                        </p>
+                      </div>
+                      
+                      <div class="heure" style="font-size: 12px; margin-top: 4px;">
+                        <p>
+                          {{ affichecommentaire.creationTime }}
                         </p>
                       </div>
         
@@ -303,517 +310,7 @@
         
                 </div>
                 
-                <!-- // les informations 00 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
                 
-                <!-- // les informations 0-->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les informations 1 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les information 2 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les informations 3 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les informations 4 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les informations 5 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
-                
-                <!-- // les informations 6 -->
-
-                <div class="avis_container" style="margin-top: 10px; margin-left: 10px;">
-
-                  <div class="content_avis">
-        
-                    <div class="information_avis">
-        
-                      <!-- // name des vétérinaire  -->
-                      <div class="name_veterinaire">
-                        <h2 class="h2_veterinaire">
-                          Diakaridia SY
-                        </h2>
-        
-                        <div class="date_evaluation">
-                          <p class="para_date">
-                            25/10/2023
-                          </p>
-                        </div>
-                      </div>
-        
-                      <!-- // avis par etoil  -->
-                      <div class="start_container">
-        
-                        <div class="start">
-        
-                          <!-- //// etoile 1  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 2  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 3  -->
-                          <div class="icon_star">
-                            <i class="ri-star-fill"></i>
-                          </div>
-                          <!-- //// etoile 4  -->
-                          <div class="icon_star">
-                            <i class="ri-star-half-fill"></i>
-                          </div>
-                          <!-- //// etoile 5  -->
-                          <div class="icon_star">
-                            <i class="ri-star-line"></i>
-                          </div>
-        
-                        </div>
-        
-                      </div>
-        
-                      <div class="para_commentaire_avis">
-                        <!-- // commentaire  -->
-                        <p>
-                          Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
-                        </p>
-                      </div>
-        
-                    </div>
-        
-                  </div>
-        
-                </div>
 
               </ion-content>
             </ng-template>
@@ -833,7 +330,7 @@
               <!-- // name des vétérinaire  -->
               <div class="name_veterinaire">
                 <h2 class="h2_veterinaire">
-                  Diakaridia SY
+                  Koureissi SY
                 </h2>
 
                 <div class="date_evaluation">
@@ -876,7 +373,7 @@
               <div class="para_commentaire_avis">
                 <!-- // commentaire  -->
                 <p>
-                  Nous sommes très satisfaits des soins que notre animal a reçus de votre part. Vous êtes un vétérinaire très compétent et attentionné.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque vero inventore 
                 </p>
               </div>
 

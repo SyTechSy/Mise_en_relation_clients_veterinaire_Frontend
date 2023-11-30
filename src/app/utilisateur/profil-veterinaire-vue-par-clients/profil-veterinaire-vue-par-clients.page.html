@@ -280,14 +280,14 @@
         <!-- ................. Champs de commentaire  -->
 
         <div class="input_commente">
-          <textarea [(ngModel)]="text" maxlength="100" (ionChange)="textareaMaxLengthValidation()" name="comment" placeholder="Émettre un avis sur le service rendu par le vétérinaire"></textarea>
+          <textarea [(ngModel)]="content" maxlength="100" (ionChange)="textareaMaxLengthValidation()" name="comment" placeholder="Émettre un avis sur le service rendu par le vétérinaire"></textarea>
           <p class="max" *ngIf="wordsCount !== undefined">
              mots saisis (limite : 100)
           </p>
           
         </div>
 
-        <button class="btn_submit">
+        <button class="btn_submit" (click)="onSubmitCommentaire()">
           Envoyer
         </button>
         
