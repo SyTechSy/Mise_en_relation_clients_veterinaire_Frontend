@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="hearder">
+    <div class="hearder" *ngIf="userconnect">
 
       <!-- Mon logo  -->
       <div class="logo">
@@ -16,15 +16,15 @@
       </div>
 
       <!-- Mon profil image  -->
-      <div class="profil_user_img">
-        <img src="../../../assets/profil.jpg" alt="le profil de utilisateur" class="profil_img">
+      <div class="profil_user_img" routerLink="/tabs/profil-user">
+        <img [src]="userconnect.photo"  class="profil_img">
       </div>
 
     </div>
 
     <!-- //////////////////////// LE CONTAINER GLOBAL D'ACCUEIL -->
 
-    <div class="container">
+    <div class="container" >
 
       <div class="content_cadre_accueil">
 

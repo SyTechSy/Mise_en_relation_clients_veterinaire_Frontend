@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 // import { error } from 'console';
@@ -23,10 +24,18 @@ export class InscriptionUtilisateurPage implements OnInit {
   photo:string="";
   // confirmMotDePasse:string="";
 
-  constructor(private userService : VetcareLiaisonService,  private router: Router) { }
+  constructor(
+      private userService : VetcareLiaisonService,  
+      private router: Router
+    ) { }
 
   ngOnInit() {
   }
+
+
+
+
+
 
 
   onSubmit() {

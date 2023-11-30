@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 // import { error } from 'console';
 import { Subscription } from 'rxjs';
 import { Commentaire } from 'src/app/model/commentaire';
@@ -37,6 +38,7 @@ export class HomeVeterinairePage implements OnInit {
     private planningService : PlanningService,
     private commentaireService : CommentaireService,
     private router: Router,
+    public alertController: AlertController
   ) { }
 
   canDismiss = false;
@@ -124,6 +126,34 @@ export class HomeVeterinairePage implements OnInit {
   //     )
   //   }
   // }
+
+
+  async confirmDelete(planningId: number | null) {
+    const alert = await this.alertController.create({
+      header: 'Confirmation de suppression',
+      message: 'Êtes-vous sûr de vouloir supprimer cet planning ?',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'cancel',
+          cssClass: 'confirm-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Annuler
+            console.log('Suppression annulée');
+          }
+        }, {
+          text: 'Supprimer',
+          cssClass: 'delete-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Supprimer
+            this.deletePlanning(planningId);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
 
   public deletePlanning(planningId: number | null) {
     if (planningId != null) {

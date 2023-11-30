@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { Sante } from 'src/app/model/sante';
 import { SanteService } from 'src/app/monService/sante.service';
 
@@ -17,7 +18,8 @@ export class DetailAnimalSantePage implements OnInit {
   constructor(
     private santeService : SanteService,
     private router : Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -43,6 +45,36 @@ export class DetailAnimalSantePage implements OnInit {
       console.log(error);
     })
   }
+
+
+  async confirmDelete(santeAnimalId: number | null) {
+    const alert = await this.alertController.create({
+      header: 'Confirmation de suppression',
+      message: 'Êtes-vous sûr de vouloir supprimer cet animal ?',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'cancel',
+          cssClass: 'confirm-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Annuler
+            console.log('Suppression annulée');
+          }
+        }, {
+          text: 'Supprimer',
+          cssClass: 'delete-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Supprimer
+            this.deleteSante(santeAnimalId);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+
 
   public deleteSante(santeAnimalId: number | null) {
     if (santeAnimalId !== null) {

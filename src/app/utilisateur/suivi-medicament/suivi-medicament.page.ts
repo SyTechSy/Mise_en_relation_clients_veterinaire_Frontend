@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 // import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Medicament } from 'src/app/model/medicament';
@@ -21,6 +22,7 @@ export class SuiviMedicamentPage implements OnInit {
   constructor(
     private mediService : MedicamentService,
     private router : Router,
+    public alertController: AlertController
     ) { 
   }
 
@@ -82,17 +84,46 @@ export class SuiviMedicamentPage implements OnInit {
           // console.error('message :', error.error.text);
           const dddd = error.error.text;
           if (dddd == "succès"){
-            console.log("suppression reussi");
+            console.log('Suppression effectuée pour :', suiviMedicamentId);
             this.chargerDonnee();
             this.router.navigate(['/suivi-medicament']);
           } else {
             console.log("error",dddd)
+            
           }
           // Traitez les erreurs ici si nécessaire
         }
       );
     }
   }
+
+  async confirmDelete(suiviMedicamentId: number | null) {
+    const alert = await this.alertController.create({
+      header: 'Confirmation de suppression',
+      message: 'Êtes-vous sûr de vouloir supprimer cet élément ?',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'cancel',
+          cssClass: 'confirm-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Annuler
+            console.log('Suppression annulée');
+          }
+        }, {
+          text: 'Supprimer',
+          cssClass: 'delete-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Supprimer
+            this.deleteMedicament(suiviMedicamentId);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
   
 
 

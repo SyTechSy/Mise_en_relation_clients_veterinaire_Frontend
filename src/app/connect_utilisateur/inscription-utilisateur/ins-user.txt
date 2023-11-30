@@ -87,7 +87,7 @@
 
         <!-- input de votre pays  -->
         <div class="champ_input">
-          <input type="password" class="input_focus" [(ngModel)]="motDePasse"  name="motDePasse"  id="password_user" placeholder="Saisir votre mot de passe" autocomplete="on" required>
+          <input type="password" class="input_focus" [(ngModel)]="motDePasse"  name="motDePasse"  id="motDePasse" placeholder="Saisir votre mot de passe" autocomplete="on" required>
           <label for="password_user" class="label">Mot de passe</label>
         </div>
 

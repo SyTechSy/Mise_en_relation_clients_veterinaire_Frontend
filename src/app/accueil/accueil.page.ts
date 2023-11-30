@@ -32,8 +32,8 @@ export class AccueilPage implements OnInit {
     const now = new Date();
     const hour = now.getHours();
 
-    if (hour >= 5 && hour < 16) {
-      this.greetingMessage = 'Bonjour et bienvenue';
+    if (hour >= 5 && hour < 15) {
+      this.greetingMessage = 'Bonjour';
     } else {
       this.greetingMessage = 'Bonsoir';
     }

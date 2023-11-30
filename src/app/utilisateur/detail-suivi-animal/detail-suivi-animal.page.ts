@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { Animal } from 'src/app/model/animal';
 import { AnimalService } from 'src/app/monService/animal.service';
 
@@ -17,7 +18,8 @@ export class DetailSuiviAnimalPage implements OnInit {
   constructor(
     private animauxService: AnimalService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -42,6 +44,34 @@ export class DetailSuiviAnimalPage implements OnInit {
     }, (error) => {
       console.log(error);
     })
+  }
+
+
+  async confirmDelete(suiviSanterId: number | null) {
+    const alert = await this.alertController.create({
+      header: 'Confirmation de suppression',
+      message: 'Êtes-vous sûr de vouloir supprimer cet élément ?',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'cancel',
+          cssClass: 'confirm-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Annuler
+            console.log('Suppression annulée');
+          }
+        }, {
+          text: 'Supprimer',
+          cssClass: 'delete-button',
+          handler: () => {
+            // Action à effectuer si l'utilisateur clique sur Supprimer
+            this.deleteAnimal(suiviSanterId);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 
