@@ -240,6 +240,7 @@
 
 .btn_submit_global {
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .btn_submit {
@@ -436,6 +437,79 @@
 }
 
 .input_focus5:focus::placeholder
+{
+    opacity: 1;
+    animation-delay: 1s;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+// .input_focus2,
+// .input_focus3
+//  {
+//     width: 100px;
+//     height: 49px;
+//     // padding: 10px 10px;
+//     outline: none;
+//     border-bottom: 1px solid #000;
+//     border-top: none;
+//     border-left: none;
+//     border-right: none;
+//     margin: 10px 0;
+//     transition: all 0.3s;
+//     font-size: 20px;
+//     background: none;
+// }
+
+.input_focus_c {
+    width: 100px;
+    height: 49px;
+    // padding: 10px 10px;
+    outline: none;
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 10px 0;
+    transition: all 0.3s;
+    font-size: 18px;
+    background: none;
+}
+
+.champ_input_v {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.input_focus:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/*  Verificatiion de label si le champs est vide ou pas  */
+
+.input_focus_c:not(:placeholder-shown) + .label,
+.input_focus_c:focus + .label {
+    color: var(--color-principal);
+    top: 4px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    background: var(--color-blanc);
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+.input_focus_c::placeholder
+ {
+    opacity: 0;
+}
+
+.input_focus_c:focus::placeholder
 {
     opacity: 1;
     animation-delay: 1s;

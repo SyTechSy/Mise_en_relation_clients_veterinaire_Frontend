@@ -4,11 +4,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./page-bienvenu/page-bienvenu.module').then(m => m.PageBienvenuPageModule)
+  },
+  {
+    path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: '',
     loadChildren: () => import('./tabs-v/tabs-v.module').then(m => m.TabsVPageModule)
+  },
+  {
+    path: 'page-bienvenu',
+    loadChildren: () => import('./page-bienvenu/page-bienvenu.module').then( m => m.PageBienvenuPageModule)
   },
   {
     path: 'tabs/accueil',
@@ -54,10 +62,10 @@ const routes: Routes = [
     path: 'inscription-utilisateur',
     loadChildren: () => import('./connect_utilisateur/inscription-utilisateur/inscription-utilisateur.module').then( m => m.InscriptionUtilisateurPageModule)
   },
-  {
-    path: 'page-bienvenue',
-    loadChildren: () => import('./utilisateur_veteriniare/page-bienvenue/page-bienvenue.module').then( m => m.PageBienvenuePageModule)
-  },
+  // {
+  //   path: 'page-bienvenue',
+  //   loadChildren: () => import('./utilisateur_veteriniare/page-bienvenue/page-bienvenue.module').then( m => m.PageBienvenuePageModule)
+  // },
   {
     path: 'section-choix',
     loadChildren: () => import('./utilisateur_veteriniare/section-choix/section-choix.module').then( m => m.SectionChoixPageModule)
@@ -79,7 +87,7 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/detail-suivi-animal/detail-suivi-animal.module').then( m => m.DetailSuiviAnimalPageModule)
   },
   {
-    path: 'detaille-rdv',
+    path: 'detaille-rdv/:id',
     loadChildren: () => import('./utilisateur/detaille-rdv/detaille-rdv.module').then( m => m.DetailleRdvPageModule)
   },
   {
@@ -99,11 +107,11 @@ const routes: Routes = [
     loadChildren: () => import('./utilisateur/modifier-animal/modifier-animal.module').then( m => m.ModifierAnimalPageModule)
   },
   {
-    path: 'modifier-rdv',
+    path: 'modifier-rdv/:id',
     loadChildren: () => import('./utilisateur/modifier-rdv/modifier-rdv.module').then( m => m.ModifierRdvPageModule)
   },
   {
-    path: 'prendre-rdv',
+    path: 'prendre-rdv/:id',
     loadChildren: () => import('./utilisateur/prendre-rdv/prendre-rdv.module').then( m => m.PrendreRdvPageModule)
   },
   {
@@ -261,7 +269,8 @@ const routes: Routes = [
   {
     path: 'modifier-sante-animal/:id',
     loadChildren: () => import('./utilisateur/modifier-sante-animal/modifier-sante-animal.module').then( m => m.ModifierSanteAnimalPageModule)
-  }
+  },
+
 ];
 @NgModule({
   imports: [

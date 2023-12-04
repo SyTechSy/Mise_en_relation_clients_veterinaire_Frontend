@@ -120,10 +120,10 @@ export class VeterinaireService {
 
 
 
-    /////////////// Pour la connexion de veterinaire
-    connexionVeterinaire(email : string, motDePasse : string) {
-      return this.http.get(`${this.apiUrl}/connexion?email=${email}&mot_de_passe=${motDePasse}`)
-    }
+  /////////////// Pour la connexion de veterinaire
+  connexionVeterinaire(email : string, motDePasse : string) {
+    return this.http.get(`${this.apiUrl}/connexion?email=${email}&mot_de_passe=${motDePasse}`)
+  }
 
   setVetes(vete: Veterinaire){
     this.vete1 = vete;

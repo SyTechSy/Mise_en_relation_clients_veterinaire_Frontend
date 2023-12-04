@@ -78,7 +78,7 @@
 
       <!-- ///////////////////// Cadre de rebdez-vous  -->
 
-      <div class="container_cadre">
+      <div class="container_cadre" *ngFor="let afficherdv of listrdv">
 
         <!-- // point cadre 1 -->
         <div class="point_cadre">
@@ -91,20 +91,22 @@
               <!-- // jour mois année  -->
               <!-- // mois  -->
               <div class="mois">
-                <p>Oct</p>
+                <p>
+                  {{afficherdv.mois | slice:0:3}}
+                </p>
               </div>
 
               <!-- // jours  -->
               <div class="jours">
                 <p>
-                  25
+                  {{afficherdv.jour}}
                 </p>
               </div>
 
               <!-- // jour mois année  -->
               <div class="jour_mois_annee">
                 <p>
-                  25/10/2023
+                  {{afficherdv.date}}
                 </p>
               </div>
 
@@ -118,14 +120,14 @@
                 <!-- // Espèce  -->
                 <div class="espece">
                   <p>
-                    Espèce de l'animal
+                    {{afficherdv.especeAnimal}}
                   </p>
                 </div>
 
                 <!-- // sexe de animal  -->
                 <div class="sexe_animal">
                   <p>
-                    Sexe de l'animal
+                    {{afficherdv.priorite}}
                   </p>
                 </div>
 
@@ -139,7 +141,8 @@
                   <!-- // nom personne  -->
                   <div class="name_perso">
                     <p>
-                      Diakaridia SY
+                      {{afficherdv.nom}}
+                      {{afficherdv.prenom}}
                     </p>
                   </div>
                 </div>
@@ -152,447 +155,25 @@
 
           <!-- // icon de detaille de rendez-vous -->
           <div class="icon_detaille">
-            <div class="icon_detaille" routerLink="/detaille-rdv">
-              <i class="ri-arrow-right-circle-fill"></i>
-            </div>
 
-            <!-- // annuler  -->
-            <div class="annuler">
+            <!-- <div class="heure">
               <p>
-                Annuler Rdv
+                {{afficherdv.creationTime}}
+                {{ afficherdv.creationTime.split(':')[0] }}:{{ afficherdv.creationTime.split(':')[1] }}
               </p>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- // point cadre 2 -->
-        <div class="point_cadre">
-
-          <div class="display_flex_jour_info">
-
-            <!-- // petit cadre  -->
-            <div class="cadre_date">
-
-              <!-- // jour mois année  -->
-              <!-- // mois  -->
-              <div class="mois">
-                <p>Oct</p>
-              </div>
-
-              <!-- // jours  -->
-              <div class="jours">
-                <p>
-                  25
-                </p>
-              </div>
-
-              <!-- // jour mois année  -->
-              <div class="jour_mois_annee">
-                <p>
-                  25/10/2023
-                </p>
-              </div>
-
-            </div>
-
-            <!-- // information rdv  -->
-            <div class="info_rdv">
-
-              <div class="les_nom">
-
-                <!-- // Espèce  -->
-                <div class="espece">
-                  <p>
-                    Espèce de l'animal
-                  </p>
-                </div>
-
-                <!-- // sexe de animal  -->
-                <div class="sexe_animal">
-                  <p>
-                    Sexe de l'animal
-                  </p>
-                </div>
-
-                <!-- // personne icon nom -->
-                <div class="icon_name">
-                  <!-- // icon perssonne  -->
-                  <div class="icon_perso">
-                    <i class="ri-user-follow-line"></i>
-                  </div>
-
-                  <!-- // nom personne  -->
-                  <div class="name_perso">
-                    <p>
-                      Diakaridia SY
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- // icon de detaille de rendez-vous -->
-          <div class="icon_detaille">
-            <div class="icon_detaille">
-              <i class="ri-arrow-right-circle-fill"></i>
-            </div>
-
-            <!-- // annuler  -->
-            <div class="annuler">
+            </div> -->
+            <div class="heure" *ngIf="afficherdv.creationTime">
               <p>
-                Annuler Rdv
+                  {{ afficherdv.creationTime.split(':')[0] }}:{{ afficherdv.creationTime.split(':')[1] }}
               </p>
-            </div>
           </div>
 
-
-        </div>
-
-        <!-- // point cadre 3 -->
-        <div class="point_cadre">
-
-          <div class="display_flex_jour_info">
-
-            <!-- // petit cadre  -->
-            <div class="cadre_date">
-
-              <!-- // jour mois année  -->
-              <!-- // mois  -->
-              <div class="mois">
-                <p>Oct</p>
-              </div>
-
-              <!-- // jours  -->
-              <div class="jours">
-                <p>
-                  25
-                </p>
-              </div>
-
-              <!-- // jour mois année  -->
-              <div class="jour_mois_annee">
-                <p>
-                  25/10/2023
-                </p>
-              </div>
-
-            </div>
-
-            <!-- // information rdv  -->
-            <div class="info_rdv">
-
-              <div class="les_nom">
-
-                <!-- // Espèce  -->
-                <div class="espece">
-                  <p>
-                    Espèce de l'animal
-                  </p>
-                </div>
-
-                <!-- // sexe de animal  -->
-                <div class="sexe_animal">
-                  <p>
-                    Sexe de l'animal
-                  </p>
-                </div>
-
-                <!-- // personne icon nom -->
-                <div class="icon_name">
-                  <!-- // icon perssonne  -->
-                  <div class="icon_perso">
-                    <i class="ri-user-follow-line"></i>
-                  </div>
-
-                  <!-- // nom personne  -->
-                  <div class="name_perso">
-                    <p>
-                      Diakaridia SY
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- // icon de detaille de rendez-vous -->
-          <div class="icon_detaille">
-            <div class="icon_detaille">
+            <div class="icon_detaille" routerLink="/detaille-rdv/{{afficherdv.rdvId}}">
               <i class="ri-arrow-right-circle-fill"></i>
             </div>
 
             <!-- // annuler  -->
-            <div class="annuler">
-              <p>
-                Annuler Rdv
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- // point cadre 4 -->
-        <div class="point_cadre">
-
-          <div class="display_flex_jour_info">
-
-            <!-- // petit cadre  -->
-            <div class="cadre_date">
-
-              <!-- // jour mois année  -->
-              <!-- // mois  -->
-              <div class="mois">
-                <p>Oct</p>
-              </div>
-
-              <!-- // jours  -->
-              <div class="jours">
-                <p>
-                  25
-                </p>
-              </div>
-
-              <!-- // jour mois année  -->
-              <div class="jour_mois_annee">
-                <p>
-                  25/10/2023
-                </p>
-              </div>
-
-            </div>
-
-            <!-- // information rdv  -->
-            <div class="info_rdv">
-
-              <div class="les_nom">
-
-                <!-- // Espèce  -->
-                <div class="espece">
-                  <p>
-                    Espèce de l'animal
-                  </p>
-                </div>
-
-                <!-- // sexe de animal  -->
-                <div class="sexe_animal">
-                  <p>
-                    Sexe de l'animal
-                  </p>
-                </div>
-
-                <!-- // personne icon nom -->
-                <div class="icon_name">
-                  <!-- // icon perssonne  -->
-                  <div class="icon_perso">
-                    <i class="ri-user-follow-line"></i>
-                  </div>
-
-                  <!-- // nom personne  -->
-                  <div class="name_perso">
-                    <p>
-                      Diakaridia SY
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- // icon de detaille de rendez-vous -->
-          <div class="icon_detaille">
-            <div class="icon_detaille">
-              <i class="ri-arrow-right-circle-fill"></i>
-            </div>
-
-            <!-- // annuler  -->
-            <div class="annuler">
-              <p>
-                Annuler Rdv
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- // point cadre 5 -->
-        <div class="point_cadre">
-
-          <div class="display_flex_jour_info">
-
-            <!-- // petit cadre  -->
-            <div class="cadre_date">
-
-              <!-- // jour mois année  -->
-              <!-- // mois  -->
-              <div class="mois">
-                <p>Oct</p>
-              </div>
-
-              <!-- // jours  -->
-              <div class="jours">
-                <p>
-                  25
-                </p>
-              </div>
-
-              <!-- // jour mois année  -->
-              <div class="jour_mois_annee">
-                <p>
-                  25/10/2023
-                </p>
-              </div>
-
-            </div>
-
-            <!-- // information rdv  -->
-            <div class="info_rdv">
-
-              <div class="les_nom">
-
-                <!-- // Espèce  -->
-                <div class="espece">
-                  <p>
-                    Espèce de l'animal
-                  </p>
-                </div>
-
-                <!-- // sexe de animal  -->
-                <div class="sexe_animal">
-                  <p>
-                    Sexe de l'animal
-                  </p>
-                </div>
-
-                <!-- // personne icon nom -->
-                <div class="icon_name">
-                  <!-- // icon perssonne  -->
-                  <div class="icon_perso">
-                    <i class="ri-user-follow-line"></i>
-                  </div>
-
-                  <!-- // nom personne  -->
-                  <div class="name_perso">
-                    <p>
-                      Diakaridia SY
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- // icon de detaille de rendez-vous -->
-          <div class="icon_detaille">
-            <div class="icon_detaille">
-              <i class="ri-arrow-right-circle-fill"></i>
-            </div>
-
-            <!-- // annuler  -->
-            <div class="annuler">
-              <p>
-                Annuler Rdv
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-
-        <!-- // point cadre 6 -->
-        <div class="point_cadre">
-
-          <div class="display_flex_jour_info">
-
-            <!-- // petit cadre  -->
-            <div class="cadre_date">
-
-              <!-- // jour mois année  -->
-              <!-- // mois  -->
-              <div class="mois">
-                <p>Oct</p>
-              </div>
-
-              <!-- // jours  -->
-              <div class="jours">
-                <p>
-                  25
-                </p>
-              </div>
-
-              <!-- // jour mois année  -->
-              <div class="jour_mois_annee">
-                <p>
-                  25/10/2023
-                </p>
-              </div>
-
-            </div>
-
-            <!-- // information rdv  -->
-            <div class="info_rdv">
-
-              <div class="les_nom">
-
-                <!-- // Espèce  -->
-                <div class="espece">
-                  <p>
-                    Espèce de l'animal
-                  </p>
-                </div>
-
-                <!-- // sexe de animal  -->
-                <div class="sexe_animal">
-                  <p>
-                    Sexe de l'animal
-                  </p>
-                </div>
-
-                <!-- // personne icon nom -->
-                <div class="icon_name">
-                  <!-- // icon perssonne  -->
-                  <div class="icon_perso">
-                    <i class="ri-user-follow-line"></i>
-                  </div>
-
-                  <!-- // nom personne  -->
-                  <div class="name_perso">
-                    <p>
-                      Diakaridia SY
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- // icon de detaille de rendez-vous -->
-          <div class="icon_detaille">
-            <div class="icon_detaille">
-              <i class="ri-arrow-right-circle-fill"></i>
-            </div>
-
-            <!-- // annuler  -->
-            <div class="annuler">
+            <div class="annuler" (click)="confirmDelete(afficherdv.rdvId!)">
               <p>
                 Annuler Rdv
               </p>

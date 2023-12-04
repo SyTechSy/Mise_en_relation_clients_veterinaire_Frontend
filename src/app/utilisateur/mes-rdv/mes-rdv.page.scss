@@ -246,6 +246,16 @@
     position: relative;
 }
 
+.heure {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.heure p {
+    font-size: 11px;
+}
+
 .annuler {
     position: absolute;
     right: 0px;

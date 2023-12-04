@@ -1,0 +1,111 @@
+
+.container_global {
+    margin-top: 10px;
+}
+
+.content {
+  position: relative;
+}
+
+
+.logo img {
+    width: 150px;
+    /* height: 100px; */
+    position: absolute;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.image_clicpath {
+    width: 300px;
+}
+
+.image_clicpath img{
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titre2 {
+    font-weight: 550;
+}
+
+.mot {
+    margin-left: 30px;
+    margin-top: -70px;
+}
+
+.titre2 span {
+    background-color: green;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: white;
+    padding-right: 2px;
+}
+
+.image_chien {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.chien {
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 10px;
+}
+
+.chien img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.container_v {
+  margin-top: -70px;
+}
+
+.content_v {
+    display: flex;
+    position: relative;
+}
+
+.image_v {
+    width: 200px;
+    margin-top: -23px;
+}
+
+.image_v img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.text_v {
+    width: 200px;
+    position: absolute;
+    margin-left: 160px;
+    top: 50px;
+}
+
+
+.text_v p {
+    font-size: 15px;
+    text-align: right;
+    position: relative;
+}
+
+.icon_arrow {
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+}
+
+.icon_arrow i {
+    font-size: 25px;
+}

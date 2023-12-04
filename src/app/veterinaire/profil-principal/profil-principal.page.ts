@@ -20,11 +20,11 @@ export class ProfilPrincipalPage implements OnInit {
     this.veteconnect = Object.assign(new Veterinaire(),JSON.parse(localStorage.getItem("veterinaire")!));
   }
 
-      // Méthode pour déconnecter l'utilisateur
-      deconnecterVeterinaire() {
-        localStorage.removeItem('veterinaire');
-        this.router.navigate(['/connexion-veterinaire']).then();
-      }
+  // Méthode pour déconnecter l'utilisateur
+  deconnecterVeterinaire() {
+    localStorage.removeItem('veterinaire');
+    this.router.navigate(['/connexion-veterinaire']).then();
+  }
   
 
 }

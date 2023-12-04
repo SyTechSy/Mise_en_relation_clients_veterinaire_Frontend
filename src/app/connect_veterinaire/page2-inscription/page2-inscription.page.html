@@ -153,11 +153,6 @@
                 <option value="">3</option>
               </select>
             </div> -->
-            
-          <div class="champ_input">
-            <input [(ngModel)]="jours"  id="jours" name="jours" type="text" class=" input_focus2" placeholder="ex: 10" autocomplete="on" required>
-            <label for="jours" class="label">Jours</label>
-          </div>
 
             <!-- <div class="mois_div">
               <select class="input_focus2 input_focus3" name="jours" id="jours">
@@ -167,11 +162,6 @@
                 <option value="">Mars</option>
               </select>
             </div> -->
-            
-          <div class="champ_input">
-            <input [(ngModel)]="mois"  id="mois" name="mois" type="text" class=" input_focus2" placeholder="ex: Janvier" autocomplete="on" required>
-            <label for="mois" class="label">Mois</label>
-          </div>
 
             <!-- <div class="annee_div">
               <select class="input_focus2 input_focus4" name="jours" id="jours">
@@ -183,10 +173,20 @@
               </select>
             </div> -->
             
-          <div class="champ_input">
-            <input [(ngModel)]="annee"  id="annee" name="annee" type="text" class=" input_focus2"  placeholder="ex: 1999" autocomplete="on" required>
-            <label for="annee" class="label">année</label>
-          </div>
+            <div class="champ_input">
+              <input [(ngModel)]="jours"  id="jours" name="jours" type="text" class=" input_focus2" placeholder="ex: 10" autocomplete="on" required>
+              <label for="jours" class="label">Jours</label>
+            </div>
+              
+            <div class="champ_input">
+              <input [(ngModel)]="mois"  id="mois" name="mois" type="text" class=" input_focus2" placeholder="ex: Janvier" autocomplete="on" required>
+              <label for="mois" class="label">Mois</label>
+            </div>
+              
+            <div class="champ_input">
+              <input [(ngModel)]="annee"  id="annee" name="annee" type="text" class=" input_focus2"  placeholder="ex: 1999" autocomplete="on" required>
+              <label for="annee" class="label">année</label>
+            </div>
 
           </div>
 
@@ -233,7 +233,7 @@
 
         <div class="compte_quiz">
           <p>Vous avez déja un compte ?</p>
-          <p class="seConnecter" routerLink="/page-final-connexion-veterinaire" >Connectez-vous</p>
+          <p class="seConnecter" routerLink="/connexion-veterinaire" >Connectez-vous</p>
         </div>
 
 

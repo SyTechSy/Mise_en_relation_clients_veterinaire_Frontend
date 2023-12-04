@@ -13,7 +13,7 @@
       <i class="ri-arrow-left-s-line"></i>
     </div> -->
 
-    <div class="icon_retour" routerLink="/detaille-rdv">
+    <div class="icon_retour" routerLink="/detaille-rdv/{{modifierRdv.rdvId}}">
       <i class="ri-arrow-left-s-line"></i>
 
       <div class="nom_retour">
@@ -22,7 +22,7 @@
     </div>
 
 
-    <div class="detaille_rdv" routerLink="/detaille-rdv" >
+    <div class="detaille_rdv"  (click)="onSubmit()" >
       <p>
         Enregistrer
       </p>
@@ -33,59 +33,8 @@
 
 <!-- // les verinaire qui est choisis  -->
 
-<div class="container_veterinaire">
 
-  <!-- // content veterinaire  -->
-  <div class="veterinaire">
 
-    <div class="name_veterinaire">
-      <p>
-        Vétérinaire
-      </p>
-    </div>
-
-    <div class="info_vete">
-
-      <div class="image_vete">
-        <img src="../../../assets/profil.jpg" alt="">
-      </div>
-
-      <div class="info_name">
-        <!-- // nom et prenom  -->
-        <div class="nom_prenom">
-          <p>
-            Diakaridia SY
-          </p>
-        </div>
-
-        <!-- // domaine de specialiter  -->
-        <div class="domaine">
-          <p>
-            Domaine de specialisation 
-          </p>
-        </div>
-
-        <!-- // pays  -->
-
-        <div class="vete_pays">
-          <p>
-            Mali
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-        <div class="bare">
-          <div class="ligne">
-            <!-- ////////// TO DO  -->
-          </div>
-        </div>
-
-  </div>
-
-</div>
 
 </ion-header>
 
@@ -95,7 +44,7 @@
 
   <aside class="formulaire">
 
-    <form class="container_formulaire">
+    <form class="container_formulaire" >
 
       
 
@@ -116,14 +65,14 @@
 
             <!-- input de votre numero  -->
             <div class="champ_input">
-              <input type="number" class="input_focus2"  id="rue" placeholder="Saisir votre nom" autocomplete="on" required>
-              <label for="rue" class="label">Votre Nom</label>
+              <input [(ngModel)]="modifierRdv.nom" [value]="modifierRdv.nom" name="nom" id="nom" type="text" class="input_focus2" placeholder="Saisir votre nom" autocomplete="on" required>
+              <label for="nom" class="label">Votre Nom</label>
             </div>
 
              <!-- input de votre numero  -->
              <div class="champ_input">
-              <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="Saisir votre preénom" autocomplete="on" required>
-              <label for="postal" class="label">Votre Prénom</label>
+              <input [(ngModel)]="modifierRdv.prenom" [value]="modifierRdv.prenom" name="prenom" type="text" class="input_focus2 input_focus3"  id="prenom" placeholder="Saisir votre preénom" autocomplete="on" required>
+              <label for="prenom" class="label">Votre Prénom</label>
             </div>
 
           </div>
@@ -134,14 +83,14 @@
 
         <!-- input de votre pays  -->
         <div class="champ_input">
-          <input type="text" class="input_focus"  id="pays" placeholder="Saisir votre adresse" autocomplete="on" required>
-          <label for="pays" class="label">Votre Adresse</label>
+          <input [(ngModel)]="modifierRdv.adresse" [value]="modifierRdv.adresse" name="adresse" type="text" class="input_focus"  id="adresse" placeholder="Saisir votre adresse" autocomplete="on" required>
+          <label for="adresse" class="label">Votre Adresse</label>
         </div>
 
         <!-- input de votre quartier  -->
         <div class="champ_input" style="margin-top: -10px;">
-          <input type="text" class="input_focus"  id="quartier" placeholder="Saisir votre numéro" autocomplete="on" required>
-          <label for="quartier" class="label">Votre numéro</label>
+          <input [(ngModel)]="modifierRdv.numero" [value]="modifierRdv.numero" name="numero" type="number" class="input_focus"  id="numero" placeholder="Saisir votre numéro" autocomplete="on" required>
+          <label for="numero" class="label">Votre numéro</label>
         </div>
 
         <!-- ///// TITRE  -->
@@ -158,40 +107,77 @@
 
             <!-- input de votre numero  -->
             <div class="champ_input">
-              <input type="number" class="input_focus2"  id="rue" placeholder="Espèce de animal" autocomplete="on" required>
-              <label for="rue" class="label">Espèce animal</label>
+              <input [(ngModel)]="modifierRdv.especeAnimal" [value]="modifierRdv.especeAnimal" name="especeAnimal"  type="text" class="input_focus2"  id="especeAnimal" placeholder="Espèce de animal" autocomplete="on" required>
+              <label for="especeAnimal" class="label">Espèce animal</label>
             </div>
 
              <!-- input de votre numero  -->
              <div class="champ_input">
-              <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="L'age de animal" autocomplete="on" required>
-              <label for="postal" class="label">Age animal</label>
+              <input [(ngModel)]="modifierRdv.ageAnimal" [value]="modifierRdv.ageAnimal" name="ageAnimal" type="text" class="input_focus2 input_focus3"  id="ageAnimal" placeholder="L'age de animal" autocomplete="on" required>
+              <label for="ageAnimal" class="label">Age animal</label>
             </div>
 
           </div>
 
         </div>
 
-        <!-- ////////// Information animal 2  -->
-
         <div class="acte_container">
 
-          <div class="champ_input2">
+          <div class="titre_date" style="margin-top: 10px;">
+            <p style="font-size: 18px; font-weight: 500; letter-spacing: 0.60px;">
+              Date de Rdv
+            </p>
+          </div>
 
-            <!-- input de votre numero  -->
+          <div class="champ_input_v">
+
             <div class="champ_input">
-              <input type="date" class="input_focus2"  id="rue" placeholder="Date de rendez-vous" autocomplete="on" required>
-              <label for="rue" class="label">Date de RDV</label>
+              <input [(ngModel)]="modifierRdv.jour" [value]="modifierRdv.jour" name="jour" id="jours" type="text" class=" input_focus_c" placeholder="ex: 10" autocomplete="on" required>
+              <label for="jours" class="label">Jours</label>
             </div>
-
-             <!-- input de votre numero  -->
-             <div class="champ_input">
-              <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="Sexe animal" autocomplete="on" required>
-              <label for="postal" class="label">Sexe animal</label>
+              
+            <div class="champ_input">
+              <input [(ngModel)]="modifierRdv.mois" [value]="modifierRdv.mois" name="mois" id="mois" type="text" class=" input_focus_c" placeholder="ex: Janvier" autocomplete="on" required>
+              <label for="mois" class="label">Mois</label>
+            </div>
+              
+            <div class="champ_input">
+              <input [(ngModel)]="modifierRdv.annee" [value]="modifierRdv.annee" name="annee" id="annee" name="annee" type="text" class=" input_focus_c"  placeholder="ex: 1999" autocomplete="on" required>
+              <label for="annee" class="label">année</label>
             </div>
 
           </div>
 
+        </div>
+
+        
+
+        <!-- ////////// Information animal 2  -->
+
+        <div class="acte_container">
+
+          <div class="champ_input">
+             <!-- input de votre numero  -->
+             <!-- <div class="champ_input">
+              <input type="text" class="input_focus2 input_focus3"  id="postal" placeholder="Sexe animal" autocomplete="on" required>
+              <label for="postal" class="label">Sexe animal</label>
+            </div> -->
+
+            <select [(ngModel)]="modifierRdv.priorite" [value]="modifierRdv.priorite" name="priorite" name="priorite" class="input_focus">
+              <option value="">Sexe Animal</option>
+              <option value="homme">Homme</option>
+              <option value="femme">Femme</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        
+        <!-- input de votre pays  -->
+        <div class="champ_input">
+          <input [(ngModel)]="modifierRdv.nonMaladie" [value]="modifierRdv.nonMaladie" name="nonMaladie" type="text" class="input_focus"  id="nonMaladie" placeholder="C'est quoi le maladie de votre animal" autocomplete="on" required>
+          <label for="nonMaladie" class="label">Maladie de Animal</label>
         </div>
 
 
@@ -206,16 +192,15 @@
         </div> -->
 
         <div class="champ_input" style="margin-top: 0px;">
-          <textarea class="input_focus5" name="descr" placeholder="Saisir votre numéro" autocomplete="on" required></textarea>
-          <label for="descr" class="label">Description</label>
+          <textarea [(ngModel)]="modifierRdv.description" [value]="modifierRdv.description" name="description" id="description" class="input_focus5" placeholder="Saisir une description de maladie de votre animal..." autocomplete="on" required></textarea>
+          <label for="description" class="label">Description</label>
         </div>
+
         
-
-
         <!-- button envoie  -->
 
         <!-- le button de submit  -->
-        <!-- <div class="btn_submit_global">
+        <!-- <div class="btn_submit_global"> 
           <button type="submit" class="btn_submit"> Modifier RDV </button>
         </div> -->
 

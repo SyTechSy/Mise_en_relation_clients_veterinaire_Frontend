@@ -184,12 +184,6 @@
     background: none;
 }
 
-.input_focus:focus {
-    border-bottom: 1px solid #000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
 
 .champ_input .label {
     position: absolute;
@@ -199,6 +193,12 @@
     color: #000;
 }
 
+.input_focus:focus {
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
 
 /*  Verificatiion de label si le champs est vide ou pas  */
 
