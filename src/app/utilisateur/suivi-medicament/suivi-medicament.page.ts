@@ -31,7 +31,7 @@ export class SuiviMedicamentPage implements OnInit {
     this.affichemedi = Object.assign(new Medicament(), JSON.parse(localStorage.getItem("medicament")!));
     this.subscription = this.mediService.listMedicament().subscribe(
       (medicaments: Medicament[]) => {
-        this.listeMedicaments = medicaments;
+        this.listeMedicaments = medicaments.reverse();
         console.log(this.listeMedicaments); // Une fois les données récupérées, les assigner à listeMedicaments
       },
       (error) => {

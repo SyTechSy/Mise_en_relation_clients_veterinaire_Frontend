@@ -26,7 +26,7 @@ export class SuiviSantePage implements OnInit {
     this.afficheSanteAnimal = Object.assign(new Sante(), JSON.parse(localStorage.getItem("santeAnimal")!));
     this.subscription = this.santeService.listSanteAnimal().subscribe(
       (santes: Sante[]) => {
-        this.listSanteAnimals = santes;
+        this.listSanteAnimals = santes.reverse();
         console.log(this.listSanteAnimals);
       },
       (error) => {

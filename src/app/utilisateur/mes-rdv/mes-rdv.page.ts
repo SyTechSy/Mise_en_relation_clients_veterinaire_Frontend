@@ -28,7 +28,7 @@ export class MesRdvPage implements OnInit {
     this.afficherdv = Object.assign(new Rdv(),JSON.parse(localStorage.getItem("utilisateur")!));
     this.subscription = this.rdvService.listRdv().subscribe(
       (rdvs: Rdv[]) => {
-        this.listrdv = rdvs;
+        this.listrdv = rdvs.reverse();
         console.log(this.listrdv);
       },
       (error) => {

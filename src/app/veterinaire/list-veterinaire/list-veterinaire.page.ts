@@ -26,7 +26,7 @@ export class ListVeterinairePage implements OnInit {
     this.afficheveterinaire = Object.assign(new Veterinaire(),JSON.parse(localStorage.getItem("veterinaire")!));
     this.subscription = this.veteService.listDesVeterinaire().subscribe(
       (veterinaires: Veterinaire[]) => {
-        this.listveterinaire = veterinaires;
+        this.listveterinaire = veterinaires.reverse();
         console.log(this.listveterinaire);
       },
       (error) => {

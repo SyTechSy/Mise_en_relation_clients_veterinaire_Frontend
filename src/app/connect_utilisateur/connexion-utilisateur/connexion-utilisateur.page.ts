@@ -66,7 +66,7 @@ export class ConnexionUtilisateurPage implements OnInit {
           localStorage.setItem('utilisateur', JSON.stringify(result));
           this.userService.setUsers(result);
           // Redirection vers une autre page après la connexion réussie
-          this.router.navigate(['/']).then();
+          this.router.navigate(['/tabs/accueil']).then();
           
       }
       )
